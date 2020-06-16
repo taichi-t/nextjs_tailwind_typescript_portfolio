@@ -1,10 +1,6 @@
 @tailwind base;
 @tailwind components;
 
-.btn-blue {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
-}
-
 .hero {
   @apply py-20;
 }
@@ -13,6 +9,38 @@
   @apply text-5xl text-center;
   color: #333;
   line-height: 1.15;
+}
+
+.theme-light {
+  --color-background: #fafafa;
+  --color-primaryText: rgba(0, 0, 0, 0.87);
+  --color-secondaryText: rgba(0, 0, 0, 0.54);
+  --color-disabled: rgba(0, 0, 0, 0.38);
+  --color-hint: rgba(0, 0, 0, 0.38);
+  --color-divider: rgba(0, 0, 0, 0.12);
+  --color-yellow: #f2bf5e;
+  --color-blue: #7ec9ed;
+  --color-bioret: #c1b4fb;
+  --color-red: #ff6161;
+  --color-green: #bada55;
+}
+
+.theme-dark {
+  --color-background: #303030;
+  --color-primaryText: #fff;
+  --color-secondaryText: rgba(255, 255, 255, 0.7);
+  --color-disabled: rgba(255, 255, 255, 0.5);
+  --color-hint: rgba(255, 255, 255, 0.5);
+  --color-divider: rgba(255, 255, 255, 0.12);
+  --color-yellow: #f2bf5e;
+  --color-blue: #7ec9ed;
+  --color-bioret: #c1b4fb;
+  --color-red: #ff6161;
+  --color-green: #bada55;
+}
+
+.content-transition {
+  transition: background-color 0.25s;
 }
 
 @tailwind utilities;
