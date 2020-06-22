@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       colors: {
         background: 'var(--color-background)',
+        paper: 'var(--color-paper)',
         primaryText: 'var(--color-primaryText)',
         secondaryText: 'var(--color-secondaryText)',
         disabled: 'var(--color-disabled)',
@@ -14,6 +15,15 @@ module.exports = {
         bioret: 'var(--color-bioret)',
         red: 'var(--color-red)',
         green: 'var(--color-green)',
+      },
+      fontFamily: {
+        body: ['Montserrat', 'Sans-serif'],
+        display: ['Signika', 'Sans-serif'],
+      },
+      fontWeight: {
+        light: 300,
+        normal: 400,
+        bold: 700,
       },
     },
   },
