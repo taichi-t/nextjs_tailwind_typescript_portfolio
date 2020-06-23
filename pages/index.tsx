@@ -4,23 +4,24 @@ import Layout from '@/components/Layout/Layout';
 
 export default function IndexPage() {
   const { siteMetadata } = Config;
-  const { toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <Layout>
-      <div className="hero">
-        <h1 className="title text-primaryText font-body ">
-          {siteMetadata.title}
-        </h1>
-      </div>
-      <div className="bg-paper">
+    <div className={`${theme} bg-background`}>
+      <Layout>
+        <div className="hero">
+          <h1 className="title text-primaryText skeleton inline-block">
+            <span>{siteMetadata.title}</span>
+          </h1>
+        </div>
+
         <button
           onClick={toggleTheme}
-          className="font-display text-6xl text-primaryText"
+          className="font-display text-6xl text-primaryText skeleton inline-block"
         >
-          It's Just Me, Jeremy!
+          <span>It's Just Me, Jeremy!</span>
         </button>
-      </div>
-    </Layout>
+      </Layout>
+    </div>
   );
 }

@@ -4,6 +4,10 @@ module.exports = {
     extend: {
       colors: {
         background: 'var(--color-background)',
+        skeleton: 'var(--color-skeleton)',
+        gradient100: 'var(--color-gradient100)',
+        gradient200: 'var(--color-gradient200)',
+        gradient300: 'var(--color-gradient300)',
         paper: 'var(--color-paper)',
         primaryText: 'var(--color-primaryText)',
         secondaryText: 'var(--color-secondaryText)',

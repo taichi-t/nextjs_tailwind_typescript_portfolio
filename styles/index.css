@@ -1,20 +1,17 @@
 @tailwind base;
 @tailwind components;
 
+@import './skeleton.css';
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Signika:wght@300;400;700&display=swap');
-
-html {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-}
-
-body {
-  font-size: 1.4rem;
-}
 
 .theme-light {
   --color-background: #ffffff;
   --color-paper: #fafafa;
+  --color-skeleton: #e0e0e0;
+  --color-gradient100: rgba(255, 255, 255, 0);
+  --color-gradient200: rgba(255, 255, 255, 0.2);
+  --color-gradient300: rgba(255, 255, 255, 0.5);
   --color-primaryText: rgba(0, 0, 0, 0.87);
   --color-secondaryText: rgba(0, 0, 0, 0.54);
   --color-disabled: rgba(0, 0, 0, 0.38);
@@ -30,6 +27,10 @@ body {
 .theme-dark {
   --color-background: #303030;
   --color-paper: #424242;
+  --color-skeleton: #616161;
+  --color-gradient100: rgba(70, 70, 70, 0);
+  --color-gradient200: rgba(70, 70, 70, 0.2);
+  --color-gradient300: rgba(70, 70, 70, 0.5);
   --color-primaryText: #fff;
   --color-secondaryText: rgba(255, 255, 255, 0.7);
   --color-disabled: rgba(255, 255, 255, 0.5);
@@ -42,8 +43,23 @@ body {
   --color-green: #bada55;
 }
 
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  background-color: inherit;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
 .content-transition {
   transition: background-color 0.25s;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 @tailwind utilities;
