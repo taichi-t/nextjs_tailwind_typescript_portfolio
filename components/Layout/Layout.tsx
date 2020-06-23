@@ -7,11 +7,13 @@ export default function Layout({ children }) {
   const { theme } = useTheme();
 
   return (
-    <div className="wrap">
+    <>
       <MetaLinks />
-      <Header />
-      {children}
-      <Footer />
-    </div>
+      <div className="wrap">
+        <Header />
+        {children}
+        <Footer />
+      </div>
+    </>
   );
 }
