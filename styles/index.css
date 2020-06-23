@@ -3,8 +3,14 @@
 @tailwind components;
 
 @import './skeleton.css';
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Signika:wght@300;400;700&display=swap');
+
+html {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  @apply text-primaryText;
+}
 
 .theme-light {
   --color-background: #ffffff;
