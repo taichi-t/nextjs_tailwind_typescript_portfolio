@@ -4,10 +4,6 @@
   @apply bg-skeleton;
 }
 
-.skeleton > span {
-  visibility: hidden;
-}
-
 @keyframes skeletonAnimation {
   100% {
     transform: translateX(100%);

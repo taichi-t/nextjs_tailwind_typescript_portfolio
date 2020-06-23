@@ -8,7 +8,7 @@ export default function IndexPage() {
 
   return (
     <Layout title="home">
-      <div className="hero h-screen">
+      <main className="hero h-screen">
         <h1
           className={`title text-primaryText inline-block ${
             !loaded && 'skeleton'
@@ -19,17 +19,15 @@ export default function IndexPage() {
 
         <button
           onClick={toggleTheme}
-          className={`font-display text-4xl text-primaryText inline-block focus:outline-none ${
+          className={`font-display text-3xl text-primaryText inline-block focus:outline-none font-bold tracking-wider text-left ${
             !loaded && 'skeleton'
           }`}
         >
-          <span>
-            Hi there! My name is Taichi Tsujioka.
-            <br />
-            I'm a junior developer based in Vancouver, Canada
-          </span>
+          <span>Hi there! I'm Taichi.</span>
+          <br />
+          <span>I'm a junior developer based in Vancouver, Canada</span>
         </button>
-      </div>
+      </main>
     </Layout>
   );
 }
