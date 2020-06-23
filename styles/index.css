@@ -1,4 +1,5 @@
 @tailwind base;
+
 @tailwind components;
 
 @import './skeleton.css';
@@ -41,15 +42,6 @@
   --color-bioret: #c1b4fb;
   --color-red: #ff6161;
   --color-green: #bada55;
-}
-
-html {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-}
-
-body {
-  font-size: 1.4rem;
 }
 
 .content-transition {

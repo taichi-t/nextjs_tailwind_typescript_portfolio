@@ -19,6 +19,7 @@ module.exports = {
         bioret: 'var(--color-bioret)',
         red: 'var(--color-red)',
         green: 'var(--color-green)',
+        html: '#ffffff',
       },
       fontFamily: {
         body: ['Montserrat', 'Sans-serif'],
