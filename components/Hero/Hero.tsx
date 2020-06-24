@@ -12,11 +12,10 @@ export default function Hero() {
   }, [headerHeight]);
 
   return (
-    <div
-      className={`text-center ${!loaded && 'h-screen skeleton'}`}
-      style={{ height: `${height}px` }}
-    >
-      <HeroSVG className="inline-block" />
+    <div style={{ height: `${height}px` }}>
+      <div className="max-w-xs mx-auto">
+        <HeroSVG className="inline-block" />
+      </div>
     </div>
   );
 }
