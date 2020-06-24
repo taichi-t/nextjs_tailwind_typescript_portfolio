@@ -14,11 +14,7 @@ export default function Header() {
         <li>
           <Link href="/">
             <a className="no-underline text-primaryText inline-block">
-              <span
-                className={`font-bold text-xs ${
-                  !loaded && 'skeleton text-opacity-0 text-transparent'
-                }`}
-              >
+              <span className={`font-bold text-xs ${!loaded && 'skeleton'}`}>
                 Home
               </span>
             </a>
@@ -28,11 +24,7 @@ export default function Header() {
           {links.map(({ href, label }) => (
             <li key={`${href}${label}`}>
               <a href={href} className="btn-blue no-underline text-primaryText">
-                <span
-                  className={`font-bold text-xs ${
-                    !loaded && 'skeleton text-opacity-0 text-transparent'
-                  }`}
-                >
+                <span className={`font-bold text-xs ${!loaded && 'skeleton'}`}>
                   {label}
                 </span>
               </a>
@@ -40,11 +32,7 @@ export default function Header() {
           ))}
           <li>
             <button>
-              <span
-                className={`font-bold text-xs ${
-                  !loaded && 'skeleton text-opacity-0 text-transparent'
-                }`}
-              >
+              <span className={`font-bold text-xs ${!loaded && 'skeleton'}`}>
                 darkmode
               </span>
             </button>

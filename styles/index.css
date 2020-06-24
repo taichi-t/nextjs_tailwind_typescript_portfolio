@@ -9,7 +9,6 @@ html {
   font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  @apply text-primaryText;
 }
 
 .theme-light {
@@ -55,7 +54,7 @@ html {
 }
 
 .wrap {
-  max-width: 1080px;
+  max-width: theme('maxWidth.xl');
   margin: 0 auto;
 }
 
