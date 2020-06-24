@@ -6,34 +6,36 @@ const links = [
 ];
 
 export default function Header() {
-  const { loaded } = useTheme();
+  const { loaded, toggleTheme, theme } = useTheme();
+  console.log(theme);
 
   return (
     <nav>
-      <ul className="flex justify-between items-center p-4">
-        <li>
-          <Link href="/">
-            <a className="no-underline text-primaryText inline-block">
-              <span className={`font-bold text-xs ${!loaded && 'skeleton'}`}>
-                Home
-              </span>
-            </a>
-          </Link>
-        </li>
+      <ul className="flex justify-between items-center p-4 text-primaryText">
+        <li></li>
         <ul className="flex justify-between items-center space-x-4 text-xs font-bold">
-          {links.map(({ href, label }) => (
-            <li key={`${href}${label}`}>
-              <a href={href} className="btn-blue no-underline text-primaryText">
-                <span className={`font-bold text-xs ${!loaded && 'skeleton'}`}>
-                  {label}
+          <li>
+            <Link href="/">
+              <a>
+                <span
+                  className={`font-bold text-xs hover:bg-yellow ${
+                    !loaded && 'skeleton'
+                  }`}
+                >
+                  about
                 </span>
               </a>
-            </li>
-          ))}
+            </Link>
+          </li>
+
           <li>
-            <button>
-              <span className={`font-bold text-xs ${!loaded && 'skeleton'}`}>
-                darkmode
+            <button onClick={toggleTheme} className="focus:outline-none">
+              <span
+                className={`font-bold text-xs hover:bg-yellow ${
+                  !loaded && 'skeleton'
+                }`}
+              >
+                {theme === 'theme-dark' ? 'light' : 'dark'}
               </span>
             </button>
           </li>

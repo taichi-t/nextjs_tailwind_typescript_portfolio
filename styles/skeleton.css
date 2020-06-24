@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
   @apply bg-skeleton;
-  display: inline-block;
   color: transparent;
 }
 

@@ -1,6 +1,7 @@
 import { useTheme } from '@/utils/themeContext';
 import Config from '@/next.config';
 import Layout from '@/components/Layout/Layout';
+import Hero from '@/components/Hero/Hero';
 
 export default function IndexPage() {
   const { loaded } = useTheme();
@@ -8,17 +9,7 @@ export default function IndexPage() {
 
   return (
     <Layout title="home">
-      <main className="hero h-screen">
-        <h2 className="title text-primaryText inline-block">
-          <span className={`${!loaded && 'skeleton'}`}>
-            Hi there! I'm Taichi.
-          </span>
-          <br />
-          <span className={`${!loaded && 'skeleton'}`}>
-            I'm a junior developer based in Vancouver, Canada
-          </span>
-        </h2>
-      </main>
+      <Hero />
     </Layout>
   );
 }
