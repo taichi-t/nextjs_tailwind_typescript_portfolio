@@ -4,6 +4,7 @@ import HeroSVG from '@/public/hero.svg';
 
 export default function Hero() {
   const { loaded, headerHeight } = useTheme();
+
   const [height, setHeight] = useState(null);
 
   useEffect(() => {
@@ -13,8 +14,8 @@ export default function Hero() {
 
   return (
     <div style={{ height: `${height}px` }}>
-      <div className="max-w-xs mx-auto">
-        <HeroSVG className="inline-block" />
+      <div className={`max-w-xs mx-auto ${!loaded && 'skeleton'}`}>
+        <HeroSVG className={`inline-block ${!loaded && 'invisible'}`} />
       </div>
     </div>
   );

@@ -28,17 +28,18 @@ html {
   --color-bioret: #c1b4fb;
   --color-red: #ff6161;
   --color-green: #bada55;
+  --color-border: #000000;
 }
 
 .theme-dark {
-  --color-background: #303030;
-  --color-paper: #424242;
-  --color-skeleton: #616161;
-  --color-gradient100: rgba(70, 70, 70, 0);
-  --color-gradient200: rgba(70, 70, 70, 0.2);
-  --color-gradient300: rgba(70, 70, 70, 0.5);
-  --color-primaryText: #fff;
-  --color-secondaryText: rgba(255, 255, 255, 0.7);
+  --color-background: #15202b;
+  --color-paper: #192834;
+  --color-skeleton: #2a343d;
+  --color-gradient100: rgba(106, 113, 131, 0);
+  --color-gradient200: rgba(106, 113, 131, 0.2);
+  --color-gradient300: rgba(106, 113, 131, 0.5);
+  --color-primaryText: #fefffe;
+  --color-secondaryText: #8899a6;
   --color-disabled: rgba(255, 255, 255, 0.5);
   --color-hint: rgba(255, 255, 255, 0.5);
   --color-divider: rgba(255, 255, 255, 0.12);
@@ -47,6 +48,7 @@ html {
   --color-bioret: #c1b4fb;
   --color-red: #ff6161;
   --color-green: #bada55;
+  --color-border: #fff;
 }
 
 .content-transition {
@@ -58,4 +60,22 @@ html {
   margin: 0 auto;
 }
 
+.inner-wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.custom-border {
+  border: 2px solid theme('colors.border');
+}
+
+.works-container {
+  width: calc(100% - theme('spacing.20'));
+  height: calc(100% - theme('spacing.20'));
+}
+
+.tag-font {
+  font-size: 0.5rem;
+  padding: 0.1rem;
+}
 @tailwind utilities;
