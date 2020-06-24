@@ -1,21 +1,26 @@
 import { useTheme } from '@/utils/themeContext';
 import useCreateTagElements from '@/hooks/useCreateTagElements';
+import WordCard1SVG from '@/public/work-card-1.svg';
 
 export default function WorkCard1() {
   const { loaded } = useTheme();
 
-  const tags = ['reactHook', 'redux', 'localStorage', 'materialUi'];
+  const tags = ['reactHook', 'redux', 'materialUi', 'localStorage'];
   const { elements } = useCreateTagElements(tags);
 
   return (
-    <div className="col-span-12 h-48 bg-paper custom-border flex justify-center items-center">
-      <div className="bg-yellow  works-container grid grid-cols-12 gap-8">
-        <div className="col-span-5 bg-green">image container</div>
-        <div className="col-span-7 bg-green">
+    <div className="group col-span-12 bg-paper custom-border flex justify-center items-center hover:bg-opacityGreen">
+      <div className="works-container grid grid-cols-12 gap-8 h-full ">
+        <div className="col-span-6">
+          <div className={`${!loaded && 'skeleton'}`}>
+            <WordCard1SVG width="100%" height="100%" />
+          </div>
+        </div>
+        <div className="col-span-6">
           <ul className="flex flex-col justify-center h-full">
             <li className="mt-auto mb-auto text-primaryText">
               <span
-                className={`font-bold text-xl inline-block font-display ${
+                className={`font-bold text-xl inline-block font-body group-hover:bg-paper ${
                   !loaded && 'skeleton text-transparent'
                 }`}
               >

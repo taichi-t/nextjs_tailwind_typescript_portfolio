@@ -12,43 +12,79 @@ html {
 }
 
 .theme-light {
+  /* bg-color */
   --color-background: #ffffff;
   --color-paper: #fafafa;
   --color-skeleton: #e0e0e0;
+
+  /* skeleton */
   --color-gradient100: rgba(255, 255, 255, 0);
   --color-gradient200: rgba(255, 255, 255, 0.2);
   --color-gradient300: rgba(255, 255, 255, 0.5);
+
+  /* font-color */
   --color-primaryText: rgba(0, 0, 0, 0.87);
   --color-secondaryText: rgba(0, 0, 0, 0.54);
-  --color-disabled: rgba(0, 0, 0, 0.38);
-  --color-hint: rgba(0, 0, 0, 0.38);
-  --color-divider: rgba(0, 0, 0, 0.12);
+
+  /* key color */
   --color-yellow: #f2bf5e;
   --color-blue: #7ec9ed;
   --color-bioret: #c1b4fb;
   --color-red: #ff6161;
   --color-green: #bada55;
+
+  /* key color opacity */
+  --color-opacityYellow: rgba(242, 191, 94, 0.7);
+  --color-opacityBlue: rgba(126, 201, 237, 0.7);
+  --color-opacityBioret: rgba(193, 180, 251, 0.7);
+  --color-opacityRed: rgba(255, 97, 97, 0.7);
+  --color-opacityGreen: rgba(186, 218, 85, 0.7);
+
+  /* devider */
   --color-border: #000000;
+  --color-inner: #e0e0e0;
+
+  /* --color-disabled: rgba(0, 0, 0, 0.38);
+  --color-hint: rgba(0, 0, 0, 0.38);
+  --color-divider: rgba(0, 0, 0, 0.12); */
 }
 
 .theme-dark {
+  /* bg-color */
   --color-background: #15202b;
   --color-paper: #192834;
   --color-skeleton: #2a343d;
+
+  /* skeleton */
   --color-gradient100: rgba(106, 113, 131, 0);
   --color-gradient200: rgba(106, 113, 131, 0.2);
   --color-gradient300: rgba(106, 113, 131, 0.5);
+
+  /* font-color */
   --color-primaryText: #fefffe;
   --color-secondaryText: #8899a6;
-  --color-disabled: rgba(255, 255, 255, 0.5);
-  --color-hint: rgba(255, 255, 255, 0.5);
-  --color-divider: rgba(255, 255, 255, 0.12);
+
+  /* key-color */
   --color-yellow: #f2bf5e;
   --color-blue: #7ec9ed;
   --color-bioret: #c1b4fb;
   --color-red: #ff6161;
   --color-green: #bada55;
+
+  /* key color opacity */
+  --color-opacityYellow: rgba(242, 191, 94, 0.7);
+  --color-opacityBlue: rgba(126, 201, 237, 0.7);
+  --color-opacityBioret: rgba(193, 180, 251, 0.7);
+  --color-opacityRed: rgba(255, 97, 97, 0.7);
+  --color-opacityGreen: rgba(186, 218, 85, 0.7);
+
+  /* divider */
   --color-border: #fff;
+  --color-inner: #2a343d;
+
+  /* --color-disabled: rgba(255, 255, 255, 0.5);
+  --color-hint: rgba(255, 255, 255, 0.5);
+  --color-divider: rgba(255, 255, 255, 0.12); */
 }
 
 .content-transition {
@@ -71,7 +107,7 @@ html {
 
 .works-container {
   width: calc(100% - theme('spacing.20'));
-  height: calc(100% - theme('spacing.20'));
+  padding: theme('spacing.12') 0 theme('spacing.12') 0;
 }
 
 .tag-font {
