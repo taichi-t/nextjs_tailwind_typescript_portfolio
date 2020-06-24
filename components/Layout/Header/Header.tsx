@@ -1,16 +1,17 @@
+import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
-const links = [
-  { href: 'https://github.com/vercel/next.js', label: 'GitHub' },
-  { href: 'https://nextjs.org/docs', label: 'Docs' },
-];
 
 export default function Header() {
-  const { loaded, toggleTheme, theme } = useTheme();
-  console.log(theme);
+  const { loaded, toggleTheme, theme, setHeight } = useTheme();
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    setHeight(headerRef.current.clientHeight);
+  }, []);
 
   return (
-    <nav>
+    <nav ref={headerRef}>
       <ul className="flex justify-between items-center p-4 text-primaryText">
         <li></li>
         <ul className="flex justify-between items-center space-x-4 text-xs font-bold">
