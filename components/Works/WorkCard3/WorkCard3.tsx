@@ -22,11 +22,9 @@ export default function WorkCard2() {
             className={`w-9/12 my-0 mx-auto mb-6 ${!isImgLoaded && 'skeleton'}`}
           >
             <img
-              src="/pc.jpg"
-              alt="pc"
-              className={`w-auto h-auto max-w-full max-h-full ${
-                !isImgLoaded && 'invisible'
-              }`}
+              src="/mac.jpg"
+              alt="mac"
+              className={`w-auto max-w-full${!isImgLoaded && 'invisible'}`}
               width="100%"
               height="100%"
               ref={imgRef}
