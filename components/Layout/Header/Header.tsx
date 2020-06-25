@@ -4,6 +4,7 @@ import { useTheme } from '@/utils/themeContext';
 
 export default function Header() {
   const { loaded, toggleTheme, theme, setHeight } = useTheme();
+
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Header() {
               <Link href="/">
                 <a>
                   <span
-                    className={`font-bold text-xs hover:bg-yellow ${
+                    className={`font-bold text-xs hover:bg-yellow inline-block ${
                       !loaded && 'skeleton'
                     }`}
                   >
@@ -33,7 +34,7 @@ export default function Header() {
             <li>
               <button onClick={toggleTheme} className="focus:outline-none">
                 <span
-                  className={`font-bold text-xs hover:bg-yellow ${
+                  className={`font-bold text-xs hover:bg-yellow inline-block ${
                     !loaded && 'skeleton'
                   }`}
                 >
