@@ -14,8 +14,8 @@ export default function Hero() {
 
   return (
     <div style={{ height: `${height}px` }}>
-      <div className={`max-w-xs mx-auto ${!loaded && 'skeleton'}`}>
-        <HeroSVG className={`inline-block ${!loaded && 'invisible'}`} />
+      <div className={`max-w-xs mx-auto`}>
+        <HeroSVG />
       </div>
     </div>
   );

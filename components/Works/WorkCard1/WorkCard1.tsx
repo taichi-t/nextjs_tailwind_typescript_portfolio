@@ -19,7 +19,7 @@ export default function WorkCard1() {
     <div className="group col-span-12 bg-paper custom-border flex justify-center items-center hover:bg-opacityGreen">
       <div className="works-container grid grid-cols-12 gap-8 h-full ">
         <div className="col-span-6">
-          <div className={`${!loaded && 'skeleton'}`}>
+          <div>
             <WordCard1SVG width="100%" height="100%" />
           </div>
         </div>
