@@ -15,8 +15,8 @@ export default function WorkCard2() {
   const handleLoad = () => setIsImgLoaded(true);
 
   return (
-    <div className="group bg-paper custom-border hover:bg-opacityGreen h-full">
-      <Link href="/works/work3">
+    <Link href="/works/work3">
+      <div className="group bg-paper custom-border hover:bg-opacityGreen h-full">
         <div className="m-8">
           <div
             className={`w-9/12 my-0 mx-auto mb-6 ${!isImgLoaded && 'skeleton'}`}
@@ -46,7 +46,7 @@ export default function WorkCard2() {
             </li>
           </ul>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
