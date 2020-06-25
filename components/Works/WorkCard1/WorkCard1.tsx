@@ -20,7 +20,7 @@ export default function WorkCard1() {
       <div className="works-container grid grid-cols-12 gap-8 h-full ">
         <div className="col-span-6">
           <div>
-            <WordCard1SVG width="100%" height="100%" />
+            <WordCard1SVG />
           </div>
         </div>
         <div className="col-span-6">
