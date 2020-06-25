@@ -25,7 +25,7 @@ module.exports = {
         opacityRed: 'var(--color-opacityRed)',
         opacityGreen: 'var(--color-opacityGreen)',
         border: 'var(--color-border)',
-        reactHook: '#61DBFC',
+        reactHook: '#629FDA',
         redux: '#764ABC',
         localStorage: '#D95726',
         typeScript: '#037ACD',

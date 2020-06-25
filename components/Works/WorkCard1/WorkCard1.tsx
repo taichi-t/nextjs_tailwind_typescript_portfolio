@@ -1,9 +1,16 @@
+import { useState, useEffect, useRef } from 'react';
 import { useTheme } from '@/utils/themeContext';
 import useCreateTagElements from '@/hooks/useCreateTagElements';
 import WordCard1SVG from '@/public/work-card-1.svg';
+// import useImagesObserver from '@/hooks/useImagesObserver';
 
 export default function WorkCard1() {
   const { loaded } = useTheme();
+
+  // const [isImageLoaded, setIsImageLoaded] = useState(false);
+  useEffect(() => {
+    // useImagesObserver(imageRef, setIsImageLoaded);
+  }, []);
 
   const tags = ['reactHook', 'redux', 'materialUi', 'localStorage'];
   const { elements } = useCreateTagElements(tags);
