@@ -11,7 +11,7 @@ export default function Hero() {
             !loaded && 'skeleton'
           }`}
         >
-          Hi there! I'm Taichi.
+          Hi there! I'm Taichi 🕺
         </span>
         <br />
         <span
@@ -19,7 +19,7 @@ export default function Hero() {
             !loaded && 'skeleton'
           }`}
         >
-          I'm a junior developer based in Vancouver, Canada, who seeking an
+          who is a junior developer based in Vancouver, Canada, seeking an
           opportunity that I work as web developer.
         </span>
       </h2>

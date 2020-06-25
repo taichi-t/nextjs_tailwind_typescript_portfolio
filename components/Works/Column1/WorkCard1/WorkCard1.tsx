@@ -12,7 +12,7 @@ export default function WorkCard1() {
 
   return (
     <Link href="/works/work1">
-      <div className="group col-span-12 bg-paper custom-border flex justify-center items-center hover:bg-opacityBlue">
+      <div className="group  bg-paper custom-border flex justify-center items-center hover:bg-opacityBlue">
         <div className="m-12 grid grid-cols-12 gap-8">
           <div className="col-span-6">
             <div>
@@ -23,7 +23,7 @@ export default function WorkCard1() {
             <ul className="flex flex-col justify-center h-full">
               <li className="mt-auto mb-auto text-primaryText">
                 <span
-                  className={`font-bold text-xl inline-block font-body group-hover:bg-paper ${
+                  className={`font-bold text-2xl inline-block font-display group-hover:bg-paper ${
                     !loaded && 'skeleton text-transparent'
                   }`}
                 >

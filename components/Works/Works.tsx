@@ -1,7 +1,9 @@
 import { useTheme } from '@/utils/themeContext';
-import WorkCard1 from './WorkCard1/WorkCard1';
-import WorkCard2 from './WorkCard2/WorkCard2';
-import WorkCard3 from './WorkCard3/WorkCard3';
+// import WorkCard1 from './WorkCard1/WorkCard1';
+// import WorkCard2 from './WorkCard2/WorkCard2';
+// import WorkCard3 from './WorkCard3/WorkCard3';
+import Column1 from './Column1/Column1';
+import Column2 from './Column2/Column2';
 
 export default function Hero() {
   const { loaded } = useTheme();
@@ -15,9 +17,12 @@ export default function Hero() {
           Recent works
         </span>
       </h2>
-      <WorkCard1 />
-      <WorkCard2 />
-      <WorkCard3 />
+      <div className="col-span-12">
+        <Column1 />
+      </div>
+      <div className="col-span-12">
+        <Column2 />
+      </div>
     </div>
   );
 }

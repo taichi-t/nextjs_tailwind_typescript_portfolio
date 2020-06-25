@@ -41,7 +41,7 @@ module.exports = {
       },
       fontFamily: {
         body: ['Montserrat', 'Sans-serif'],
-        display: ['Signika', 'Sans-serif'],
+        display: ['Rubik', 'Sans-serif'],
       },
       fontWeight: {
         light: 300,
@@ -52,6 +52,8 @@ module.exports = {
   },
   variants: {
     backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    textDecoration: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   plugins: [],
 };

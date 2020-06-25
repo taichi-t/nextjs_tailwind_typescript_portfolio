@@ -2,11 +2,19 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '@/utils/themeContext';
 import useCreateTagElements from '@/hooks/useCreateTagElements';
+
 export default function WorkCard2() {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   const { loaded } = useTheme();
-  const tags = ['typeScript', 'nextJs', 'tailwind'];
+
+  const tags = [
+    'gatsby',
+    'materialUi',
+    'styledComponents',
+    'graphQl',
+    'contentful',
+  ];
   const { elements } = useCreateTagElements(tags);
   useEffect(() => {
     if (imgRef.current.complete) setIsImgLoaded(true);
@@ -15,16 +23,18 @@ export default function WorkCard2() {
   const handleLoad = () => setIsImgLoaded(true);
 
   return (
-    <Link href="/works/work3">
-      <div className="group col-span-5 bg-paper custom-border hover:bg-opacityGreen">
+    <div className="group bg-paper custom-border hover:bg-opacityBioret h-full">
+      <Link href="/works/work2">
         <div className="m-8">
           <div
             className={`w-9/12 my-0 mx-auto mb-6 ${!isImgLoaded && 'skeleton'}`}
           >
             <img
-              src="/mac.jpg"
-              alt="mac"
-              className={`w-auto max-w-full${!isImgLoaded && 'invisible'}`}
+              src="/pc.jpg"
+              alt="pc"
+              className={`w-auto h-auto max-w-full max-h-full ${
+                !isImgLoaded && 'invisible'
+              }`}
               width="100%"
               height="100%"
               ref={imgRef}
@@ -34,11 +44,11 @@ export default function WorkCard2() {
           <ul>
             <li className="mb-5 text-primaryText">
               <span
-                className={`font-bold text-xl inline-block font-body group-hover:bg-paper ${
+                className={`font-bold text-2xl inline-block font-display group-hover:bg-paper ${
                   !loaded && 'skeleton text-transparent'
                 }`}
               >
-                Portfolio
+                Gatsby Blog
               </span>
             </li>
             <li>
@@ -46,7 +56,7 @@ export default function WorkCard2() {
             </li>
           </ul>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
