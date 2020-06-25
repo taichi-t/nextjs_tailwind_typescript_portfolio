@@ -7,7 +7,7 @@ export default function Layout({ children, title }) {
   const { theme } = useTheme();
 
   return (
-    <div className={`${theme} bg-background`}>
+    <div className={`${theme} bg-background content-transition`}>
       <div className="wrap">
         <Head>
           <title>{title || 'portfolio'}</title>

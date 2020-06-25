@@ -11,4 +11,5 @@ module.exports = {
     twitterUsername: website.twitterUsername,
     facebookAppID: '',
   },
+  font: website.font,
 };

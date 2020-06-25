@@ -1,12 +1,10 @@
+import config from '@/next.config';
+
 let FontFaceObserver = require('fontfaceobserver');
 
 const useFontFaceObserver = (setLoaded) => {
-  let fontFamilies = {
-    Montserrat: [{ weight: 300 }, { weight: 400 }, { weight: 700 }],
-    Signika: [{ weight: 300 }, { weight: 400 }, { weight: 700 }],
-
-    // Etc.
-  };
+  const { font } = config;
+  let fontFamilies = font;
 
   var fontObservers = [];
   Object.keys(fontFamilies).forEach(function (family) {
@@ -18,7 +16,6 @@ const useFontFaceObserver = (setLoaded) => {
 
     Promise.all(fontObservers).then(
       function () {
-        console.log('seccess');
         setLoaded(true);
       },
       function () {
