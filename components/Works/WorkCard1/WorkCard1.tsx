@@ -16,8 +16,8 @@ export default function WorkCard1() {
   const { elements } = useCreateTagElements(tags);
 
   return (
-    <div className="group col-span-12 bg-paper custom-border flex justify-center items-center hover:bg-opacityGreen">
-      <div className="works-container grid grid-cols-12 gap-8 h-full ">
+    <div className="group col-span-12 bg-paper custom-border flex justify-center items-center hover:bg-opacityBlue">
+      <div className="m-12 grid grid-cols-12 gap-8">
         <div className="col-span-6">
           <div>
             <WordCard1SVG />
@@ -35,7 +35,7 @@ export default function WorkCard1() {
               </span>
             </li>
             <li>
-              <ul className="flex">{elements}</ul>
+              <ul className="flex flex-wrap">{elements}</ul>
             </li>
           </ul>
         </div>

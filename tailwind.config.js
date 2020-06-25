@@ -31,9 +31,12 @@ module.exports = {
         typeScript: '#037ACD',
         gatsby: '#663399',
         materialUi: '#04B0FF',
-        netxJs: '#FFFFFF',
+        nextJs: 'var(--color-primaryText)',
         styledComponents: '#D046B0',
         scss: '#CF679B',
+        graphQl: '#E535AB',
+        contentful: 'var(--color-primaryText)',
+        tailwind: '#4AAFB3',
         inner: 'var(--color-inner)',
       },
       fontFamily: {
