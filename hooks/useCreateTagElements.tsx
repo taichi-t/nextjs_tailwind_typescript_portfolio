@@ -1,7 +1,7 @@
 export default function useCreateTagElements(tags) {
   const elements = tags.map((tag, index) => (
     <li
-      className={`rounded-sm ${
+      className={`bg-inner ${
         tag === tags[tags.length - 1] ? '' : 'mr-1'
       } tag-font font-bold `}
       key={index}
