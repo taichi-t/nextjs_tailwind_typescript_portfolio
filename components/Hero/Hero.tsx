@@ -10,7 +10,7 @@ export default function Hero() {
   useEffect(() => {
     const fullscreen = window.innerHeight;
     setHeight(fullscreen - headerHeight);
-  }, [headerHeight]);
+  }, []);
 
   return (
     <div style={{ height: `${height}px` }}>

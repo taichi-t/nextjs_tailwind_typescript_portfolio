@@ -1,11 +1,6 @@
-import Layout from '@/components/Layout/Layout';
+import WorkPagesLayout from '@/components/WorkPagesLayout/WorkPagesLayout';
+import Config from '@/next.config';
 
-export default function IndexPage() {
-  return (
-    <Layout title="work3">
-      <main>
-        <h1>work1</h1>
-      </main>
-    </Layout>
-  );
+export default function Work1() {
+  return <WorkPagesLayout {...Config.work1Config} />;
 }

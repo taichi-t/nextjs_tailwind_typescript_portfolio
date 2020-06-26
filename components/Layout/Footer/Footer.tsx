@@ -1,6 +1,6 @@
 import { useTheme } from '@/utils/themeContext';
 import Launch from '@/public/icons/launch.svg';
-import { theme } from '@/tailwind.config';
+
 export default function Footer() {
   const { loaded } = useTheme();
   return (
