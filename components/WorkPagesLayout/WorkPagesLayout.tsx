@@ -16,23 +16,20 @@ export default function WorkPagesLayout({
   githubLink,
 }) {
   const { loaded } = useTheme();
+
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   useEffect(() => {
-    setTimeout(() => {
-      if (imgRef.current.complete) setIsImgLoaded(true);
-    }, 500);
+    if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
 
   const handleLoad = () => {
-    setTimeout(() => {
-      setIsImgLoaded(true);
-    }, 500);
+    setIsImgLoaded(true);
   };
   return (
     <Layout title={pageTitle}>
       <main>
-        <div className="grid grid-cols-12 gap-8 w-full text-primaryText">
+        <div className="grid grid-cols-12 gap-8 text-primaryText h-screen">
           <div className="col-span-8">
             <Discription
               discription={discription}
@@ -44,7 +41,7 @@ export default function WorkPagesLayout({
             <Aside tags={tags} role={role} />
           </div>
         </div>
-        <div className={`-mt-10 inner-wrap ${!isImgLoaded && 'skeleton'}`}>
+        <div className={`-mt-24 inner-wrap ${!isImgLoaded && 'skeleton'}`}>
           <img
             src={image.src}
             alt={image.alt}
@@ -59,20 +56,16 @@ export default function WorkPagesLayout({
         <ul className="text-indigo-400 text-center mt-20 font-bold text-xl">
           <li className="inline-block mr-10">
             <Link href={links.prev.src}>
-              <span
-                className={`underline inline-block ${!loaded && 'skeleton'}`}
-              >
+              <a className={`underline inline-block ${!loaded && 'skeleton'}`}>
                 👈 {links.prev.title}
-              </span>
+              </a>
             </Link>
           </li>
           <li className="inline-block">
             <Link href={links.next.src}>
-              <span
-                className={`underline inline-block ${!loaded && 'skeleton'}`}
-              >
+              <a className={`underline inline-block ${!loaded && 'skeleton'}`}>
                 {links.next.title} 👉
-              </span>
+              </a>
             </Link>
           </li>
         </ul>

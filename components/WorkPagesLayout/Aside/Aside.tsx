@@ -6,7 +6,7 @@ export default function Aside({ tags, role }) {
   const { elements } = useCreateTagElements(tags);
 
   return (
-    <div className="flex justify-center items-center">
+    <aside className="flex justify-center items-center">
       <div className="inline-block">
         <h2 className="text-secondaryText text-xs font-bold">
           <span className={`inline-block ${!loaded && 'skeleton'}`}>Role</span>
@@ -28,6 +28,6 @@ export default function Aside({ tags, role }) {
         </h2>
         <ul className="flex flex-wrap">{elements}</ul>
       </div>
-    </div>
+    </aside>
   );
 }
