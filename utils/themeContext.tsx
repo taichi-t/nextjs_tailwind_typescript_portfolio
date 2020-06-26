@@ -18,12 +18,15 @@ export default function ThemeProvider({ children }) {
   const [headerHeight, setHeaderHeight] = useState<number>(null);
 
   useEffect(() => {
-    useFontFaceObserver(setLoaded);
+    setTimeout(function () {
+      useFontFaceObserver(setLoaded);
+    }, 50);
   }, []);
 
   function toggleTheme() {
     setTheme(theme === 'theme-light' ? 'theme-dark' : 'theme-light');
   }
+
   function setHeight(num) {
     setHeaderHeight(num);
   }

@@ -1,5 +1,6 @@
 import { useTheme } from '@/utils/themeContext';
 import Launch from '@/public/icons/launch.svg';
+import Link from 'next/link';
 
 export default function Footer() {
   const { loaded } = useTheme();
@@ -35,7 +36,11 @@ export default function Footer() {
       </div>
       <div className="mt-8 pb-32 inner-wrap">
         <button className="text-base text-primaryText font-bold mr-3  hover:text-primaryText hover:bg-yellow focus:outline-none">
-          <span className={`inline-block ${!loaded && 'skeleton'}`}>about</span>
+          <Link href="/">
+            <span className={`inline-block ${!loaded && 'skeleton'}`}>
+              about
+            </span>
+          </Link>
         </button>
         <button className="text-base text-primaryText font-bold hover:text-primaryText hover:bg-yellow focus:outline-none">
           <span className={`inline-block ${!loaded && 'skeleton'}`}>

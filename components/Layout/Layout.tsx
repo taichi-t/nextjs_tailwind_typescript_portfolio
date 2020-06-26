@@ -6,7 +6,6 @@ import { useTheme } from '@/utils/themeContext';
 
 export default function Layout({ children, title }) {
   const { theme } = useTheme();
-
   useEffect(() => {
     theme === 'theme-dark'
       ? (document.body.style.backgroundColor = '#15202b')

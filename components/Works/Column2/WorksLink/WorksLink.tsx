@@ -8,7 +8,7 @@ export default function WorksLink() {
         <div className="m-3 ">
           <div className="text-primaryText text-lg font-bold">
             <span
-              className={`inline-block group-hover:underline group-hover:bg-paper group-hover:text-indigo-400 ${
+              className={`inline-block underline group-hover:bg-paper text-indigo-400 ${
                 !loaded && 'skeleton'
               }`}
             >
