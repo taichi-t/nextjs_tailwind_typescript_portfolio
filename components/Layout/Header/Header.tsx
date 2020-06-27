@@ -34,11 +34,11 @@ export default function Header() {
             <li>
               <button onClick={toggleTheme} className="focus:outline-none">
                 <span
-                  className={`font-bold text-xs hover:bg-yellow inline-block ${
+                  className={`font-bold text-sm inline-block ${
                     !loaded && 'skeleton'
                   }`}
                 >
-                  {theme === 'theme-dark' ? 'light' : 'dark'}
+                  {theme === 'theme-dark' ? '🌞' : '🌚'}
                 </span>
               </button>
             </li>
