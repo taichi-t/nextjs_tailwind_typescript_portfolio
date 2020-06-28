@@ -13,7 +13,7 @@ module.exports = {
         secondaryText: 'var(--color-secondaryText)',
         // disabled: 'var(--color-disabled)',
         // hint: 'var(--color-hint)',
-        // divider: 'var(--color-divider)',
+        divider: 'var(--color-divider)',
         yellow: 'var(--color-yellow)',
         blue: 'var(--color-blue)',
         bioret: 'var(--color-bioret)',

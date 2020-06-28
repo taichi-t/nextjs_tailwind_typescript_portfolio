@@ -1,25 +1,27 @@
-// import ReactSvg from '@/public/icons/react.svg';
-// import TypeScriptSvg from '@/public/icons/typescript.svg';
-// import ReduxSvg from '@/public/icons/redux.svg';
-// import JavascriptSvg from '@/public/icons/javascript.svg';
 import ProfileImage from './ProfileImage/ProfileImage';
 import Profile from './Profile/Profile';
 import Aside from './Aside/Aside';
+import HardSkill from './HardSkill/HardSkill';
+import SoftSkill from './SoftSkill/SoftSkill';
 
 export default function About() {
   return (
-    <main className="bg-paper custom-border-thick">
-      <div className="m-3 grid grid-cols-12 grid-rows-6 h-full gap-3">
-        <div className="row-span-6 col-span-3">
-          <ProfileImage />
-        </div>
-        <div className="row-span-6 col-span-6 ">
-          <Profile />
-        </div>
-        <div className="row-span-6 col-span-3 ">
-          <Aside />
+    <main>
+      <div className="bg-paper custom-border-thick">
+        <div className="m-3 grid grid-cols-12 grid-rows-6 h-full gap-3">
+          <div className="row-span-6 col-span-3">
+            <ProfileImage />
+          </div>
+          <div className="row-span-6 col-span-6 ">
+            <Profile />
+          </div>
+          <div className="row-span-6 col-span-3 ">
+            <Aside />
+          </div>
         </div>
       </div>
+      <HardSkill />
+      <SoftSkill />
     </main>
   );
 }

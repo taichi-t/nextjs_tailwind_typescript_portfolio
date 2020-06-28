@@ -46,8 +46,8 @@ html {
   --color-inner: #e0e0e0;
 
   /* --color-disabled: rgba(0, 0, 0, 0.38);
-  --color-hint: rgba(0, 0, 0, 0.38);
-  --color-divider: rgba(0, 0, 0, 0.12); */
+  --color-hint: rgba(0, 0, 0, 0.38); */
+  --color-divider: #e6ecf0;
 }
 
 .theme-dark {
@@ -84,8 +84,8 @@ html {
   --color-inner: #2a343d;
 
   /* --color-disabled: rgba(255, 255, 255, 0.5);
-  --color-hint: rgba(255, 255, 255, 0.5);
-  --color-divider: rgba(255, 255, 255, 0.12); */
+  --color-hint: rgba(255, 255, 255, 0.5); */
+  --color-divider: rgba(255, 255, 255, 0.12);
 }
 
 .content-transition {
@@ -139,6 +139,27 @@ html {
 
 .item-font {
   font-size: 0.6rem;
+}
+
+dt > span {
+  text-indent: 1em;
+  font-size: 0.7rem;
+}
+
+dd {
+  font-size: 0.7rem;
+  margin-left: 2em;
+}
+
+.about-list-title {
+  font-size: 0.8rem;
+  color: theme('colors.secondaryText');
+  font-weight: bold;
+}
+.about-list-content {
+  font-size: 0.8rem;
+  color: theme('colors.primaryText');
+  margin-top: theme('margin.1');
 }
 
 @tailwind utilities;
