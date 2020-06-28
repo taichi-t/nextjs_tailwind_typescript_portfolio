@@ -7,7 +7,11 @@ export default function HardSkill() {
   return (
     <div className="text-primaryText text-sm mt-5 mx-auto grid grid-cols-12 gap-3">
       <div className="col-span-6">
-        <h2 className="text-secondaryText font-bold block">Specialists:</h2>
+        <h2 className="text-secondaryText font-bold block">
+          <span className={`inline-block ${!loaded && 'skeleton'}`}>
+            Specialists:
+          </span>
+        </h2>
         <ul className="flex ml-2">
           <li className="w-16 mr-5">
             <span>
