@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 import useCreateTagElements from '@/hooks/useCreateTagElements';
-import WordCard1SVG from '@/public/work-card-1.svg';
+import WordCard1SVG from '@/public/task.svg';
 // import useImagesObserver from '@/hooks/useImagesObserver';
 
 export default function WorkCard1() {
@@ -16,7 +16,7 @@ export default function WorkCard1() {
         <div className="m-12 grid grid-cols-12 gap-8">
           <div className="col-span-6">
             <div>
-              <WordCard1SVG />
+              <WordCard1SVG className="h-full" />
             </div>
           </div>
           <div className="col-span-6">

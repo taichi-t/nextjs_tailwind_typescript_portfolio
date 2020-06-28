@@ -18,7 +18,7 @@ export default function Header() {
           <li></li>
           <ul className="flex justify-between items-center space-x-4 text-xs font-bold">
             <li>
-              <Link href="/">
+              <Link href="/about">
                 <a>
                   <span
                     className={`font-bold text-xs hover:bg-yellow inline-block ${

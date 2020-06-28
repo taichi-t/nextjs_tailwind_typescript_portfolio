@@ -106,6 +106,12 @@ html {
   border: 2px solid theme('colors.border');
 }
 
+.custom-border-thick {
+  border: 2px solid theme('colors.border');
+  box-shadow: 5px 6px 0px theme('colors.border');
+  border-radius: 3px;
+}
+
 /* works  */
 
 .tag-font {
@@ -116,4 +122,23 @@ html {
 .role-font {
   font-size: 0.6rem;
 }
+
+/* about */
+.circle {
+  border-radius: 50%;
+  border: solid 3px theme('colors.border');
+}
+
+.svgs {
+  fill: theme('colors.primaryText');
+}
+
+.list-font {
+  font-size: 0.5rem;
+}
+
+.item-font {
+  font-size: 0.6rem;
+}
+
 @tailwind utilities;
