@@ -6,12 +6,12 @@ import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 
 export default function WorkPagesLayout({
-  discription,
+  contentHtml,
   tags,
   image,
   role,
   links,
-  pageTitle,
+  title,
   webLink,
   githubLink,
 }) {
@@ -27,12 +27,13 @@ export default function WorkPagesLayout({
     setIsImgLoaded(true);
   };
   return (
-    <Layout title={pageTitle}>
+    <Layout title={`works/${title}`}>
       <main>
         <div className="grid grid-cols-12 gap-8 text-primaryText h-screen">
           <div className="col-span-8">
             <Discription
-              discription={discription}
+              contentHtml={contentHtml}
+              title={title}
               webLink={webLink}
               githubLink={githubLink}
             />
@@ -55,14 +56,14 @@ export default function WorkPagesLayout({
 
         <ul className="text-indigo-400 text-center mt-20 font-bold text-xl">
           <li className="inline-block mr-10">
-            <Link href={links.prev.src}>
+            <Link href="/work/[id]" as={`${links.prev.src}`}>
               <a className={`underline inline-block ${!loaded && 'skeleton'}`}>
                 👈 {links.prev.title}
               </a>
             </Link>
           </li>
           <li className="inline-block">
-            <Link href={links.next.src}>
+            <Link href="/work/[id]" as={`${links.next.src}`}>
               <a className={`underline inline-block ${!loaded && 'skeleton'}`}>
                 {links.next.title} 👉
               </a>

@@ -3,7 +3,7 @@ import { useTheme } from '@/utils/themeContext';
 export default function WorksLink() {
   const { loaded } = useTheme();
   return (
-    <Link href="/works/work2">
+    <Link href="/work/works">
       <div className="group bg-paper custom-border h-full hover:bg-yellow">
         <div className="m-3 ">
           <div className="text-primaryText text-lg font-bold">

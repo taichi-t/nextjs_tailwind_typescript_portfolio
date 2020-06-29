@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTheme } from '@/utils/themeContext';
 import Launch from '@/public/icons/launch.svg';
 
-export default function WorkCard1({ discription, webLink, githubLink }) {
-  const { title, textBox1 } = discription;
+export default function WorkCard1({ contentHtml, title, webLink, githubLink }) {
   const { loaded, headerHeight } = useTheme();
   const [height, setHeight] = useState(null);
 
@@ -18,18 +17,17 @@ export default function WorkCard1({ discription, webLink, githubLink }) {
         <span className={`inline-block ${!loaded && 'skeleton'}`}>{title}</span>
       </h1>
       <article className="mt-5">
-        <h2 className={`text-lg font-bold text-secondaryText `}>
+        {/* <h2 className={`text-lg font-bold text-secondaryText `}>
           <span className={`inline-block ${!loaded && 'skeleton'}`}>
-            {textBox1.title}
+            {title}
           </span>
-        </h2>
-        <p
+        </h2> */}
+        <div
           className={`text-sm mt-2 leading-relaxed inline-block ${
             !loaded && 'skeleton'
           }`}
-        >
-          {textBox1.content}
-        </p>
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        />
 
         <a
           href={webLink}

@@ -15,7 +15,7 @@ export default function WorkCard2() {
   const handleLoad = () => setIsImgLoaded(true);
 
   return (
-    <Link href="/works/work3">
+    <Link href="/work/[id]" as={`/work/portfolio`}>
       <div className="group bg-paper custom-border hover:bg-opacityGreen h-full">
         <div className="m-8">
           <div

@@ -11,7 +11,7 @@ export default function WorkCard1() {
   const { elements } = useCreateTagElements(tags);
 
   return (
-    <Link href="/works/work1">
+    <Link href="/work/[id]" as={`/work/my-work-space`}>
       <div className="group  bg-paper custom-border flex justify-center items-center hover:bg-opacityBlue">
         <div className="m-12 grid grid-cols-12 gap-8">
           <div className="col-span-6">
