@@ -5,7 +5,7 @@ import Works from '@/components/Works/Works';
 
 export default function IndexPage() {
   return (
-    <Layout title="home">
+    <Layout title="home" pathname>
       <main>
         <Hero />
         <Introduction />
@@ -14,3 +14,5 @@ export default function IndexPage() {
     </Layout>
   );
 }
+
+IndexPage.getInitialProps = async ({ pathname }) => pathname;

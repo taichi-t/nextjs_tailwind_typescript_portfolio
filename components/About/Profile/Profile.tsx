@@ -1,9 +1,5 @@
-import GithubSvg from '@/public/icons/github.svg';
-import LinkedInSvg from '@/public/icons/linkedin.svg';
-import TwitterSvg from '@/public/icons/twitter.svg';
-import InstaGraSvg from '@/public/icons/instagram.svg';
-import MyBlogSvg from '@/public/icons/my-blog.svg';
 import { useTheme } from '@/utils/themeContext';
+import Sns from '@/components/Sns/Sns';
 
 export default function Profile() {
   const { loaded } = useTheme();
@@ -23,33 +19,7 @@ export default function Profile() {
         </p>
       </div>
 
-      <ul className="flex">
-        <li className="w-5 mr-3">
-          <a href="">
-            <GithubSvg className="svgs" />
-          </a>
-        </li>
-        <li className="w-5 mr-3">
-          <a href="">
-            <LinkedInSvg className="svgs" />
-          </a>
-        </li>
-        <li className="w-5 mr-3">
-          <a href="">
-            <TwitterSvg className="svgs" />
-          </a>
-        </li>
-        <li className="w-5 mr-3">
-          <a href="">
-            <InstaGraSvg className="svgs" />
-          </a>
-        </li>
-        <li className="w-5 self-center mr-3">
-          <a href="">
-            <MyBlogSvg className="svgs" />
-          </a>
-        </li>
-      </ul>
+      <Sns />
     </div>
   );
 }

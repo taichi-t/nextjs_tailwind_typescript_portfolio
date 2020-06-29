@@ -18,6 +18,21 @@ export default function Header() {
           <li></li>
           <ul className="flex justify-between items-center space-x-4 text-xs font-bold">
             <li>
+              <Link href="/">
+                <a>
+                  <span
+                    className={`font-bold text-xs hover:bg-yellow inline-block ${
+                      !loaded && 'skeleton'
+                    }`}
+                  >
+                    home
+                  </span>
+                </a>
+              </Link>
+            </li>
+            <span className="mx-2 font-bold text-primaryText">/</span>
+
+            <li>
               <Link href="/about">
                 <a>
                   <span
@@ -30,6 +45,7 @@ export default function Header() {
                 </a>
               </Link>
             </li>
+            <span className="mx-2 font-bold text-primaryText">/</span>
 
             <li>
               <button onClick={toggleTheme} className="focus:outline-none">

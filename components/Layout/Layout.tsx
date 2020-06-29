@@ -4,7 +4,7 @@ import Header from './Header/Header';
 import Head from 'next/head';
 import { useTheme } from '@/utils/themeContext';
 
-export default function Layout({ children, title }) {
+export default function Layout({ children, title, pathname }) {
   const { theme } = useTheme();
   useEffect(() => {
     theme === 'theme-dark'

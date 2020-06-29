@@ -15,4 +15,5 @@ module.exports = {
   work1Config: website.work1Config,
   work2Config: website.work2Config,
   work3Config: website.work3Config,
+  sns: website.sns,
 };

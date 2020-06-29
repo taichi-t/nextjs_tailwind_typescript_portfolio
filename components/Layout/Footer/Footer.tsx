@@ -1,6 +1,7 @@
 import { useTheme } from '@/utils/themeContext';
 import Launch from '@/public/icons/launch.svg';
 import Link from 'next/link';
+import Sns from '@/components/Sns/Sns';
 
 export default function Footer() {
   const { loaded } = useTheme();
@@ -19,7 +20,7 @@ export default function Footer() {
           </span>
         </h3>
         <a
-          className={`text-xl leading-tight inline-block text-primaryText`}
+          className={`text-xl leading-tight inline-block text-primaryText mb-3`}
           href="mailto:t.tujioka.0925@gmail.com"
         >
           <span
@@ -33,15 +34,17 @@ export default function Footer() {
             <Launch className="inline-block fill-current" width="1rem" />
           </span>
         </a>
+        <Sns />
       </div>
       <div className="mt-8 pb-32 inner-wrap">
-        <button className="text-base text-primaryText font-bold mr-3  hover:text-primaryText hover:bg-yellow focus:outline-none">
+        <button className="text-base text-primaryText font-bold  hover:text-primaryText hover:bg-yellow focus:outline-none">
           <Link href="/">
             <span className={`inline-block ${!loaded && 'skeleton'}`}>
               about
             </span>
           </Link>
         </button>
+        <span className="mx-2 font-bold text-primaryText">/ </span>
         <button className="text-base text-primaryText font-bold hover:text-primaryText hover:bg-yellow focus:outline-none">
           <span className={`inline-block ${!loaded && 'skeleton'}`}>
             resume📄
