@@ -82,9 +82,6 @@ html {
   /* divider */
   --color-border: #fff;
   --color-inner: #2a343d;
-
-  /* --color-disabled: rgba(255, 255, 255, 0.5);
-  --color-hint: rgba(255, 255, 255, 0.5); */
   --color-divider: rgba(255, 255, 255, 0.12);
 }
 

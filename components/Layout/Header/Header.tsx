@@ -1,8 +1,11 @@
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
+import { useRouter } from 'next/router';
 
 export default function Header() {
+  const { pathname } = useRouter();
+
   const { loaded, toggleTheme, theme, setHeight } = useTheme();
 
   const headerRef = useRef(null);
@@ -15,38 +18,49 @@ export default function Header() {
     <header>
       <nav ref={headerRef}>
         <ul className="flex justify-between items-center p-4 text-primaryText">
-          <li></li>
-          <ul className="flex justify-between items-center space-x-4 text-xs font-bold">
+          <li>icon</li>
+          <ul className="flex justify-between items-center ">
             <li>
               <Link href="/">
-                <a>
-                  <span
-                    className={`font-bold text-xs hover:bg-yellow inline-block ${
-                      !loaded && 'skeleton'
-                    }`}
-                  >
+                <a
+                  className={`hover:text-yellow font-bold text-xs mr-4 ${
+                    pathname === '/' && 'text-yellow'
+                  }`}
+                >
+                  <span className={`inline-block ${!loaded && 'skeleton'}`}>
                     home
                   </span>
                 </a>
               </Link>
             </li>
-            <span className="mx-2 font-bold text-primaryText">/</span>
 
             <li>
               <Link href="/about">
-                <a>
-                  <span
-                    className={`font-bold text-xs hover:bg-yellow inline-block ${
-                      !loaded && 'skeleton'
-                    }`}
-                  >
+                <a
+                  className={`hover:text-yellow font-bold text-xs mr-4 ${
+                    pathname === '/about' && 'text-yellow'
+                  }`}
+                >
+                  <span className={`inline-block ${!loaded && 'skeleton'}`}>
                     about
                   </span>
                 </a>
               </Link>
             </li>
-            <span className="mx-2 font-bold text-primaryText">/</span>
-
+            <li>
+              <Link href="/work/works">
+                <a
+                  className={`hover:text-yellow font-bold text-xs mr-4 ${
+                    pathname === '/work/works' && 'text-yellow'
+                  }`}
+                >
+                  <span className={`inline-block ${!loaded && 'skeleton'}`}>
+                    works
+                  </span>
+                </a>
+              </Link>
+            </li>
+            <span className="mr-4">/</span>
             <li>
               <button onClick={toggleTheme} className="focus:outline-none">
                 <span

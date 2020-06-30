@@ -2,9 +2,12 @@ import { useTheme } from '@/utils/themeContext';
 import Launch from '@/public/icons/launch.svg';
 import Link from 'next/link';
 import Sns from '@/components/Sns/Sns';
+import { useRouter } from 'next/router';
 
 export default function Footer() {
+  const { pathname } = useRouter();
   const { loaded } = useTheme();
+
   return (
     <footer className="mt-20">
       <div className="inner-wrap">
@@ -36,19 +39,29 @@ export default function Footer() {
         </a>
         <Sns />
       </div>
-      <div className="mt-8 pb-32 inner-wrap">
-        <button className="text-base text-primaryText font-bold  hover:text-primaryText hover:bg-yellow focus:outline-none">
-          <Link href="/">
-            <span className={`inline-block ${!loaded && 'skeleton'}`}>
+      <div className="mt-8 pb-32 inner-wrap text-base text-primaryText">
+        <button
+          className={`font-bold  hover:text-yellow focus:outline-none ${
+            pathname === '/about' && 'text-yellow'
+          }`}
+        >
+          <Link href="/about">
+            <span className={`inline-block ${!loaded && 'skeleton'} `}>
               about
             </span>
           </Link>
         </button>
-        <span className="mx-2 font-bold text-primaryText">/ </span>
-        <button className="text-base text-primaryText font-bold hover:text-primaryText hover:bg-yellow focus:outline-none">
-          <span className={`inline-block ${!loaded && 'skeleton'}`}>
-            resume📄
-          </span>
+        <span className="mx-2 text-primaryText">/ </span>
+        <button
+          className={`font-bold  hover:text-yellow focus:outline-none ${
+            pathname === '/resume' && 'text-yellow'
+          }`}
+        >
+          <Link href="/resume">
+            <span className={`inline-block ${!loaded && 'skeleton'} `}>
+              resume📄
+            </span>
+          </Link>
         </button>
       </div>
     </footer>
