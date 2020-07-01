@@ -57,11 +57,11 @@ export default function Footer() {
             pathname === '/resume' && 'text-yellow'
           }`}
         >
-          <Link href="/resume">
+          <a href="/taichi-tsujioka-resume.pdf">
             <span className={`inline-block ${!loaded && 'skeleton'} `}>
               resume📄
             </span>
-          </Link>
+          </a>
         </button>
       </div>
     </footer>
