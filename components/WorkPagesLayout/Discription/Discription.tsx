@@ -1,23 +1,33 @@
-import { useEffect, useState } from 'react';
 import { useTheme } from '@/utils/themeContext';
 import Launch from '@/public/icons/launch.svg';
+import Aside from '@/components/WorkPagesLayout/Aside/Aside';
 
-export default function WorkCard1({ contentHtml, title, webLink, githubLink }) {
+export default function WorkCard1({
+  contentHtml,
+  title,
+  webLink,
+  githubLink,
+  tags,
+  role,
+}) {
   const { loaded } = useTheme();
-  const [height, setHeight] = useState(null);
 
   return (
     <div>
-      <h1 className={`inner-wrap font-bold text-2xl font-display`}>
+      <h1 className={`inner-wrap font-bold text-2xl font-display `}>
         <span className={`inline-block ${!loaded && 'skeleton'}`}>{title}</span>
       </h1>
       <article className="mt-5">
         <div
-          className={`text-sm mt-2 leading-relaxed inline-block ${
+          className={`text-sm leading-relaxed inline-block ${
             !loaded && 'skeleton'
           }`}
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
+
+        <div className="tablet:hidden desktop:hidden mobile:block mobile:mt-5">
+          <Aside tags={tags} role={role} />
+        </div>
 
         <a
           href={webLink}

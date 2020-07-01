@@ -56,7 +56,7 @@ module.exports = {
 
         // desktop: '920px',
         // // => @media (min-width: 1280px) { ... }
-        // sm: { max: '319px' },
+
         mobile: { max: '767px' },
         tablet: { min: '768px', max: '919px' },
         desktop: { min: '920px' },

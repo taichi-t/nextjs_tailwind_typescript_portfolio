@@ -6,7 +6,7 @@ import WorksGridLayout from '@/components/WorksGridLayout/WorksGridLayout';
 export default function Posts({ allWorksData }) {
   return (
     <Layout title="works">
-      <main>
+      <main className="mt-3">
         <WorksGridLayout allWorksData={allWorksData} />
       </main>
     </Layout>

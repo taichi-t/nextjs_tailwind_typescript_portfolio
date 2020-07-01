@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header>
       <nav>
-        <ul className="flex justify-between items-center py-4 text-primaryText mobile:flex-wrap mobile:py-2">
+        <ul className="flex justify-between items-center py-4 text-primaryText mobile:flex-wrap mobile:py-2 ">
           <li className={`mobile:grow-1 mobile:w-12 w-16 `}>
             <Link href="/">
               <img src="/logo.png" alt="me" width="100%" height="100%" />
@@ -20,7 +20,7 @@ export default function Header() {
             <li>
               <Link href="/">
                 <a
-                  className={`hover:text-yellow font-bold text-xs mr-4 ${
+                  className={`hover:text-yellow font-bold text-xs mr-4 mobile:mr-2 ${
                     pathname === '/' && 'text-yellow'
                   }`}
                 >
@@ -34,7 +34,7 @@ export default function Header() {
             <li>
               <Link href="/about">
                 <a
-                  className={`hover:text-yellow font-bold text-xs mr-4 ${
+                  className={`hover:text-yellow font-bold text-xs mr-4 mobile:mr-2 ${
                     pathname === '/about' && 'text-yellow'
                   }`}
                 >
@@ -47,7 +47,7 @@ export default function Header() {
             <li>
               <Link href="/work/works">
                 <a
-                  className={`hover:text-yellow font-bold text-xs ${
+                  className={`hover:text-yellow font-bold text-xs  ${
                     pathname === '/work/works' && 'text-yellow'
                   }`}
                 >
@@ -57,11 +57,11 @@ export default function Header() {
                 </a>
               </Link>
             </li>
-            <span className="mx-4">/</span>
+            <span className="mx-2">/</span>
             <li>
               <button onClick={toggleTheme} className="focus:outline-none">
                 <span
-                  className={`font-bold text-sm inline-block ${
+                  className={`font-bold text-lg inline-block ${
                     !loaded && 'skeleton'
                   }`}
                 >

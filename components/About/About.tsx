@@ -6,7 +6,7 @@ import SoftSkill from './SoftSkill/SoftSkill';
 
 export default function About() {
   return (
-    <main>
+    <main className="mt-3">
       <div className="bg-paper custom-border-thick">
         <div className="m-3 grid grid-cols-12 grid-rows-6 gap-3 mobile:gap-1">
           <div className="row-span-6 col-span-3 mobile:col-span-12">

@@ -28,17 +28,19 @@ export default function WorkPagesLayout({
   };
   return (
     <Layout title={`works/${title}`}>
-      <main>
-        <div className="grid grid-cols-12 gap-8 text-primaryText tablet:px-3">
-          <div className="col-span-8">
+      <main className="mt-3">
+        <div className="grid grid-cols-12 gap-8 text-primaryText tablet:px-3 mobile:gap-1">
+          <div className="col-span-8 mobile:col-span-12">
             <Discription
               contentHtml={contentHtml}
               title={title}
               webLink={webLink}
               githubLink={githubLink}
+              tags={tags}
+              role={role}
             />
           </div>
-          <div className="col-span-4">
+          <div className="col-span-4 mobile:hidden">
             <Aside tags={tags} role={role} />
           </div>
         </div>
@@ -54,20 +56,20 @@ export default function WorkPagesLayout({
           />
         </div>
 
-        <ul className="text-indigo-400 mt-20 font-bold flex justify-around">
-          <li className="mr-10">
+        <ul className="flex font-bold justify-around text-indigo-400 mt-20 inner-wrap">
+          <li className="text-left">
+            <p className="text-xl">👈</p>
             <Link href="/work/[id]" as={`${links.prev.src}`}>
               <a className={`underline inline-block ${!loaded && 'skeleton'}`}>
-                <span className="text-xl">👈 </span>
                 <span className="text-base">{links.prev.title}</span>
               </a>
             </Link>
           </li>
-          <li className="">
+          <li className="text-right">
+            <p className="text-xl">👉</p>
             <Link href="/work/[id]" as={`${links.next.src}`}>
               <a className={`underline inline-block ${!loaded && 'skeleton'}`}>
                 <span className="text-base">{links.next.title}</span>
-                <span className="text-xl"> 👉</span>
               </a>
             </Link>
           </li>

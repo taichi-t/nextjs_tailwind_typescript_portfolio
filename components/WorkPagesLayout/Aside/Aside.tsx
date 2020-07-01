@@ -6,7 +6,7 @@ export default function Aside({ tags, role }) {
   const { elements } = useCreateTagElements(tags);
 
   return (
-    <aside className="flex justify-center items-center">
+    <aside className="flex justify-center items-center mobile:justify-start">
       <div className="inline-block">
         <h2 className="text-secondaryText text-xs font-bold">
           <span className={`inline-block ${!loaded && 'skeleton'}`}>Role</span>
@@ -21,7 +21,7 @@ export default function Aside({ tags, role }) {
               </li>
             ))}
         </ul>
-        <h2 className="text-secondaryText text-xs font-bold mt-5">
+        <h2 className="text-secondaryText text-xs font-bold mt-5 mobile:mt-1">
           <span className={`inline-block ${!loaded && 'skeleton'}`}>
             Technology
           </span>
