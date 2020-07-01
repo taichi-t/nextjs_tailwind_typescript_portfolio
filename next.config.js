@@ -13,7 +13,4 @@ module.exports = {
   },
   font: website.font,
   sns: website.sns,
-  env: {
-    resumeUrl: process.env.RESUME_URL,
-  },
 };
