@@ -29,7 +29,7 @@ export default function WorkPagesLayout({
   return (
     <Layout title={`works/${title}`}>
       <main>
-        <div className="grid grid-cols-12 gap-8 text-primaryText h-screen">
+        <div className="grid grid-cols-12 gap-8 text-primaryText tablet:px-3">
           <div className="col-span-8">
             <Discription
               contentHtml={contentHtml}
@@ -42,7 +42,7 @@ export default function WorkPagesLayout({
             <Aside tags={tags} role={role} />
           </div>
         </div>
-        <div className={`-mt-24 inner-wrap ${!isImgLoaded && 'skeleton'}`}>
+        <div className={`mt-5 inner-wrap ${!isImgLoaded && 'skeleton'}`}>
           <img
             src={image.src}
             alt={image.alt}
@@ -54,18 +54,20 @@ export default function WorkPagesLayout({
           />
         </div>
 
-        <ul className="text-indigo-400 text-center mt-20 font-bold text-xl">
-          <li className="inline-block mr-10">
+        <ul className="text-indigo-400 mt-20 font-bold flex justify-around">
+          <li className="mr-10">
             <Link href="/work/[id]" as={`${links.prev.src}`}>
               <a className={`underline inline-block ${!loaded && 'skeleton'}`}>
-                👈 {links.prev.title}
+                <span className="text-xl">👈 </span>
+                <span className="text-base">{links.prev.title}</span>
               </a>
             </Link>
           </li>
-          <li className="inline-block">
+          <li className="">
             <Link href="/work/[id]" as={`${links.next.src}`}>
               <a className={`underline inline-block ${!loaded && 'skeleton'}`}>
-                {links.next.title} 👉
+                <span className="text-base">{links.next.title}</span>
+                <span className="text-xl"> 👉</span>
               </a>
             </Link>
           </li>

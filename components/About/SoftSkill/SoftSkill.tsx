@@ -3,9 +3,9 @@ export default function SoftSkill() {
   const { loaded } = useTheme();
   return (
     <div className="p-6 border border-divider bg-paper mt-8">
-      <div className="grid grid-cols-12 gap-3 text-primaryText">
+      <div className="grid grid-cols-12 gap-3 text-primaryText table:gap-2">
         <div className="col-span-6">
-          <h2 className="about-list-title">
+          <h2 className="about-list-title ">
             <span className={`inline-block ${!loaded && 'skeleton'}`}>
               🔥 I'm really passionate about ...
             </span>

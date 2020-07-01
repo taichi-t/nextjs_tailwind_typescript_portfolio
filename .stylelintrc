@@ -3,6 +3,7 @@
   "rules": {
     "at-rule-no-unknown": [ true, {
       "ignoreAtRules": [
+        "screen"
         "extends",
         "tailwind"
       ]

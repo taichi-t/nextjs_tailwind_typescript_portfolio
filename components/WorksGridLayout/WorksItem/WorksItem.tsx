@@ -19,7 +19,7 @@ export default function WorksGridLayout({ item }) {
 
   return (
     <Link href="/work/[id]" as={`/work/${id}`}>
-      <div className="col-span-4 text-primaryText bg-paper p-3 border border-divider">
+      <div className="col-span-4 text-primaryText bg-paper p-3 border border-divider tablet:p-2">
         <div className={`${!isImgLoaded && 'skeleton'}`}>
           <img
             src={thumbnail.src}

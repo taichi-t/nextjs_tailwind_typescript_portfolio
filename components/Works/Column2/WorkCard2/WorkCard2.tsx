@@ -25,9 +25,11 @@ export default function WorkCard2() {
   return (
     <Link href="/work/[id]" as={`/work/gatsby-blog`}>
       <div className="group bg-paper custom-border hover:bg-opacityBioret h-full">
-        <div className="m-8">
+        <div className="m-8 tablet:m-6 mobile:m-4">
           <div
-            className={`w-9/12 my-0 mx-auto mb-6 ${!isImgLoaded && 'skeleton'}`}
+            className={`w-9/12 tablet:w-full my-0 mx-auto mb-6 mobile:w-full mobile:mb-3 ${
+              !isImgLoaded && 'skeleton'
+            }`}
           >
             <img
               src="/pc.jpg"
@@ -42,7 +44,7 @@ export default function WorkCard2() {
             />
           </div>
           <ul>
-            <li className="mb-5 text-primaryText">
+            <li className="mb-5 text-primaryText mobile:mb-2">
               <span
                 className={`font-bold text-2xl inline-block font-display group-hover:bg-paper ${
                   !loaded && 'skeleton text-transparent'

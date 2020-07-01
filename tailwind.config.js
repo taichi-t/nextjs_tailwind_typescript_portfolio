@@ -48,6 +48,19 @@ module.exports = {
         normal: 400,
         bold: 700,
       },
+      screens: {
+        // mobile: '320px',
+
+        // tablet: '768px',
+        // // => @media (min-width: 1024px) { ... }
+
+        // desktop: '920px',
+        // // => @media (min-width: 1280px) { ... }
+        // sm: { max: '319px' },
+        mobile: { max: '767px' },
+        tablet: { min: '768px', max: '919px' },
+        desktop: { min: '920px' },
+      },
     },
   },
   variants: {

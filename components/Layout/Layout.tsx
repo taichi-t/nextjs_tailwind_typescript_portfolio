@@ -14,7 +14,7 @@ export default function Layout({ children, title }) {
 
   return (
     <div className={`${theme} bg-background content-transition`}>
-      <div className="wrap">
+      <div className="wrap px-2">
         <Head>
           <title>{title || 'portfolio'}</title>
           <meta charSet="utf-8" />

@@ -6,5 +6,5 @@ export default function WorksGridLayout({ allWorksData }) {
     <WorksItem item={item} key={item.id} />
   ));
 
-  return <div className="grid grid-cols-12 gap-4">{contents}</div>;
+  return <div className="grid grid-cols-12 gap-4 tablet:gap-2">{contents}</div>;
 }

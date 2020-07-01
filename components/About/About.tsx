@@ -8,7 +8,7 @@ export default function About() {
   return (
     <main>
       <div className="bg-paper custom-border-thick">
-        <div className="m-3 grid grid-cols-12 grid-rows-6 h-full gap-3">
+        <div className="m-3 grid grid-cols-12 grid-rows-6 gap-3">
           <div className="row-span-6 col-span-3">
             <ProfileImage />
           </div>

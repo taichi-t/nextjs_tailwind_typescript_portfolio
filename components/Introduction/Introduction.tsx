@@ -4,10 +4,10 @@ export default function Hero() {
   const { loaded } = useTheme();
 
   return (
-    <div className="mt-20 inner-wrap">
+    <div className="mt-20 inner-wrap mobile:mt-0">
       <h2 className="title text-primaryText ">
         <span
-          className={`font-display font-bold text-4xl inline-block ${
+          className={`font-display font-bold text-4xl inline-block mobile:text-lg ${
             !loaded && 'skeleton'
           }`}
         >
@@ -15,7 +15,7 @@ export default function Hero() {
         </span>
         <br />
         <span
-          className={`text-2xl leading-tight inline-block ${
+          className={`text-2xl leading-tight inline-block mobile:text-sm ${
             !loaded && 'skeleton'
           }`}
         >

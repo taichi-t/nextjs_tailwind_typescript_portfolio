@@ -1,25 +1,22 @@
-import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 import { useRouter } from 'next/router';
 
 export default function Header() {
+  const { loaded, toggleTheme, theme } = useTheme();
+
   const { pathname } = useRouter();
-
-  const { loaded, toggleTheme, theme, setHeight } = useTheme();
-
-  const headerRef = useRef(null);
-
-  useEffect(() => {
-    setHeight(headerRef.current.clientHeight);
-  }, []);
 
   return (
     <header>
-      <nav ref={headerRef}>
-        <ul className="flex justify-between items-center p-4 text-primaryText">
-          <li>icon</li>
-          <ul className="flex justify-between items-center ">
+      <nav>
+        <ul className="flex justify-between items-center py-4 text-primaryText mobile:flex-wrap mobile:py-2">
+          <li className={`mobile:grow-1 mobile:w-12 w-16 `}>
+            <Link href="/">
+              <img src="/logo.png" alt="me" width="100%" height="100%" />
+            </Link>
+          </li>
+          <ul className="inline-flex w-full justify-end">
             <li>
               <Link href="/">
                 <a
@@ -50,7 +47,7 @@ export default function Header() {
             <li>
               <Link href="/work/works">
                 <a
-                  className={`hover:text-yellow font-bold text-xs mr-4 ${
+                  className={`hover:text-yellow font-bold text-xs ${
                     pathname === '/work/works' && 'text-yellow'
                   }`}
                 >
@@ -60,7 +57,7 @@ export default function Header() {
                 </a>
               </Link>
             </li>
-            <span className="mr-4">/</span>
+            <span className="mx-4">/</span>
             <li>
               <button onClick={toggleTheme} className="focus:outline-none">
                 <span

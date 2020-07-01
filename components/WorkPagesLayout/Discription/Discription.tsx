@@ -3,25 +3,15 @@ import { useTheme } from '@/utils/themeContext';
 import Launch from '@/public/icons/launch.svg';
 
 export default function WorkCard1({ contentHtml, title, webLink, githubLink }) {
-  const { loaded, headerHeight } = useTheme();
+  const { loaded } = useTheme();
   const [height, setHeight] = useState(null);
 
-  useEffect(() => {
-    const fullscreen = window.innerHeight;
-    setHeight(fullscreen - headerHeight);
-  }, [height]);
-
   return (
-    <div style={{ height: `${height}px` }}>
+    <div>
       <h1 className={`inner-wrap font-bold text-2xl font-display`}>
         <span className={`inline-block ${!loaded && 'skeleton'}`}>{title}</span>
       </h1>
       <article className="mt-5">
-        {/* <h2 className={`text-lg font-bold text-secondaryText `}>
-          <span className={`inline-block ${!loaded && 'skeleton'}`}>
-            {title}
-          </span>
-        </h2> */}
         <div
           className={`text-sm mt-2 leading-relaxed inline-block ${
             !loaded && 'skeleton'

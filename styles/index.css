@@ -158,5 +158,18 @@ dd {
   color: theme('colors.primaryText');
   margin-top: theme('margin.1');
 }
+.logo {
+  display: inline-block;
+  width: 4rem;
+}
+
+@screen tablet {
+  .about-list-title {
+    font-size: theme('fontSize.xs');
+  }
+  .about-list-content {
+    font-size: theme('fontSize.xs');
+  }
+}
 
 @tailwind utilities;
