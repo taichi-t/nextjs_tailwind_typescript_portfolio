@@ -4,7 +4,7 @@ export default function Hero() {
   const { loaded } = useTheme();
 
   return (
-    <div className="mt-20 inner-wrap mobile:mt-0">
+    <div className="inner-wrap">
       <h2 className="title text-primaryText ">
         <span
           className={`font-display font-bold text-4xl inline-block mobile:text-lg ${

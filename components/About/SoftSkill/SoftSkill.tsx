@@ -2,9 +2,9 @@ import { useTheme } from '@/utils/themeContext';
 export default function SoftSkill() {
   const { loaded } = useTheme();
   return (
-    <div className="p-6 border border-divider bg-paper mt-8">
-      <div className="grid grid-cols-12 gap-3 text-primaryText table:gap-2">
-        <div className="col-span-6">
+    <div className="p-6 border border-divider bg-paper mt-8 mobile:p-3">
+      <div className="grid grid-cols-12 gap-3 text-primaryText table:gap-2 mobile:gap-1">
+        <div className="col-span-6 mobile:col-span-12">
           <h2 className="about-list-title ">
             <span className={`inline-block ${!loaded && 'skeleton'}`}>
               🔥 I'm really passionate about ...
@@ -17,7 +17,7 @@ export default function SoftSkill() {
             </span>
           </p>
         </div>
-        <div className="col-span-6">
+        <div className="col-span-6 mobile:col-span-12 mobile:mt-5">
           <h2 className="about-list-title">
             <span className={`inline-block ${!loaded && 'skeleton'}`}>
               👀 My ambition is ...
@@ -32,7 +32,7 @@ export default function SoftSkill() {
             </span>
           </p>
         </div>
-        <div className="col-span-6">
+        <div className="col-span-6 mobile:col-span-12 mobile:mt-5">
           <h2 className="about-list-title">
             <span className={`inline-block ${!loaded && 'skeleton'}`}>
               👥 When I work on a project, ...
@@ -46,7 +46,7 @@ export default function SoftSkill() {
             </span>
           </p>
         </div>
-        <div className="col-span-6">
+        <div className="col-span-6 mobile:col-span-12 mobile:mt-5">
           <h2 className="about-list-title">
             <span className={`inline-block ${!loaded && 'skeleton'}`}>
               🏋️‍♂️ Me time involves ...
