@@ -24,7 +24,6 @@
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.js",
-    "next.config.js",
-    "config/website.js"
+    "next.config.js"
   ]
 }
