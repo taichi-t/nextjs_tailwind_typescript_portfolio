@@ -52,11 +52,7 @@ export default function Footer() {
           </Link>
         </button>
         <span className="mx-2 text-primaryText">/</span>
-        <button
-          className={`font-bold  hover:text-yellow focus:outline-none ${
-            pathname === '/resume' && 'text-yellow'
-          }`}
-        >
+        <button className={`font-bold  hover:text-yellow focus:outline-none`}>
           <a href="/taichi-tsujioka-resume.pdf" target="_blank">
             <span className={`inline-block ${!loaded && 'skeleton'} `}>
               resume📄
