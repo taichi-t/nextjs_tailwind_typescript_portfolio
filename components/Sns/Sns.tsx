@@ -1,7 +1,7 @@
 import GithubSvg from '@/public/icons/github.svg';
 import LinkedInSvg from '@/public/icons/linkedin.svg';
 import InstaGramSvg from '@/public/icons/instagram.svg';
-import config from '@/next.config';
+const config = require('@/next.config');
 
 export default function Sns() {
   const { sns } = config;
