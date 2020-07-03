@@ -1,0 +1,39 @@
+.hero-text-container {
+  position: relative;
+  font-family: theme('fontFamily.display');
+  font-weight: bold;
+  color: theme('colors.primaryText');
+  font-size: theme('fontSize.4xl');
+  line-height: theme('lineHeight.10');
+  letter-spacing: theme('letterSpacing.wider');
+}
+
+.hero-text {
+  transform: skew(-10deg) rotate(-10deg);
+  text-align: center;
+  text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px,
+    #533d4a 4px 4px, #533d4a 5px 5px, #533d4a 6px 6px, #533d4a 7px 7px,
+    #533d4a 8px 8px;
+}
+
+.hero-text:nth-child(1) {
+  color: theme('colors.red');
+}
+.hero-text:nth-child(2) {
+  color: theme('colors.green');
+}
+.hero-text:nth-child(3) {
+  color: theme('colors.yellow');
+}
+
+.disable-hero-text {
+  color: transparent;
+  text-shadow: none;
+}
+
+@screen mobile {
+  .hero-text-container {
+    font-size: theme('fontSize.xl');
+    line-height: theme('lineHeight.7');
+  }
+}
