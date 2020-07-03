@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import Head from 'next/head';
@@ -6,6 +6,8 @@ import { useTheme } from '@/utils/themeContext';
 
 export default function Layout({ children, title }) {
   const { theme } = useTheme();
+  const headerRef = useRef(null);
+
   useEffect(() => {
     theme === 'theme-dark'
       ? (document.body.style.backgroundColor = '#15202b')
@@ -23,7 +25,9 @@ export default function Layout({ children, title }) {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <Header />
+        <header ref={headerRef}>
+          <Header />
+        </header>
         {children}
         <Footer />
       </div>

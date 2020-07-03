@@ -1,9 +1,11 @@
+import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 import { useRouter } from 'next/router';
 
 export default function Header() {
   const { loaded, toggleTheme, theme } = useTheme();
+  const headerRef = useRef(null);
 
   const { pathname } = useRouter();
 
