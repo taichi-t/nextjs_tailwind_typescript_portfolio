@@ -1,16 +1,18 @@
-const website = require('./config/website');
-
 module.exports = {
   siteMetadata: {
-    title: website.title,
-    titleTemplate: website.titleTemplate,
-    description: website.description,
-    siteUrl: website.siteUrl,
-    image: website.image,
-    owner: website.owner,
-    twitterUsername: website.twitterUsername,
-    facebookAppID: '',
+    title: 'portfolio',
+    titleTemplate: "Taichi's portfolio",
+    description:
+      "Hi there! My name is Taichi Tsujioka. I'm a junior developer based in Vancouver, Canada",
   },
-  font: website.font,
-  sns: website.sns,
+  font: {
+    Montserrat: [{ weight: 300 }, { weight: 400 }, { weight: 700 }],
+    Rubik: [{ weight: 300 }, { weight: 400 }, { weight: 700 }],
+  },
+  sns: {
+    linkedIn: 'https://www.linkedin.com/in/taichi-tsujioka/',
+    instagram: 'https://www.instagram.com/nabagibasan/',
+    github: 'https://github.com/taichi-t',
+    blog: 'https://www.canajapa.com/',
+  },
 };

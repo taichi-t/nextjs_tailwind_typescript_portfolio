@@ -1,5 +1,4 @@
 import config from '@/next.config';
-
 let FontFaceObserver = require('fontfaceobserver');
 
 const useFontFaceObserver = (setLoaded) => {
