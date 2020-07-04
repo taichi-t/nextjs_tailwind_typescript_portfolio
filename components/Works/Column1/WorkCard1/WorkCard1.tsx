@@ -7,7 +7,7 @@ export default function WorkCard1() {
   const { loaded } = useTheme();
 
   const tags = ['reactHook', 'redux', 'materialUi', 'localStorage'];
-  const { elements } = useCreateTagElements(tags);
+  // const { elements } = useCreateTagElements(tags);
 
   return (
     <Link href="/work/[id]" as={`/work/my-work-space`}>
@@ -30,7 +30,19 @@ export default function WorkCard1() {
                 </span>
               </li>
               <li>
-                <ul className="flex flex-wrap">{elements}</ul>
+                <ul className="flex flex-wrap">
+                  {tags.map((tag, index) => (
+                    <li
+                      className={`bg-inner mb-1 ${
+                        tag === tags[tags.length - 1] ? '' : 'mr-1'
+                      } tag-font font-bold `}
+                      key={index}
+                    >
+                      <span className={`text-opacity-50 text-${tag}`}>#</span>
+                      <span className={`text-${tag}`}>{tag}</span>
+                    </li>
+                  ))}
+                </ul>
               </li>
             </ul>
           </div>
