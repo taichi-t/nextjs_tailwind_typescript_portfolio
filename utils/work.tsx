@@ -7,12 +7,11 @@ import html from 'remark-html';
 const postsDirectory = path.join(process.cwd(), 'public/MDfiles');
 
 export function getAllWorkIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => {
-    const folderName = `${fileName}/`;
+  const folderNames = fs.readdirSync(postsDirectory);
+  return folderNames.map((folderName) => {
     return {
       params: {
-        id: `${folderName + fileName}`.replace(/\.md$/, ''),
+        id: folderName,
       },
     };
   });
@@ -20,8 +19,8 @@ export function getAllWorkIds() {
 
 export function getSortedWorksData() {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((folderName) => {
+  const folderNames = fs.readdirSync(postsDirectory);
+  const allPostsData = folderNames.map((folderName) => {
     // Remove ".md" from file name to get id
     const id = folderName;
 
