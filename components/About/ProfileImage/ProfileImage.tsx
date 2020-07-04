@@ -8,7 +8,11 @@ export default function ProfileImage() {
 
   const handleLoad = () => setIsImgLoaded(true);
   return (
-    <div className={`p-3 mobile:p-1 ${!isImgLoaded && 'skeleton circle'}`}>
+    <div
+      className={`p-3 mobile:p-1 w-full h-full ${
+        !isImgLoaded && 'skeleton circle'
+      }`}
+    >
       <img
         src="/images/me.JPG"
         alt="me"
