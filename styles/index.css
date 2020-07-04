@@ -64,19 +64,6 @@ html {
 
   --color-nextJs: rgba(0, 0, 0, 0.87);
   --color-contentful: rgba(0, 0, 0, 0.87);
-
-  /* --color-reactHook: #629fda;
-  --color-redux: #764abc;
-  --color-localStorage: #d95726;
-  --color-gatsby: #663399;
-  --color-typeScript: #037acd;
-  --color-materialUi: #04b0ff;
-  --color-nextJs: theme('colors.primaryText');
-  --color-styledComponents: #d046b0;
-  --color-scss: #cf679b;
-  --color-graphQl: #e535ab;
-  --color-contentful: theme('colors.primaryText');
-  --color-tailwind: #4aafb3; */
 }
 
 .theme-dark {
@@ -115,19 +102,6 @@ html {
 
   --color-nextJs: #fefffe;
   --color-contentful: #fefffe;
-
-  /* --color-reactHook: #629fda;
-  --color-redux: #764abc;
-  --color-localStorage: #d95726;
-  --color-gatsby: #663399;
-  --color-typeScript: #037acd;
-  --color-materialUi: #04b0ff;
-  --color-nextJs: theme('colors.primaryText');
-  --color-styledComponents: #d046b0;
-  --color-scss: #cf679b;
-  --color-graphQl: #e535ab;
-  --color-contentful: theme('colors.primaryText');
-  --color-tailwind: #4aafb3; */
 }
 
 .content-transition {
