@@ -6,24 +6,10 @@ export default function Tags({ tags }) {
       } tag-font font-bold `}
       key={index}
     >
-      <span
-        className={`tag-hash ${
-          tag === 'text-nextJs' || tag === 'text-contentful'
-            ? 'primaryText'
-            : `text-${tag}`
-        }`}
-      >
+      <span className={`tag-hash`} style={{ color: `var(--color-${tag})` }}>
         #
       </span>
-      <span
-        className={`${
-          tag === 'text-nextJs' || tag === 'text-contentful'
-            ? 'primaryText'
-            : `text-${tag}`
-        }`}
-      >
-        {tag}
-      </span>
+      <span style={{ color: `var(--color-${tag})` }}>{tag}</span>
     </li>
   ));
 }
