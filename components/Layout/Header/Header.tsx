@@ -13,7 +13,14 @@ export default function Header() {
         <ul>
           <li className={`mobile:grow-1 mobile:w-12 w-16`}>
             <Link href="/">
-              <img src="/images/logo.png" alt="me" width="100%" height="100%" />
+              <div className="w-full h-full">
+                <img
+                  src="/images/logo.png"
+                  alt="me"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
             </Link>
           </li>
         </ul>
