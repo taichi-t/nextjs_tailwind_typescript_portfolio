@@ -1,13 +1,12 @@
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '@/utils/themeContext';
-import useCreateTagElements from '@/hooks/useCreateTagElements';
+import Tags from '@/components/Tags/Tags';
 export default function WorkCard2() {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   const { loaded } = useTheme();
   const tags = ['typeScript', 'nextJs', 'tailwind'];
-  const { elements } = useCreateTagElements(tags);
   useEffect(() => {
     if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
@@ -44,7 +43,9 @@ export default function WorkCard2() {
               </span>
             </li>
             <li>
-              <ul className="flex flex-wrap">{elements}</ul>
+              <ul className="flex flex-wrap">
+                <Tags tags={tags} />
+              </ul>
             </li>
           </ul>
         </div>

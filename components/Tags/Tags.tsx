@@ -7,15 +7,19 @@ export default function Tags({ tags }) {
       key={index}
     >
       <span
-        className={`tag-hash text-${
-          tag === 'nextJs' || tag === 'contentful' ? 'primaryText' : tag
+        className={`tag-hash ${
+          tag === 'text-nextJs' || tag === 'text-contentful'
+            ? 'primaryText'
+            : `text-${tag}`
         }`}
       >
         #
       </span>
       <span
-        className={`text-${
-          tag === 'nextJs' || tag === 'contentful' ? 'primaryText' : tag
+        className={`${
+          tag === 'text-nextJs' || tag === 'text-contentful'
+            ? 'primaryText'
+            : `text-${tag}`
         }`}
       >
         {tag}

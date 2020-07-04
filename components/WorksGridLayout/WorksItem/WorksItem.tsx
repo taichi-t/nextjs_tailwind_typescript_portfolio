@@ -1,15 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import useCreateTagElemnts from '@/hooks/useCreateTagElements';
 import { useTheme } from '@/utils/themeContext';
+import Tags from '@/components/Tags/Tags';
 
 export default function WorksGridLayout({ item }) {
   const { thumbnail, id, title, tags } = item;
   const { loaded } = useTheme();
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
-
-  const { elements } = useCreateTagElemnts(tags);
 
   useEffect(() => {
     if (imgRef.current.complete) setIsImgLoaded(true);
@@ -34,7 +32,9 @@ export default function WorksGridLayout({ item }) {
             {title}
           </span>
         </h2>
-        <ul className="flex flex-wrap mt-3">{elements}</ul>
+        <ul className="flex flex-wrap mt-3">
+          <Tags tags={tags} />
+        </ul>
       </div>
     </Link>
   );

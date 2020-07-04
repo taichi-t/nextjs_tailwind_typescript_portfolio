@@ -1,15 +1,11 @@
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
-import useCreateTagElements from '@/hooks/useCreateTagElements';
 import WordCard1SVG from '@/public/images/task.svg';
 import Tags from '@/components/Tags/Tags';
 
 export default function WorkCard1() {
   const { loaded } = useTheme();
   const tags = ['reactHook', 'redux', 'materialUi', 'localStorage'];
-  const { elements } = useCreateTagElements(tags);
-
-  // const { elements } = useCreateTagElements(tags);
 
   return (
     <Link href="/work/[id]" as={`/work/my-work-space`}>

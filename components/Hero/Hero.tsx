@@ -41,7 +41,7 @@ export default function Hero() {
               !loaded && 'skeleton disable-hero-text'
             }`}
           >
-            Have hun🤟
+            Have fun🤟
           </span>
         </p>
       </h1>
