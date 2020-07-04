@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./components/**/*.tsx', './pages/**/*.ts'],
+  purge: ['./components/**/*', './pages/**/*', './hooks/**/*'],
   theme: {
     extend: {
       colors: {
@@ -11,8 +11,6 @@ module.exports = {
         paper: 'var(--color-paper)',
         primaryText: 'var(--color-primaryText)',
         secondaryText: 'var(--color-secondaryText)',
-        // disabled: 'var(--color-disabled)',
-        // hint: 'var(--color-hint)',
         divider: 'var(--color-divider)',
         yellow: 'var(--color-yellow)',
         blue: 'var(--color-blue)',
@@ -25,18 +23,6 @@ module.exports = {
         opacityRed: 'var(--color-opacityRed)',
         opacityGreen: 'var(--color-opacityGreen)',
         border: 'var(--color-border)',
-        reactHook: '#629FDA',
-        redux: '#764ABC',
-        localStorage: '#D95726',
-        typeScript: '#037ACD',
-        gatsby: '#663399',
-        materialUi: '#04B0FF',
-        nextJs: 'var(--color-primaryText)',
-        styledComponents: '#D046B0',
-        scss: '#CF679B',
-        graphQl: '#E535AB',
-        contentful: 'var(--color-primaryText)',
-        tailwind: '#4AAFB3',
         inner: 'var(--color-inner)',
       },
       fontFamily: {
@@ -49,14 +35,6 @@ module.exports = {
         bold: 700,
       },
       screens: {
-        // mobile: '320px',
-
-        // tablet: '768px',
-        // // => @media (min-width: 1024px) { ... }
-
-        // desktop: '920px',
-        // // => @media (min-width: 1280px) { ... }
-
         mobile: { max: '767px' },
         tablet: { min: '768px', max: '919px' },
         desktop: { min: '920px' },

@@ -7,6 +7,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700');
 
+:root {
+  --color-reactHook: #629fda;
+  --color-redux: #764abc;
+  --color-localStorage: #d95726;
+  --color-gatsby: #663399;
+  --color-typeScript: #037acd;
+  --color-materialUi: #04b0ff;
+
+  --color-styledComponents: #d046b0;
+  --color-scss: #cf679b;
+  --color-graphQl: #e535ab;
+
+  --color-tailwind: #4aafb3;
+}
+
 html {
   font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
@@ -45,10 +60,10 @@ html {
   /* devider */
   --color-border: #000000;
   --color-inner: #e0e0e0;
-
-  /* --color-disabled: rgba(0, 0, 0, 0.38);
-  --color-hint: rgba(0, 0, 0, 0.38); */
   --color-divider: #e6ecf0;
+
+  --color-nextJs: rgba(0, 0, 0, 0.87);
+  --color-contentful: rgba(0, 0, 0, 0.87);
 }
 
 .theme-dark {
@@ -84,6 +99,9 @@ html {
   --color-border: #fff;
   --color-inner: #2a343d;
   --color-divider: rgba(255, 255, 255, 0.12);
+
+  --color-nextJs: #fefffe;
+  --color-contentful: #fefffe;
 }
 
 .content-transition {
@@ -115,6 +133,10 @@ html {
 .tag-font {
   font-size: 0.5rem;
   padding: 0.1rem;
+}
+
+.tag-hash {
+  opacity: 0.5;
 }
 
 .role-font {

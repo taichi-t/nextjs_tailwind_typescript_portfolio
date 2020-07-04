@@ -1,5 +1,5 @@
 import { useTheme } from '@/utils/themeContext';
-import Launch from '@/public/icons/launch.svg';
+import Launch from '@/public/images/icons/launch.svg';
 import Link from 'next/link';
 import Sns from '@/components/Sns/Sns';
 import { useRouter } from 'next/router';
@@ -53,7 +53,7 @@ export default function Footer() {
         </button>
         <span className="mx-2 text-primaryText">/</span>
         <button className={`font-bold  hover:text-yellow focus:outline-none`}>
-          <a href="/taichi-tsujioka-resume.pdf" target="_blank">
+          <a href="/pdf/taichi-tsujioka-resume.pdf" target="_blank">
             <span className={`inline-block ${!loaded && 'skeleton'} `}>
               resume📄
             </span>

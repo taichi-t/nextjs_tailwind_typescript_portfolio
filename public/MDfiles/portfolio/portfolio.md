@@ -10,10 +10,10 @@ role:
 webLink: 'https://taichi-t.github.io/deploy_redux_hooks_app/'
 githubLink: 'https://github.com/taichi-t/nextjs_tilewind_typescript_boilerplate'
 image:
-  src: '/work1-devices.png'
+  src: '/images/work1-devices.png'
   alt: 'work1-devices'
 thumbnail:
-  src: '/mac.jpg'
+  src: '/images/mac.jpg'
   alt: 'mac'
 links:
   next:

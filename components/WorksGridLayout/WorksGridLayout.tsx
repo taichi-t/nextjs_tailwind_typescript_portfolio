@@ -1,4 +1,3 @@
-import useCreateTagElemnts from '@/hooks/useCreateTagElements';
 import WorksItem from './WorksItem/WorksItem';
 
 export default function WorksGridLayout({ allWorksData }) {

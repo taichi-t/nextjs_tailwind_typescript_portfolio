@@ -1,9 +1,8 @@
 import { useTheme } from '@/utils/themeContext';
-import useCreateTagElements from '@/hooks/useCreateTagElements';
+import Tags from '@/components/Tags/Tags';
 
 export default function Aside({ tags, role }) {
   const { loaded } = useTheme();
-  const { elements } = useCreateTagElements(tags);
 
   return (
     <aside className="flex justify-center items-center mobile:justify-start">
@@ -26,7 +25,9 @@ export default function Aside({ tags, role }) {
             Technology
           </span>
         </h2>
-        <ul className="flex flex-wrap">{elements}</ul>
+        <ul className="flex flex-wrap">
+          <Tags tags={tags} />
+        </ul>
       </div>
     </aside>
   );

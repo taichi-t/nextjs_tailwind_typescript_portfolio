@@ -1,7 +1,7 @@
 import { useTheme } from '@/utils/themeContext';
-import ReactSvg from '@/public/icons/react.svg';
-import TypeScriptSvg from '@/public/icons/typescript.svg';
-import JavascriptSvg from '@/public/icons/javascript.svg';
+import ReactSvg from '@/public/images/icons/react.svg';
+import TypeScriptSvg from '@/public/images/icons/typescript.svg';
+import JavascriptSvg from '@/public/images/icons/javascript.svg';
 export default function HardSkill() {
   const { loaded } = useTheme();
   return (

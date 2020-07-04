@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
-import useCreateTagElements from '@/hooks/useCreateTagElements';
-import WordCard1SVG from '@/public/task.svg';
-// import useImagesObserver from '@/hooks/useImagesObserver';
+import WordCard1SVG from '@/public/images/task.svg';
+import Tags from '@/components/Tags/Tags';
 
 export default function WorkCard1() {
   const { loaded } = useTheme();
-
   const tags = ['reactHook', 'redux', 'materialUi', 'localStorage'];
-  const { elements } = useCreateTagElements(tags);
 
   return (
     <Link href="/work/[id]" as={`/work/my-work-space`}>
@@ -23,7 +20,7 @@ export default function WorkCard1() {
             <ul className="flex flex-col justify-center h-full">
               <li className="mt-auto mb-auto text-primaryText mobile:mb-2">
                 <span
-                  className={`font-bold text-2xl  inline-block font-display group-hover:bg-paper ${
+                  className={`font-bold text-2xl  inline-block font-display group-hover:bg-paper text-primaryText ${
                     !loaded && 'skeleton text-transparent'
                   }`}
                 >
@@ -31,7 +28,9 @@ export default function WorkCard1() {
                 </span>
               </li>
               <li>
-                <ul className="flex flex-wrap">{elements}</ul>
+                <ul className="flex flex-wrap">
+                  <Tags tags={tags} />
+                </ul>
               </li>
             </ul>
           </div>

@@ -1,5 +1,5 @@
 import { useTheme } from '@/utils/themeContext';
-import Launch from '@/public/icons/launch.svg';
+import Launch from '@/public/images/icons/launch.svg';
 import Aside from '@/components/WorkPagesLayout/Aside/Aside';
 
 export default function WorkCard1({
@@ -33,6 +33,7 @@ export default function WorkCard1({
           href={webLink}
           target="_blank"
           className={`font-bold text-indigo-400 inline-block mt-5`}
+          rel="noopener"
         >
           <span
             className={`inline-block underline mr-1 ${!loaded && 'skeleton'}`}
@@ -48,6 +49,7 @@ export default function WorkCard1({
           href={githubLink}
           target="_blank"
           className={`font-bold text-indigo-400 inline-block mt-2`}
+          rel="noopener"
         >
           <span
             className={`inline-block underline mr-1 ${!loaded && 'skeleton'}`}
