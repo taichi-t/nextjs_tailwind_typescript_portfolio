@@ -9,7 +9,7 @@ export default function ProfileImage() {
   const handleLoad = () => setIsImgLoaded(true);
   return (
     <div className="p-3 mobile:p-1">
-      <div className={` ${!isImgLoaded && 'skeleton circle'}`}>
+      <div className={`inline-block ${!isImgLoaded && 'skeleton circle'}`}>
         <img
           src="/images/me.JPG"
           alt="me"
