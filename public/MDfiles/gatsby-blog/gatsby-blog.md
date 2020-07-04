@@ -12,10 +12,10 @@ role:
 webLink: 'https://www.canajapa.com/'
 githubLink: 'https://github.com/taichi-t/gatsby-contentful-blog'
 image:
-  src: '/work1-devices.png'
+  src: '/images/work1-devices.png'
   alt: 'work1-devices'
 thumbnail:
-  src: '/pc.jpg'
+  src: '/images/pc.jpg'
   alt: 'pc'
 links:
   next:

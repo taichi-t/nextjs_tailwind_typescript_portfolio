@@ -32,7 +32,7 @@ export default function WorkCard2() {
             }`}
           >
             <img
-              src="/pc.jpg"
+              src="/images/pc.jpg"
               alt="pc"
               className={`w-auto h-auto max-w-full max-h-full ${
                 !isImgLoaded && 'invisible'

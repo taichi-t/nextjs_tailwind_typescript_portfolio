@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./components/**/*.tsx', './pages/**/*.ts'],
+  purge: ['./components/**/*.tsx', './pages/**/*.ts', './hooks/**/*.tsx'],
   theme: {
     extend: {
       colors: {
@@ -11,8 +11,6 @@ module.exports = {
         paper: 'var(--color-paper)',
         primaryText: 'var(--color-primaryText)',
         secondaryText: 'var(--color-secondaryText)',
-        // disabled: 'var(--color-disabled)',
-        // hint: 'var(--color-hint)',
         divider: 'var(--color-divider)',
         yellow: 'var(--color-yellow)',
         blue: 'var(--color-blue)',
@@ -49,14 +47,6 @@ module.exports = {
         bold: 700,
       },
       screens: {
-        // mobile: '320px',
-
-        // tablet: '768px',
-        // // => @media (min-width: 1024px) { ... }
-
-        // desktop: '920px',
-        // // => @media (min-width: 1280px) { ... }
-
         mobile: { max: '767px' },
         tablet: { min: '768px', max: '919px' },
         desktop: { min: '920px' },

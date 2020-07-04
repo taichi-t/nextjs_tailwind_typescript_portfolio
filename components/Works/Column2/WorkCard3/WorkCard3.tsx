@@ -24,7 +24,7 @@ export default function WorkCard2() {
             }`}
           >
             <img
-              src="/mac.jpg"
+              src="/images/mac.jpg"
               alt="mac"
               className={`${!isImgLoaded && 'invisible'}`}
               width="100%"

@@ -4,14 +4,15 @@ import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
 
-const postsDirectory = path.join(process.cwd(), 'works');
+const postsDirectory = path.join(process.cwd(), 'public/MDfiles');
 
 export function getAllWorkIds() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
+    const folderName = `${fileName}/`;
     return {
       params: {
-        id: fileName.replace(/\.md$/, ''),
+        id: `${folderName + fileName}`.replace(/\.md$/, ''),
       },
     };
   });
@@ -20,12 +21,15 @@ export function getAllWorkIds() {
 export function getSortedWorksData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+  const allPostsData = fileNames.map((folderName) => {
     // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '');
+    const id = folderName;
 
     // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
+    const fullPath = path.join(
+      postsDirectory,
+      `${folderName}/${folderName}.md`
+    );
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section
@@ -48,7 +52,7 @@ export function getSortedWorksData() {
 }
 
 export async function getWorkData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const fullPath = path.join(postsDirectory, `${id}/${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section

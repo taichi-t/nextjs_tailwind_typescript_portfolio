@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 import useCreateTagElements from '@/hooks/useCreateTagElements';
-import WordCard1SVG from '@/public/task.svg';
-// import useImagesObserver from '@/hooks/useImagesObserver';
+import WordCard1SVG from '@/public/images/task.svg';
 
 export default function WorkCard1() {
   const { loaded } = useTheme();
