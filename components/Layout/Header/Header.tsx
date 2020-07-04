@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 
 export default function Header() {
   const { loaded, toggleTheme, theme } = useTheme();
-
   const { pathname } = useRouter();
 
   return (
