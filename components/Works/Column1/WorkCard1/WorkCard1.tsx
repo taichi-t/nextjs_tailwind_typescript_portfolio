@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 import useCreateTagElements from '@/hooks/useCreateTagElements';
 import WordCard1SVG from '@/public/images/task.svg';
+import Tags from '@/components/Tags/Tags';
 
 export default function WorkCard1() {
   const { loaded } = useTheme();
@@ -31,7 +32,9 @@ export default function WorkCard1() {
                 </span>
               </li>
               <li>
-                <ul className="flex flex-wrap">{elements}</ul>
+                <ul className="flex flex-wrap">
+                  <Tags tags={tags} />
+                </ul>
               </li>
             </ul>
           </div>
