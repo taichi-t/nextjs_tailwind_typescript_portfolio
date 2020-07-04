@@ -1,4 +1,4 @@
-const config = require('@/next.config');
+const config = require('@/config/website');
 let FontFaceObserver = require('fontfaceobserver');
 
 const useFontFaceObserver = (setLoaded) => {
