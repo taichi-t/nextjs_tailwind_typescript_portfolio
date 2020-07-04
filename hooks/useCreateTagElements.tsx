@@ -6,8 +6,20 @@ export default function useCreateTagElements(tags) {
       } tag-font font-bold `}
       key={index}
     >
-      <span className={`text-opacity-50 text-${tag}`}>#</span>
-      <span className={`text-${tag}`}>{tag}</span>
+      <span
+        className={`tag-hash text-${
+          tag === 'nextJs' || tag === 'contentful' ? 'primaryText' : tag
+        }`}
+      >
+        #
+      </span>
+      <span
+        className={`text-${
+          tag === 'nextJs' || tag === 'contentful' ? 'primaryText' : tag
+        }`}
+      >
+        {tag}
+      </span>
     </li>
   ));
 
