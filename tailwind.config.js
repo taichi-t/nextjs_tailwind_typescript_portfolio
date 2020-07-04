@@ -28,7 +28,6 @@ module.exports = {
         localStorage: 'var(--color-localStorage)',
         typeScript: 'var(--color-typeScript)',
         gatsby: 'var(--color-gatsby)',
-
         materialUi: 'var(--color-materialUi)',
         nextJs: 'var(--color-nextJs)',
         styledComponents: 'var(--color-styledComponents)',

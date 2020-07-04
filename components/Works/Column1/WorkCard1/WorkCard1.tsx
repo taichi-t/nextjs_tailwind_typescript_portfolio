@@ -23,7 +23,7 @@ export default function WorkCard1() {
             <ul className="flex flex-col justify-center h-full">
               <li className="mt-auto mb-auto text-primaryText mobile:mb-2">
                 <span
-                  className={`font-bold text-2xl  inline-block font-display group-hover:bg-paper text-gatsby ${
+                  className={`font-bold text-2xl  inline-block font-display group-hover:bg-paper text-primaryText ${
                     !loaded && 'skeleton text-transparent'
                   }`}
                 >
