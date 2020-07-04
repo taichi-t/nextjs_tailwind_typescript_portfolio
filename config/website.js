@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'portfolio',
-    titleTemplate: "Taichi's portfolio",
+    title: "Taichi'sportfolio",
     description:
       "Hi there! My name is Taichi Tsujioka. I'm a junior developer based in Vancouver, Canada",
   },
