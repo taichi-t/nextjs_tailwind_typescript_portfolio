@@ -12,13 +12,11 @@ type ContextProps = {
 export const ThemeContext = createContext<Partial<ContextProps>>(initialValue);
 
 export default function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState<string>('theme-dark');
+  const [theme, setTheme] = useState<string>('theme-light');
   const [loaded, setLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    setTimeout(function () {
-      useFontFaceObserver(setLoaded);
-    }, 50);
+    useFontFaceObserver(setLoaded);
   }, []);
 
   function toggleTheme() {

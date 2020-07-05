@@ -3,14 +3,14 @@ import Hero from '@/components/Hero/Hero';
 import Introduction from '@/components/Introduction/Introduction';
 import Works from '@/components/Works/Works';
 
-export default function IndexPage() {
+export default function IndexPage({ children }) {
   return (
-    <Layout title="home">
-      <main>
-        <Hero />
-        <Introduction />
-        <Works />
-      </main>
-    </Layout>
+    <main>
+      <Hero />
+      <Introduction />
+      <Works />
+    </main>
   );
 }
+
+IndexPage.Layout = Layout;

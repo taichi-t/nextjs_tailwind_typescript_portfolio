@@ -3,13 +3,11 @@ import { GetStaticProps } from 'next';
 import { getSortedWorksData } from '@/utils/work';
 import WorksGridLayout from '@/components/WorksGridLayout/WorksGridLayout';
 
-export default function Posts({ allWorksData }) {
+export default function Works({ allWorksData }) {
   return (
-    <Layout title="works">
-      <main className="mt-3">
-        <WorksGridLayout allWorksData={allWorksData} />
-      </main>
-    </Layout>
+    <main className="mt-3">
+      <WorksGridLayout allWorksData={allWorksData} />
+    </main>
   );
 }
 
@@ -21,3 +19,5 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
+Works.Layout = Layout;
