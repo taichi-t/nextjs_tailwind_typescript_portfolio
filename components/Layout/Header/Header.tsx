@@ -31,7 +31,7 @@ export default function Header() {
                   onLoad={handleLoad}
                 />
                 <div
-                  className={`${isImgLoaded ? 'hidden' : 'skeleton '}`}
+                  className={`${isImgLoaded ? 'hidden' : 'block '}`}
                   style={{ paddingTop: '100%', height: 'auto' }}
                 />
               </div>
