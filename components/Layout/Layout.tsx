@@ -4,13 +4,13 @@ import Head from 'next/head';
 
 import { useTheme } from '@/utils/themeContext';
 
-export default function Layout({ children, title }) {
+export default function Layout({ children }) {
   const { theme } = useTheme();
 
   return (
     <>
       <Head>
-        <title>{title || 'portfolio'}</title>
+        <title>{'Taichi`s portfolio'}</title>
       </Head>
       <style global jsx>{`
         body {

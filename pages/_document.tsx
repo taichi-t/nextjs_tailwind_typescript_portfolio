@@ -17,7 +17,7 @@ export default class Document extends NextDocument {
             name="description"
             content={siteMetadata.description}
           />
-          <meta key="og:title" name="og:title" content={siteMetadata.title} />
+          <meta key="title" name="title" content={siteMetadata.title} />
         </Head>
         <body>
           <Main />
