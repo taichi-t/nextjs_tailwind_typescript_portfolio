@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import Layout from '@/components/Layout/Layout';
 import Discription from './Discription/Discription';
 import Aside from './Aside/Aside';
 import Link from 'next/link';

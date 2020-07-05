@@ -1,6 +1,5 @@
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
-import Head from 'next/head';
 
 import { useTheme } from '@/utils/themeContext';
 
@@ -9,9 +8,6 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <Head>
-        <title>{'Taichi`s portfolio'}</title>
-      </Head>
       <style global jsx>{`
         body {
           background-color: ${theme === 'theme-dark' ? '#15202b' : '#ffffff'};
