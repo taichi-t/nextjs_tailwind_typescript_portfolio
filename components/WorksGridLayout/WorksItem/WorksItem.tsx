@@ -29,7 +29,7 @@ export default function WorksGridLayout({ item }) {
         </div>
         <div
           className={`${isImgLoaded ? 'hidden' : 'skeleton'}`}
-          style={{ paddingTop: '50%', height: 'auto' }}
+          style={{ paddingTop: '67%', height: 'auto' }}
         />
         <h2 className="font-bold font-display mt-3">
           <span className={`inline-block ${!loaded && 'skeleton'}`}>
