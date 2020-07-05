@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 import { useRouter } from 'next/router';
@@ -5,6 +6,13 @@ import { useRouter } from 'next/router';
 export default function Header() {
   const { loaded, toggleTheme, theme } = useTheme();
   const { pathname } = useRouter();
+  const [isImgLoaded, setIsImgLoaded] = useState(false);
+  const imgRef = useRef(null);
+  useEffect(() => {
+    if (imgRef.current.complete) setIsImgLoaded(true);
+  }, []);
+
+  const handleLoad = () => setIsImgLoaded(true);
 
   return (
     <header>
@@ -12,12 +20,19 @@ export default function Header() {
         <ul>
           <li className={`mobile:grow-1 mobile:w-12 w-16`}>
             <Link href="/">
-              <div className="w-full h-full">
+              <div>
                 <img
                   src="/images/logo.png"
                   alt="me"
+                  className={`${isImgLoaded ? 'block' : 'hidden'}`}
                   width="100%"
                   height="100%"
+                  ref={imgRef}
+                  onLoad={handleLoad}
+                />
+                <div
+                  className={`${isImgLoaded ? 'hidden' : 'skeleton '}`}
+                  style={{ paddingTop: '100%', height: 'auto' }}
                 />
               </div>
             </Link>

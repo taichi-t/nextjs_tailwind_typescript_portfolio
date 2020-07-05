@@ -18,15 +18,19 @@ export default function WorksGridLayout({ item }) {
   return (
     <Link href="/work/[id]" as={`/work/${id}`}>
       <div className="col-span-4 text-primaryText bg-paper p-3 border border-divider tablet:p-2 mobile:col-span-12">
-        <div className={`${!isImgLoaded && 'skeleton'}`}>
+        <div>
           <img
             src={thumbnail.src}
             alt={thumbnail.alt}
             onLoad={handleLoad}
             ref={imgRef}
-            className={`${!isImgLoaded && 'invisible'}`}
+            className={`${isImgLoaded ? 'block' : 'hidden'}`}
           />
         </div>
+        <div
+          className={`${isImgLoaded ? 'hidden' : 'skeleton'}`}
+          style={{ paddingTop: '50%', height: 'auto' }}
+        />
         <h2 className="font-bold font-display mt-3">
           <span className={`inline-block ${!loaded && 'skeleton'}`}>
             {title}
