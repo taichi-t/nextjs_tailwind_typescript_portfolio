@@ -1,9 +1,18 @@
 import WorkPagesLayout from '@/components/WorkPagesLayout/WorkPagesLayout';
+import Layout from '@/components/Layout/Layout';
+import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllWorkIds, getWorkData } from '@/utils/work';
 
-export default function Posts({ workData }) {
-  return <WorkPagesLayout {...workData} />;
+export default function Work({ workData }) {
+  return (
+    <>
+      <Head>
+        <title>{`works/${workData.title}`}</title>
+      </Head>
+      <WorkPagesLayout {...workData} />
+    </>
+  );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -22,3 +31,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   };
 };
+
+Work.Layout = Layout;

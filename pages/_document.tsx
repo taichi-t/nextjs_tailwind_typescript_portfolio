@@ -7,6 +7,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
+          <meta charSet="utf-8" />
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
@@ -16,7 +17,7 @@ export default class Document extends NextDocument {
             name="description"
             content={siteMetadata.description}
           />
-          <meta key="og:title" name="og:title" content={siteMetadata.title} />
+          <meta key="title" name="title" content={siteMetadata.title} />
         </Head>
         <body>
           <Main />

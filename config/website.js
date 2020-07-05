@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Taichi'sportfolio",
+    title: "Taichi's portfolio",
     description:
       "Hi there! My name is Taichi Tsujioka. I'm a junior developer based in Vancouver, Canada",
   },

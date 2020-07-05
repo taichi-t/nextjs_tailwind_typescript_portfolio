@@ -1,9 +1,16 @@
 import Layout from '@/components/Layout/Layout';
+import Head from 'next/head';
+
 import About from '@/components/About/About';
 export default function AboutPage() {
   return (
-    <Layout title="about">
+    <>
+      <Head>
+        <title>{'about'}</title>
+      </Head>
       <About />
-    </Layout>
+    </>
   );
 }
+
+AboutPage.Layout = Layout;

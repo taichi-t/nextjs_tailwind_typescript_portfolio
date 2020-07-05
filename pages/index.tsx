@@ -1,16 +1,22 @@
 import Layout from '@/components/Layout/Layout';
+import Head from 'next/head';
 import Hero from '@/components/Hero/Hero';
 import Introduction from '@/components/Introduction/Introduction';
 import Works from '@/components/Works/Works';
 
 export default function IndexPage() {
   return (
-    <Layout title="home">
+    <>
+      <Head>
+        <title>{'home'}</title>
+      </Head>
       <main>
         <Hero />
         <Introduction />
         <Works />
       </main>
-    </Layout>
+    </>
   );
 }
+
+IndexPage.Layout = Layout;
