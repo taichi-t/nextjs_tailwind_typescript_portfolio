@@ -12,8 +12,8 @@ role:
 webLink: 'https://www.canajapa.com/'
 githubLink: 'https://github.com/taichi-t/gatsby-contentful-blog'
 image:
-  src: '/images/work1-devices.png'
-  alt: 'work1-devices'
+  src: '/MDfiles/gatsby-blog/gatsby-blog.png'
+  alt: 'gatsby-blog with responsive design'
 thumbnail:
   src: '/images/pc.jpg'
   alt: 'pc'

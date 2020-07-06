@@ -12,8 +12,8 @@ role:
 webLink: 'https://taichi-t.github.io/deploy_redux_hooks_app/'
 githubLink: 'https://github.com/taichi-tdeploy_redux_hooks_app'
 image:
-  src: '/images/work1-devices.png'
-  alt: 'work1-devices'
+  src: '/MDfiles/my-work-space/my-work-space.png'
+  alt: 'my-work-space with responsive design'
 thumbnail:
   src: '/images/mac.jpg'
   alt: 'mac'

@@ -10,8 +10,8 @@ role:
 webLink: 'https://taichi-t.github.io/deploy_redux_hooks_app/'
 githubLink: 'https://github.com/taichi-t/nextjs_tilewind_typescript_boilerplate'
 image:
-  src: '/images/work1-devices.png'
-  alt: 'work1-devices'
+  src: '/MDfiles/portfolio/portfolio.png'
+  alt: 'portfolio with responsive design'
 thumbnail:
   src: '/images/mac.jpg'
   alt: 'mac'
