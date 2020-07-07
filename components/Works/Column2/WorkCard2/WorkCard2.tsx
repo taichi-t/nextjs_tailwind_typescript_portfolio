@@ -26,20 +26,20 @@ export default function WorkCard2() {
       <div className="group bg-paper custom-border hover:bg-opacityBioret h-full">
         <div className="m-8 tablet:m-6 mobile:m-4">
           <div
-            className={`w-9/12 tablet:w-full my-0 mx-auto mb-6 mobile:w-full mobile:mb-3 ${
-              !isImgLoaded && 'skeleton'
-            }`}
+            className={`w-9/12 tablet:w-full my-0 mx-auto mb-6 mobile:w-full mobile:mb-3`}
           >
             <img
-              src="/images/pc.jpg"
-              alt="pc"
-              className={`w-auto h-auto max-w-full max-h-full ${
-                !isImgLoaded && 'invisible'
-              }`}
+              src="/MDfiles/gatsby-blog/gatsby-blog-mockup.png"
+              alt="mockup of gatsby blog"
+              className={`shadow ${isImgLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
               ref={imgRef}
               onLoad={handleLoad}
+            />
+            <div
+              className={`${isImgLoaded ? 'hidden' : 'skeleton'}`}
+              style={{ paddingTop: '67%' }}
             />
           </div>
           <ul>

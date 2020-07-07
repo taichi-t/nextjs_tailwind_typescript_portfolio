@@ -12,11 +12,11 @@ role:
 webLink: 'https://taichi-t.github.io/deploy_redux_hooks_app/'
 githubLink: 'https://github.com/taichi-tdeploy_redux_hooks_app'
 image:
-  src: '/MDfiles/my-work-space/my-work-space.png'
+  src: '/MDfiles/my-work-space/my-work-space-devices.png'
   alt: 'my-work-space with responsive design'
 thumbnail:
-  src: '/images/mac.jpg'
-  alt: 'mac'
+  src: '/MDfiles/my-work-space/my-work-space-mockup.png'
+  alt: 'mockup my-work-space'
 links:
   next:
     src: '/work/gatsby-blog'

@@ -12,7 +12,7 @@ type ContextProps = {
 export const ThemeContext = createContext<Partial<ContextProps>>(initialValue);
 
 export default function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState<string>('theme-light');
+  const [theme, setTheme] = useState<string>('theme-dark');
   const [loaded, setLoaded] = useState<boolean>(false);
 
   useEffect(() => {

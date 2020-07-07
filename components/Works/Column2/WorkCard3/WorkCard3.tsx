@@ -18,18 +18,20 @@ export default function WorkCard2() {
       <div className="group bg-paper custom-border hover:bg-opacityGreen h-full">
         <div className="m-8 tablet:m-6 mobile:m-4">
           <div
-            className={`w-9/12 tablet:w-full my-0 mx-auto mb-6 mobile:w-full mobile:mb-3 ${
-              !isImgLoaded && 'skeleton'
-            }`}
+            className={`w-9/12 tablet:w-full my-0 mx-auto mb-6 mobile:w-full mobile:mb-3`}
           >
             <img
-              src="/images/mac.jpg"
-              alt="mac"
-              className={`${!isImgLoaded && 'invisible'}`}
+              src="/MDfiles/portfolio/portfolio-mockup.png"
+              alt="mockup of portfolio"
+              className={`shadow ${isImgLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
               ref={imgRef}
               onLoad={handleLoad}
+            />
+            <div
+              className={`${isImgLoaded ? 'hidden' : 'skeleton'}`}
+              style={{ paddingTop: '67%' }}
             />
           </div>
           <ul>

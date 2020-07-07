@@ -19,6 +19,7 @@ export function getAllWorkIds() {
 
 export function getSortedWorksData() {
   // Get file names under /posts
+
   const folderNames = fs.readdirSync(postsDirectory);
   const allPostsData = folderNames.map((folderName) => {
     // Remove ".md" from file name to get id
