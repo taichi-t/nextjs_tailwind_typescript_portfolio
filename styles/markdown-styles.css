@@ -1,0 +1,5 @@
+.markdown-style h2 {
+  font-size: theme('fontSize.lg');
+  font-weight: theme('fontWeight.bold');
+  color: theme('colors.secondaryText');
+}

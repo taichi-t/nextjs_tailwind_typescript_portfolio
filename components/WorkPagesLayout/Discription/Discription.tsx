@@ -17,10 +17,10 @@ export default function WorkCard1({
       <h1 className={`inner-wrap font-bold text-2xl font-display `}>
         <span className={`inline-block ${!loaded && 'skeleton'}`}>{title}</span>
       </h1>
-      <article className="mt-5">
-        <div
+      <div className="mt-5">
+        <article
           className={`text-sm leading-relaxed inline-block ${
-            !loaded && 'skeleton'
+            loaded ? 'markdown-style' : 'skeleton'
           }`}
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
@@ -60,7 +60,7 @@ export default function WorkCard1({
             <Launch className="inline-block fill-current" width="1rem" />
           </span>
         </a>
-      </article>
+      </div>
     </div>
   );
 }
