@@ -42,7 +42,7 @@ export default function WorkPagesLayout({
           <Aside tags={tags} role={role} />
         </div>
       </div>
-      <div className={`mt-5 inner-wrap ${!isImgLoaded && 'skeleton'}`}>
+      <div className={`mt-5 inner-wrap`}>
         <img
           src={image.src}
           alt={image.alt}
@@ -50,8 +50,12 @@ export default function WorkPagesLayout({
           width="100%"
           height="100%"
           onLoad={handleLoad}
-          className={`${!isImgLoaded && 'invisible'}`}
+          className={`${isImgLoaded ? 'block' : 'hidden'}`}
         />
+        <div
+          className={`skeleton ${isImgLoaded ? 'hidden' : 'block'}`}
+          style={{ paddingTop: '58%' }}
+        ></div>
       </div>
 
       <ul className="flex font-bold justify-around text-indigo-400 mt-20 inner-wrap">
