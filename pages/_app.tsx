@@ -6,6 +6,7 @@ import { useTheme } from '@/utils/themeContext';
 function MyApp({ Component, pageProps }) {
   const Layout = Component.Layout ? Component.Layout : React.Fragment;
   const { theme } = useTheme();
+
   return (
     <ThemeProvider>
       <div className={`${theme}`}>
