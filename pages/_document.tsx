@@ -7,6 +7,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
+          <link rel="manifest" href="/manifest.json" />
           <meta charSet="utf-8" />
           <meta
             name="viewport"
