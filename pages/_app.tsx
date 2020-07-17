@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Router from 'next/router';
-import * as gtag from '../utils/gtags';
+import * as gtag from '@/utils/gtag';
 import '@/styles/index.css';
 import ThemeProvider from '@/utils/themeContext';
 import { useTheme } from '@/utils/themeContext';

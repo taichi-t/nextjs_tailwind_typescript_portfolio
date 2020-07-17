@@ -4,6 +4,7 @@ import config from '@/config/website';
 export default class Document extends NextDocument {
   render() {
     const { siteMetadata } = config;
+
     return (
       <Html lang="en">
         <Head>
