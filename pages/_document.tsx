@@ -30,7 +30,7 @@ export default class Document extends NextDocument {
             sizes="16x16"
             href="/favicons/favicon-16x16.png"
           />
-          {/* <link rel="manifest" href="/site.webmanifest" /> */}
+
           <link
             rel="mask-icon"
             href="/favicons/safari-pinned-tab.svg"
@@ -43,6 +43,22 @@ export default class Document extends NextDocument {
             content={siteMetadata.description}
           />
           <meta key="title" name="title" content={siteMetadata.title} />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
         </Head>
         <body>
           <Main />
