@@ -10,9 +10,9 @@ export default function WorkCard2() {
 
   const tags = [
     'gatsby',
-    'materialUi',
-    'styledComponents',
-    'graphQl',
+    'scss',
+    'react-bootstrap',
+    'netlify-functions',
     'contentful',
   ];
   useEffect(() => {
@@ -22,15 +22,15 @@ export default function WorkCard2() {
   const handleLoad = () => setIsImgLoaded(true);
 
   return (
-    <Link href="/work/[id]" as={`/work/gatsby-blog`}>
+    <Link href="/work/[id]" as={`/work/Impactraction`}>
       <div className="group bg-paper custom-border hover:bg-opacityBioret h-full">
         <div className="m-8 tablet:m-6 mobile:m-4">
           <div
             className={`w-9/12 tablet:w-full my-0 mx-auto mb-6 mobile:w-full mobile:mb-3`}
           >
             <img
-              src="/MDfiles/gatsby-blog/gatsby-blog-mockup.png"
-              alt="mockup of gatsby blog"
+              src="/MDfiles/Impactraction/Impactraction-mockup.png"
+              alt="mockup of Impactraction"
               className={`shadow ${isImgLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
@@ -49,7 +49,7 @@ export default function WorkCard2() {
                   !loaded && 'skeleton text-transparent'
                 }`}
               >
-                Gatsby Blog
+                Impactraction
               </span>
             </li>
             <li>
