@@ -20,7 +20,7 @@ export default function Hero() {
           }`}
         >
           a junior developer based in Vancouver, Canada, seeking an opportunity
-          to work as fron-end developer.
+          to work as front-end developer.
         </span>
       </h2>
     </div>
