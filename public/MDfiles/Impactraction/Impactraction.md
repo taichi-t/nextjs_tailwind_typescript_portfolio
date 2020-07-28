@@ -14,10 +14,10 @@ role:
 webLink:
 githubLink:
 image:
-  src: '/MDfiles/impactraction/impactraction-devices.png'
+  src: '/MDfiles/Impactraction/Impactraction-devices.png'
   alt: 'impactraction with responsive design'
 thumbnail:
-  src: '/MDfiles/impactraction/impactraction-mockup.png'
+  src: '/MDfiles/Impactraction/Impactraction-mockup.png'
   alt: 'mockup Impactraction'
 links:
   next:
