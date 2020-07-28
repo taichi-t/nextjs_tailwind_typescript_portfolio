@@ -15,7 +15,7 @@ webLink:
 githubLink:
 image:
   src: '/MDfiles/impactraction/impactraction-devices.png'
-  alt: 'gimpactraction with responsive design'
+  alt: 'impactraction with responsive design'
 thumbnail:
   src: '/MDfiles/impactraction/impactraction-mockup.png'
   alt: 'mockup Impactraction'
