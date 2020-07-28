@@ -18,6 +18,8 @@
   --color-scss: #cf679b;
   --color-graphQl: #e535ab;
   --color-tailwind: #4aafb3;
+  --color-react-bootstrap: #40e0fc;
+  --color-netlify-functions: #45a6bd;
 }
 
 html {

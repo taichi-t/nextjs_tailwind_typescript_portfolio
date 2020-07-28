@@ -3,3 +3,6 @@
   font-weight: theme('fontWeight.bold');
   color: theme('colors.secondaryText');
 }
+.markdown-style p {
+  margin-bottom: 1rem;
+}

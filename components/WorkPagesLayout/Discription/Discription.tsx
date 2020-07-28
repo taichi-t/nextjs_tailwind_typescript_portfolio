@@ -28,38 +28,38 @@ export default function WorkCard1({
         <div className="tablet:hidden desktop:hidden mobile:block mobile:mt-5">
           <Aside tags={tags} role={role} />
         </div>
+        {webLink && (
+          <a
+            href={webLink}
+            target="_blank"
+            className={`font-bold text-indigo-400 inline-block mt-5`}
+            rel="noopener"
+          >
+            <span className={`inline-block underline mr-1`}>VISIT WEBSITE</span>
+            <span>
+              <Launch className="inline-block fill-current" width="1rem" />
+            </span>
+          </a>
+        )}
 
-        <a
-          href={webLink}
-          target="_blank"
-          className={`font-bold text-indigo-400 inline-block mt-5`}
-          rel="noopener"
-        >
-          <span
-            className={`inline-block underline mr-1 ${!loaded && 'skeleton'}`}
-          >
-            VISIT WEBSITE
-          </span>
-          <span>
-            <Launch className="inline-block fill-current" width="1rem" />
-          </span>
-        </a>
         <br />
-        <a
-          href={githubLink}
-          target="_blank"
-          className={`font-bold text-indigo-400 inline-block mt-2`}
-          rel="noopener"
-        >
-          <span
-            className={`inline-block underline mr-1 ${!loaded && 'skeleton'}`}
+        {githubLink && (
+          <a
+            href={githubLink}
+            target="_blank"
+            className={`font-bold text-indigo-400 inline-block mt-2 `}
+            rel="noopener"
           >
-            VISIT GIT
-          </span>
-          <span>
-            <Launch className="inline-block fill-current" width="1rem" />
-          </span>
-        </a>
+            <span
+              className={`inline-block underline mr-1 ${!loaded && 'skeleton'}`}
+            >
+              VISIT GIT
+            </span>
+            <span>
+              <Launch className="inline-block fill-current" width="1rem" />
+            </span>
+          </a>
+        )}
       </div>
     </div>
   );
