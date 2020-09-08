@@ -14,7 +14,6 @@ export default function WorkPagesLayout({
   webLink,
   githubLink,
 }) {
-  console.log(image);
   const { loaded } = useTheme();
 
   const [isImgLoaded, setIsImgLoaded] = useState(false);
