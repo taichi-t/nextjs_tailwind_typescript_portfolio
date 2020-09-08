@@ -35,4 +35,4 @@ This is my personal portfolio that built up with Next.js, TailwindCSS and TypeSc
 
 <br>
 
-It got the **96 scores** with google speed insight.
+It got **96 scores** with google speed insight.
