@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import Discription from './Discription/Discription';
+import Description from './Description/Description';
 import Aside from './Aside/Aside';
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
@@ -14,6 +14,7 @@ export default function WorkPagesLayout({
   webLink,
   githubLink,
 }) {
+  console.log(image);
   const { loaded } = useTheme();
 
   const [isImgLoaded, setIsImgLoaded] = useState(false);
@@ -29,7 +30,7 @@ export default function WorkPagesLayout({
     <main className="mt-3">
       <div className="grid grid-cols-12 gap-8 text-primaryText tablet:px-3 mobile:gap-1">
         <div className="col-span-8 mobile:col-span-12">
-          <Discription
+          <Description
             contentHtml={contentHtml}
             title={title}
             webLink={webLink}

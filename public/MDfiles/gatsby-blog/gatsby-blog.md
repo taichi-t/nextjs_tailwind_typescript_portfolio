@@ -28,4 +28,9 @@ links:
 
 ## What is Gatsby Blog
 
-My Work Space is **an advanced Todo List**. You can add your Todo, and organize them order by weeks, or projects etc. In this project, I focus on UI, for instance you can toggle dark mode or light mode, choose a color theme. It's no need SignUp, your todo is saved as local data. Let's get started My Work Space 🔥
+A personal blog for people in japan who want to live or get IT job in Vancouver, Canada.🔥
+
+## Technologies
+
+Implemented Headless Content Management System (Headless CMS), so enable users to update and post with graphical user interface easily.
+The blog sites is built with Gatsby.js, which Server-Side Rendering (SSR), therefore that allows users to deliver responsive sites that work a lot faster than standard request-response model.

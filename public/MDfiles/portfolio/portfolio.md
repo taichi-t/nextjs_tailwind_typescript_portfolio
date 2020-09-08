@@ -1,5 +1,5 @@
 ---
-title: 'Portfolio'
+title: 'My Portfolio'
 date: '2020-05-01'
 tags:
   - typeScript
@@ -26,4 +26,13 @@ links:
 
 ## How it works
 
-This is my portfolio Using Next.js and tailwind. Why I use those technologies, one of the reasons is they both are a very brand new framework. The other reason is that Next.js is displaying websites so fast, that is What I've been put effort into it these days 🌝
+This is my personal portfolio that built up with Next.js, TailwindCSS and TypeScript. In this project, focused on responsiveness, worked on the below,
+
+- Installed Server-Side rendering **(Next.js)**
+- Implemented Progressive Web Apps **(PWA)**
+- Implemented fetching the files of the page user might visit in advance
+- Compressed images to the proper size
+
+<br>
+
+It got the **96 scores** with google speed insight.

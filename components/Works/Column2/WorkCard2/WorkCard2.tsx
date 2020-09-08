@@ -49,7 +49,7 @@ export default function WorkCard2() {
                   !loaded && 'skeleton text-transparent'
                 }`}
               >
-                Impactraction
+                Company's websites
               </span>
             </li>
             <li>

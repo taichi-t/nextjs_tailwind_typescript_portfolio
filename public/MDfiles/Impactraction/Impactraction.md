@@ -1,5 +1,5 @@
 ---
-title: 'Impactraction'
+title: "Company's websites"
 date: '2020-07-28'
 tags:
   - gatsby
@@ -28,10 +28,10 @@ links:
     title: 'Portfolio'
 ---
 
-## What is Impactraction
-
-Impactraction is an actual company, we developed the company website of 6 pages.
-
 ## What I did as team
 
-developed front-end architecture and boiler-plate, reviewed team member's code and launch the website as a tech lead.
+developed front-end architecture, boiler-plate, reviewed member's code as a tech lead 👀
+
+## Technologies
+
+The client needed the website to be editable and display faster, also enable visitors for the websites to subscribe to newsletters, so that we introduced Server-Side Rendering **(SSR)**, a Headless Contents Management System **(Contentful)** and Customer Relationship Management system **(Agile CMS)**.

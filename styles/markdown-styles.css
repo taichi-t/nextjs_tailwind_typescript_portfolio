@@ -6,3 +6,7 @@
 .markdown-style p {
   margin-bottom: 1rem;
 }
+
+.markdown-style li {
+  list-style: inside;
+}

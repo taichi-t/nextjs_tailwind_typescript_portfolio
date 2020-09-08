@@ -8,9 +8,8 @@ tags:
   - localStorage
 role:
   - Front-end development
-  - UI/UX design
 webLink: 'https://taichi-t.github.io/deploy_redux_hooks_app/'
-githubLink: 'https://github.com/taichi-tdeploy_redux_hooks_app'
+githubLink: 'https://github.com/taichi-t/deploy_redux_hooks_app'
 image:
   src: '/MDfiles/my-work-space/my-work-space-devices.png'
   alt: 'my-work-space with responsive design'
@@ -28,4 +27,6 @@ links:
 
 ## What is My Work Space
 
-My Work Space is an advanced Todo List. You can add your Todo, and organize them order by weeks, or projects etc. In this project, I focus on UI, for instance you can toggle dark mode or light mode, choose a color theme. It's no need SignUp, your todo is saved as local data. Let's get started My Work Space 🔥
+My Work Space is **an advanced Todo List**. You can add your tasks and organize them by weeks, or projects etc. In this project, I focus on UI, for instance you can toggle dark mode or light mode, choose a color theme.
+
+It's no need sign-up, your todo is saved automatically. Let's get started My Work Space 🔥

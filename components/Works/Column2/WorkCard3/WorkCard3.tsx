@@ -41,7 +41,7 @@ export default function WorkCard2() {
                   !loaded && 'skeleton text-transparent'
                 }`}
               >
-                Portfolio
+                My Portfolio
               </span>
             </li>
             <li>
