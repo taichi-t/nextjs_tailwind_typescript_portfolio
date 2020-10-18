@@ -19,7 +19,9 @@
   --color-graphQl: #e535ab;
   --color-tailwind: #4aafb3;
   --color-react-bootstrap: #40e0fc;
-  --color-netlify-functions: #45a6bd;
+  --color-mongoDB: #52aa4a;
+  --color-nodeJs: #67a063;
+  --color-semantic-ui: #31bfb3;
 }
 
 html {
