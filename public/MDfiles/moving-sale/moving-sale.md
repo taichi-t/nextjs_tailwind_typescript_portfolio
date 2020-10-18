@@ -1,8 +1,8 @@
 ---
-title: 'Full Stack Project'
+title: 'Moving Sale'
 date: '2020-10-18'
 tags:
-  - react
+  - reactHook
   - nextJs
   - mongoDB
   - nodeJs
