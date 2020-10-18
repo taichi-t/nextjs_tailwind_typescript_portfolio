@@ -1,5 +1,5 @@
 ---
-title: "Full Stack Project"
+title: 'Full Stack Project'
 date: '2020-10-18'
 tags:
   - react
@@ -12,7 +12,7 @@ role:
   - Front-end development
   - Back-end development
 webLink: 'https://moving-sale.vercel.app/'
-githubLink: "https://github.com/taichi-t/next.js_e-commerce"
+githubLink: 'https://github.com/taichi-t/next.js_e-commerce'
 image:
   src: '/MDfiles/moving-sale/moving-sale-devices.png'
   alt: 'moving-sale with responsive design'
@@ -22,7 +22,7 @@ thumbnail:
 links:
   next:
     src: '/work/Impactraction'
-    title: 'Company's websites'
+    title: "Company's websites"
   prev:
     src: '/work/my-work-place'
     title: 'My Work Place'
