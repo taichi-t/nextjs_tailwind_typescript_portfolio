@@ -6,7 +6,10 @@ export default function WorkCard2() {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   const { loaded } = useTheme();
-  const tags = ['typeScript', 'nextJs', 'tailwind'];
+  const tags = ["reactHook",
+    "redux",
+    "materialUi",
+    "localStorage"];
   useEffect(() => {
     if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
@@ -14,15 +17,15 @@ export default function WorkCard2() {
   const handleLoad = () => setIsImgLoaded(true);
 
   return (
-    <Link href="/work/[id]" as={`/work/portfolio`}>
+    <Link href="/work/[id]" as={`/work/my-work-space`}>
       <div className="group bg-paper custom-border hover:bg-opacityGreen h-full">
         <div className="m-8 tablet:m-6 mobile:m-4">
           <div
             className={`w-9/12 tablet:w-full my-0 mx-auto mb-6 mobile:w-full mobile:mb-3`}
           >
             <img
-              src="/MDfiles/portfolio/portfolio-mockup.png"
-              alt="mockup of portfolio"
+              src="/MDfiles/my-work-space/my-work-space-mockup.png"
+              alt="mockup of my-work-space"
               className={`shadow ${isImgLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
@@ -41,7 +44,7 @@ export default function WorkCard2() {
                   !loaded && 'skeleton text-transparent'
                 }`}
               >
-                My Portfolio
+               My Work Space
               </span>
             </li>
             <li>

@@ -12,15 +12,19 @@ export default function WorkCard1() {
     if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
   const handleLoad = () => setIsImgLoaded(true);
-  const tags = ['reactHook', 'redux', 'materialUi', 'localStorage'];
+  const tags = ["reactHook",
+    "nextJs",
+    "mongoDB",
+    "nodeJs",
+    "semantic-ui"];
   return (
-    <Link href="/work/[id]" as={`/work/my-work-space`}>
+    <Link href="/work/[id]" as={`/work/moving-sale`}>
       <div className="group  bg-paper custom-border flex justify-center items-center hover:bg-opacityBlue">
         <div className="m-12 grid grid-cols-12 gap-8 tablet:gap-6 tablet:m-10 mobile:gap-2 mobile:m-4">
           <div className="col-span-6 mobile:col-span-12 mobile:mb-3">
             <img
-              src="/MDfiles/my-work-space/my-work-space-mockup.png"
-              alt="mockup of my work space"
+              src="/MDfiles/moving-sale/moving-sale-mockup.png"
+              alt="mockup of moving sale"
               className={`shadow ${isImgLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
@@ -40,7 +44,7 @@ export default function WorkCard1() {
                     !loaded && 'skeleton text-transparent'
                   }`}
                 >
-                  My Work Space
+                  E-commerce website
                 </span>
               </li>
               <li>
