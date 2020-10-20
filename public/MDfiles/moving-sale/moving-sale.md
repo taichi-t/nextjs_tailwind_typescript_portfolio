@@ -30,8 +30,8 @@ links:
 
 ## What is Moving Sale
 
-Moving Sale is a platform for selling and buying products person-to-person.👀
+A platform for selling and buying products user-to-user👀
 
 ## Technologies
 
-It is build up with React(Next.js), MongoDB and Node.js. In this project, I focused on responsiveness. For instance, SWR(stale-while-revalidate) allows client-side to cache data, so no need to fetch to a server if users visits once more. Furthermore, it used SSR (Server Side Rendering), so a server-side pre-renders web-page, it enables client-side displaying faster than no SSR.
+It is build up with React(Next.js), MongoDB and Node.js. In this project, I focused on responsiveness. For instance, SWR(stale-while-revalidate) allows client-side to cache data, so no need to fetch to a server when users visit once more, it means reducing wasteful data fetching. Furthermore, it used SSR (Server Side Rendering), so a server-side pre-renders web-page, it enables client-side displaying faster than no SSR.
