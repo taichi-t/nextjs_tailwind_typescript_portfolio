@@ -4,11 +4,11 @@ import Hero from '@/components/Hero/Hero';
 import Introduction from '@/components/Introduction/Introduction';
 import Works from '@/components/Works/Works';
 
-export default function IndexPage() {
+export default function IndexPage(): JSX.Element {
   return (
     <>
       <Head>
-        <title>{'home'}</title>
+        <title>home</title>
       </Head>
       <main>
         <Hero />
