@@ -60,11 +60,11 @@ export function getSortedWorksData():GetSortedWorksData {
   });
 }
 
-export  function getWorkData(id:string):GetWorkData{
+export async function getWorkData(id:string):Promise<GetWorkData>{
   const fullPath = path.join(workDirectory, `${id}/${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const fileContents =  fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
-  const processedContent =  remark()
+  const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
