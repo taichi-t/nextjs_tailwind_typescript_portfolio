@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-export default function ProfileImage() {
+export default function ProfileImage(): JSX.Element {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   useEffect(() => {

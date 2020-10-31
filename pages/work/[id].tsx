@@ -9,7 +9,7 @@ type WorkData = {
   workData: WorkType;
 };
 
-export default function Work({ workData }: WorkData): React.ReactElement {
+export default function Work({ workData }: WorkData): JSX.Element {
   return (
     <>
       <Head>

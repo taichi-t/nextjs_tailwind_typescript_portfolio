@@ -18,9 +18,7 @@ const initialValue = { theme: 'theme-dark', loaded: false };
 
 export const ThemeContext = createContext<Partial<ContextProps>>(initialValue);
 
-export default function ThemeProvider({
-  children,
-}: ContextProps): React.ReactElement {
+export default function ThemeProvider({ children }: ContextProps): JSX.Element {
   const [theme, setTheme] = useState(initialValue.theme);
   const [loaded, setLoaded] = useState(initialValue.loaded);
 

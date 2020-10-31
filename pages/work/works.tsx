@@ -9,9 +9,7 @@ type AllWorksData = {
   allWorksData: WorkType[];
 };
 
-export default function Works({
-  allWorksData,
-}: AllWorksData): React.ReactElement {
+export default function Works({ allWorksData }: AllWorksData): JSX.Element {
   return (
     <>
       <Head>
