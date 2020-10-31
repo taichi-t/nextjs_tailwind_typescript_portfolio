@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 
 export default function Footer(): JSX.Element {
   const { pathname } = useRouter();
-  const { loaded } = useTheme();
+  const { isFontLoaded } = useTheme();
 
   return (
     <footer className="mt-20">
@@ -16,7 +16,7 @@ export default function Footer(): JSX.Element {
         >
           <span
             className={`inline-block
-            ${!loaded && 'skeleton text-transparent'}
+            ${!isFontLoaded && 'skeleton text-transparent'}
           `}
           >
             Drop me a line 📮
@@ -28,7 +28,7 @@ export default function Footer(): JSX.Element {
         >
           <span
             className={`inline-block underline mr-1 ${
-              !loaded && 'skeleton bg-skeleton text-transparent'
+              !isFontLoaded && 'skeleton bg-skeleton text-transparent'
             }`}
           >
             t.tujioka.0925@gmail.com
@@ -46,7 +46,7 @@ export default function Footer(): JSX.Element {
           }`}
         >
           <Link href="/about">
-            <span className={`inline-block ${!loaded && 'skeleton'} `}>
+            <span className={`inline-block ${!isFontLoaded && 'skeleton'} `}>
               about
             </span>
           </Link>
@@ -54,7 +54,7 @@ export default function Footer(): JSX.Element {
         <span className="mx-2 text-primaryText">/</span>
         <button className={`font-bold  hover:text-yellow focus:outline-none`}>
           <a href="/pdf/taichi-tsujioka-resume.pdf" target="_blank">
-            <span className={`inline-block ${!loaded && 'skeleton'} `}>
+            <span className={`inline-block ${!isFontLoaded && 'skeleton'} `}>
               resume📄
             </span>
           </a>

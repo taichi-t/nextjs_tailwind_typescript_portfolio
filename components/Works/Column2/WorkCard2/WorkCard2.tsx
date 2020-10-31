@@ -4,9 +4,9 @@ import { useTheme } from '@/utils/themeContext';
 import Tags from '@/components/Tags/Tags';
 
 export default function WorkCard2(): JSX.Element {
-  const [isImgLoaded, setIsImgLoaded] = useState(false);
+  const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
   const imgRef = useRef(null);
-  const { loaded } = useTheme();
+  const { isFontLoaded } = useTheme();
 
   const tags = [
     'gatsby',
@@ -16,10 +16,10 @@ export default function WorkCard2(): JSX.Element {
     'contentful',
   ];
   useEffect(() => {
-    if (imgRef.current.complete) setIsImgLoaded(true);
+    if (imgRef.current.complete) setIsImgisFontLoaded(true);
   }, []);
 
-  const handleLoad = () => setIsImgLoaded(true);
+  const handleLoad = () => setIsImgisFontLoaded(true);
 
   return (
     <Link href="/work/[id]" as={`/work/Impactraction`}>
@@ -31,14 +31,14 @@ export default function WorkCard2(): JSX.Element {
             <img
               src="/MDfiles/Impactraction/Impactraction-mockup.png"
               alt="mockup of Impactraction"
-              className={`shadow ${isImgLoaded ? 'block' : 'hidden'}`}
+              className={`shadow ${isImgisFontLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
               ref={imgRef}
               onLoad={handleLoad}
             />
             <div
-              className={`${isImgLoaded ? 'hidden' : 'skeleton'}`}
+              className={`${isImgisFontLoaded ? 'hidden' : 'skeleton'}`}
               style={{ paddingTop: '67%' }}
             />
           </div>
@@ -46,7 +46,7 @@ export default function WorkCard2(): JSX.Element {
             <li className="mb-5 text-primaryText mobile:mb-2">
               <span
                 className={`font-bold text-2xl inline-block font-display group-hover:bg-paper ${
-                  !loaded && 'skeleton text-transparent'
+                  !isFontLoaded && 'skeleton text-transparent'
                 }`}
               >
                 Company's websites

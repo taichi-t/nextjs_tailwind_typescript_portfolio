@@ -3,15 +3,15 @@ import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '@/utils/themeContext';
 import Tags from '@/components/Tags/Tags';
 export default function WorkCard2(): JSX.Element {
-  const [isImgLoaded, setIsImgLoaded] = useState(false);
+  const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
   const imgRef = useRef(null);
-  const { loaded } = useTheme();
+  const { isFontLoaded } = useTheme();
   const tags = ['reactHook', 'redux', 'materialUi', 'localStorage'];
   useEffect(() => {
-    if (imgRef.current.complete) setIsImgLoaded(true);
+    if (imgRef.current.complete) setIsImgisFontLoaded(true);
   }, []);
 
-  const handleLoad = () => setIsImgLoaded(true);
+  const handleLoad = () => setIsImgisFontLoaded(true);
 
   return (
     <Link href="/work/[id]" as={`/work/my-work-space`}>
@@ -23,14 +23,14 @@ export default function WorkCard2(): JSX.Element {
             <img
               src="/MDfiles/my-work-space/my-work-space-mockup.png"
               alt="mockup of my-work-space"
-              className={`shadow ${isImgLoaded ? 'block' : 'hidden'}`}
+              className={`shadow ${isImgisFontLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
               ref={imgRef}
               onLoad={handleLoad}
             />
             <div
-              className={`${isImgLoaded ? 'hidden' : 'skeleton'}`}
+              className={`${isImgisFontLoaded ? 'hidden' : 'skeleton'}`}
               style={{ paddingTop: '67%' }}
             />
           </div>
@@ -38,7 +38,7 @@ export default function WorkCard2(): JSX.Element {
             <li className="mb-5 text-primaryText mobile:mb-2">
               <span
                 className={`font-bold font-display text-2xl inline-block group-hover:bg-paper ${
-                  !loaded && 'skeleton text-transparent'
+                  !isFontLoaded && 'skeleton text-transparent'
                 }`}
               >
                 My Work Space

@@ -10,15 +10,15 @@ type Item = {
 
 export default function WorksGridLayout({ item }: Item) {
   const { thumbnail, id, title, tags } = item;
-  const { loaded } = useTheme();
-  const [isImgLoaded, setIsImgLoaded] = useState(false);
+  const { isFontLoaded } = useTheme();
+  const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
   const imgRef = useRef(null);
 
   useEffect(() => {
-    if (imgRef.current.complete) setIsImgLoaded(true);
+    if (imgRef.current.complete) setIsImgisFontLoaded(true);
   }, []);
 
-  const handleLoad = () => setIsImgLoaded(true);
+  const handleLoad = () => setIsImgisFontLoaded(true);
 
   return (
     <Link href="/work/[id]" as={`/work/${id}`}>
@@ -29,15 +29,15 @@ export default function WorksGridLayout({ item }: Item) {
             alt={thumbnail.alt}
             onLoad={handleLoad}
             ref={imgRef}
-            className={`${isImgLoaded ? 'block' : 'hidden'}`}
+            className={`${isImgisFontLoaded ? 'block' : 'hidden'}`}
           />
         </div>
         <div
-          className={`${isImgLoaded ? 'hidden' : 'skeleton'}`}
+          className={`${isImgisFontLoaded ? 'hidden' : 'skeleton'}`}
           style={{ paddingTop: '67%', height: 'auto' }}
         />
         <h2 className="font-bold font-display mt-3">
-          <span className={`inline-block ${!loaded && 'skeleton'}`}>
+          <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
             {title}
           </span>
         </h2>

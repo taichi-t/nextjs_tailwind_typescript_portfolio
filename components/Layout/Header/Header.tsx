@@ -4,15 +4,15 @@ import { useTheme } from '@/utils/themeContext';
 import { useRouter } from 'next/router';
 
 export default function Header(): JSX.Element {
-  const { loaded, toggleTheme, theme } = useTheme();
+  const { isFontLoaded, toggleTheme, theme } = useTheme();
   const { pathname } = useRouter();
-  const [isImgLoaded, setIsImgLoaded] = useState(false);
+  const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
   const imgRef = useRef(null);
   useEffect(() => {
-    if (imgRef.current.complete) setIsImgLoaded(true);
+    if (imgRef.current.complete) setIsImgisFontLoaded(true);
   }, []);
 
-  const handleLoad = () => setIsImgLoaded(true);
+  const handleLoad = () => setIsImgisFontLoaded(true);
 
   return (
     <header>
@@ -24,14 +24,14 @@ export default function Header(): JSX.Element {
                 <img
                   src="/images/logo.png"
                   alt="me"
-                  className={`${isImgLoaded ? 'block' : 'hidden'}`}
+                  className={`${isImgisFontLoaded ? 'block' : 'hidden'}`}
                   width="100%"
                   height="100%"
                   ref={imgRef}
                   onLoad={handleLoad}
                 />
                 <div
-                  className={`${isImgLoaded ? 'hidden' : 'block '}`}
+                  className={`${isImgisFontLoaded ? 'hidden' : 'block '}`}
                   style={{ paddingTop: '100%', height: 'auto' }}
                 />
               </div>
@@ -46,7 +46,7 @@ export default function Header(): JSX.Element {
                   pathname === '/' && 'text-yellow'
                 }`}
               >
-                <span className={`inline-block ${!loaded && 'skeleton'}`}>
+                <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
                   home
                 </span>
               </a>
@@ -60,7 +60,7 @@ export default function Header(): JSX.Element {
                   pathname === '/about' && 'text-yellow'
                 }`}
               >
-                <span className={`inline-block ${!loaded && 'skeleton'}`}>
+                <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
                   about
                 </span>
               </a>
@@ -73,7 +73,7 @@ export default function Header(): JSX.Element {
                   pathname === '/work/works' && 'text-yellow'
                 }`}
               >
-                <span className={`inline-block ${!loaded && 'skeleton'}`}>
+                <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
                   works
                 </span>
               </a>
@@ -86,7 +86,7 @@ export default function Header(): JSX.Element {
             <button onClick={toggleTheme} className="focus:outline-none">
               <span
                 className={`font-bold text-lg inline-block ${
-                  !loaded && 'skeleton'
+                  !isFontLoaded && 'skeleton'
                 }`}
               >
                 {theme === 'theme-dark' ? '🌞' : '🌚'}

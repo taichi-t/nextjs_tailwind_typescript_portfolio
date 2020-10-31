@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 export default function WorksLink(): JSX.Element {
-  const { loaded } = useTheme();
+  const { isFontLoaded } = useTheme();
   return (
     <Link href="/work/works">
       <div className="group bg-paper custom-border h-full hover:bg-yellow">
@@ -9,7 +9,7 @@ export default function WorksLink(): JSX.Element {
           <div className="text-lg font-bold text-indigo-400">
             <span
               className={`inline-block underline group-hover:bg-paper ${
-                !loaded && 'skeleton'
+                !isFontLoaded && 'skeleton'
               }`}
             >
               VIEW MORE 👉

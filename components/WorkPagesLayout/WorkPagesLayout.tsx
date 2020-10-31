@@ -15,15 +15,15 @@ export default function WorkPagesLayout({
   webLink,
   githubLink,
 }: WorkType): JSX.Element {
-  const { loaded } = useTheme();
-  const [isImgLoaded, setIsImgLoaded] = useState(false);
+  const { isFontLoaded } = useTheme();
+  const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
   const imgRef = useRef(null);
   useEffect(() => {
-    if (imgRef.current.complete) setIsImgLoaded(true);
+    if (imgRef.current.complete) setIsImgisFontLoaded(true);
   }, []);
 
   const handleLoad = () => {
-    setIsImgLoaded(true);
+    setIsImgisFontLoaded(true);
   };
   return (
     <main className="mt-3">
@@ -50,10 +50,10 @@ export default function WorkPagesLayout({
           width="100%"
           height="100%"
           onLoad={handleLoad}
-          className={`${isImgLoaded ? 'block' : 'hidden'}`}
+          className={`${isImgisFontLoaded ? 'block' : 'hidden'}`}
         />
         <div
-          className={`skeleton ${isImgLoaded ? 'hidden' : 'block'}`}
+          className={`skeleton ${isImgisFontLoaded ? 'hidden' : 'block'}`}
           style={{ paddingTop: '58%' }}
         ></div>
       </div>
@@ -62,7 +62,11 @@ export default function WorkPagesLayout({
         <li className="text-left">
           <p className="text-xl">👈</p>
           <Link href="/work/[id]" as={`${links.prev.src}`}>
-            <a className={`underline inline-block ${!loaded && 'skeleton'}`}>
+            <a
+              className={`underline inline-block ${
+                !isFontLoaded && 'skeleton'
+              }`}
+            >
               <span className="text-base">{links.prev.title}</span>
             </a>
           </Link>
@@ -70,7 +74,11 @@ export default function WorkPagesLayout({
         <li className="text-right">
           <p className="text-xl">👉</p>
           <Link href="/work/[id]" as={`${links.next.src}`}>
-            <a className={`underline inline-block ${!loaded && 'skeleton'}`}>
+            <a
+              className={`underline inline-block ${
+                !isFontLoaded && 'skeleton'
+              }`}
+            >
               <span className="text-base">{links.next.title}</span>
             </a>
           </Link>
