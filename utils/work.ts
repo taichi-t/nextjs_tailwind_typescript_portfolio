@@ -4,10 +4,28 @@ import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
 
-const postsDirectory = path.join(process.cwd(), 'public/MDfiles');
+type GetAllWorkIds = {
+  params: {
+      id: string;
+  };
+}[]
 
-export function getAllWorkIds() {
-  const folderNames = fs.readdirSync(postsDirectory);
+type GetSortedWorksData = {
+  date: string;
+  title: string;
+  id: string;
+}[]
+
+type GetWorkData = {
+    title: string;
+    id: string;
+    contentHtml: string;
+}
+
+const workDirectory = path.join(process.cwd(), 'public/MDfiles');
+
+export function getAllWorkIds():GetAllWorkIds{
+  const folderNames = fs.readdirSync(workDirectory);
   return folderNames.map((folderName) => {
     return {
       params: {
@@ -17,32 +35,23 @@ export function getAllWorkIds() {
   });
 }
 
-export function getSortedWorksData() {
-  // Get file names under /posts
-
-  const folderNames = fs.readdirSync(postsDirectory);
-  const allPostsData = folderNames.map((folderName) => {
-    // Remove ".md" from file name to get id
+export function getSortedWorksData():GetSortedWorksData {
+  const folderNames = fs.readdirSync(workDirectory);
+  const allWorksData = folderNames.map((folderName) => {
     const id = folderName;
-
-    // Read markdown file as string
     const fullPath = path.join(
-      postsDirectory,
+      workDirectory,
       `${folderName}/${folderName}.md`
     );
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-    // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-
-    // Combine the data with the id
     return {
       id,
       ...(matterResult.data as { date: string; title: string }),
     };
   });
-  // Sort posts by date
-  return allPostsData.sort((a, b) => {
+
+  return allWorksData.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
     } else {
@@ -51,20 +60,14 @@ export function getSortedWorksData() {
   });
 }
 
-export async function getWorkData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}/${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-  // Use gray-matter to parse the post metadata section
+export async function getWorkData(id:string):Promise<GetWorkData>{
+  const fullPath = path.join(workDirectory, `${id}/${id}.md`);
+  const fileContents =  fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
-
-  // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
-
-  // Combine the data with the id and contentHtml
   return {
     id,
     contentHtml,

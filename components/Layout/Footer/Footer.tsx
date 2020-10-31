@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Sns from '@/components/Sns/Sns';
 import { useRouter } from 'next/router';
 
-export default function Footer() {
+export default function Footer(): JSX.Element {
   const { pathname } = useRouter();
   const { loaded } = useTheme();
 

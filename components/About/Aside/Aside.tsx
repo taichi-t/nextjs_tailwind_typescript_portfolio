@@ -1,5 +1,5 @@
 import { useTheme } from '@/utils/themeContext';
-export default function Aside() {
+export default function Aside(): JSX.Element {
   const { loaded } = useTheme();
   return (
     <div className="p-3 text-primaryText h-full flex flex-col justify-around">

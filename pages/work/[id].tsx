@@ -3,8 +3,13 @@ import Layout from '@/components/Layout/Layout';
 import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllWorkIds, getWorkData } from '@/utils/work';
+import { Work as WorkType } from '@/types/works';
 
-export default function Work({ workData }) {
+type WorkData = {
+  workData: WorkType;
+};
+
+export default function Work({ workData }: WorkData): JSX.Element {
   return (
     <>
       <Head>

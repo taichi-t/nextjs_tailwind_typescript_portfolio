@@ -1,9 +1,8 @@
 import { useTheme } from '@/utils/themeContext';
 import Sns from '@/components/Sns/Sns';
 
-export default function Profile() {
+export default function Profile(): JSX.Element {
   const { loaded } = useTheme();
-
   return (
     <div className="p-3 text-primaryText h-full flex flex-col justify-between mobile:p-1">
       <div className="inline-block align-top">

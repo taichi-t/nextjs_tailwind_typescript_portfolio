@@ -3,7 +3,7 @@ import Header from './Header/Header';
 
 import { useTheme } from '@/utils/themeContext';
 
-export default function Layout({ children }) {
+export default function Layout({ children }): JSX.Element {
   const { theme } = useTheme();
 
   return (

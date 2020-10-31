@@ -1,5 +1,5 @@
 import { useTheme } from '@/utils/themeContext';
-export default function SoftSkill() {
+export default function SoftSkill(): JSX.Element {
   const { loaded } = useTheme();
   return (
     <div className="p-6 border border-divider bg-paper mt-8 mobile:p-3">

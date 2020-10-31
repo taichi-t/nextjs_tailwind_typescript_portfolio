@@ -5,7 +5,7 @@ import '@/styles/index.css';
 import ThemeProvider from '@/utils/themeContext';
 import { useTheme } from '@/utils/themeContext';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }): JSX.Element {
   const Layout = Component.Layout ? Component.Layout : React.Fragment;
   const { theme } = useTheme();
   useEffect(() => {

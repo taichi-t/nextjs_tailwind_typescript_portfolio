@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 import { useRouter } from 'next/router';
 
-export default function Header() {
+export default function Header(): JSX.Element {
   const { loaded, toggleTheme, theme } = useTheme();
   const { pathname } = useRouter();
   const [isImgLoaded, setIsImgLoaded] = useState(false);

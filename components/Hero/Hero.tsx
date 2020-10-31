@@ -1,6 +1,6 @@
 import { useTheme } from '@/utils/themeContext';
 
-export default function Hero() {
+export default function Hero(): JSX.Element {
   const { loaded } = useTheme();
 
   return (

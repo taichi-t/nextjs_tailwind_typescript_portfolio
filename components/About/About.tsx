@@ -4,7 +4,7 @@ import Aside from './Aside/Aside';
 import HardSkill from './HardSkill/HardSkill';
 import SoftSkill from './SoftSkill/SoftSkill';
 
-export default function About() {
+export default function About(): JSX.Element {
   return (
     <main className="mt-3">
       <div className="bg-paper custom-border-thick">
@@ -24,23 +24,4 @@ export default function About() {
       <SoftSkill />
     </main>
   );
-}
-
-{
-  /* <ul className="flex">
-            <li className="w-16">
-              <span>
-                <ReactSvg fill="#61DAFB" />
-              </span>
-            </li>
-            <li className="w-16">
-              <TypeScriptSvg fill="#007acc" />
-            </li>
-            <li className="w-16">
-              <ReduxSvg fill="#764ABC" />
-            </li>
-            <li className="w-16">
-              <JavascriptSvg fill="#f7df1e" />
-            </li>
-          </ul> */
 }

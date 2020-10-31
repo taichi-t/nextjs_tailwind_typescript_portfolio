@@ -2,7 +2,7 @@ import { useTheme } from '@/utils/themeContext';
 import ReactSvg from '@/public/images/icons/react.svg';
 import TypeScriptSvg from '@/public/images/icons/typescript.svg';
 import JavascriptSvg from '@/public/images/icons/javascript.svg';
-export default function HardSkill() {
+export default function HardSkill(): JSX.Element {
   const { loaded } = useTheme();
   return (
     <div className="text-primaryText text-sm mt-5 mx-auto grid grid-cols-12 gap-3 mobile:gap-1 mobile:mt-8">
@@ -69,37 +69,4 @@ export default function HardSkill() {
       </div>
     </div>
   );
-}
-
-{
-  /* <h2 className="text-secondaryText font-bold block">Specialists:</h2>
-<ul className="flex">
-  <li className="w-16 mr-8">
-    <span>
-      <ReactSvg fill="#61DAFB" />
-    </span>
-  </li>
-  <li className="w-16 mr-8">
-    <TypeScriptSvg fill="#007acc" />
-  </li>
-
-  <li className="w-16 mr-8">
-    <JavascriptSvg fill="#f7df1e" />
-  </li>
-</ul>
-<h2 className="text-secondaryText font-bold block">Other skills:</h2>
-<ul className="flex">
-  <li className="w-16 mr-8">
-    <span>
-      <ReactSvg fill="#61DAFB" />
-    </span>
-  </li>
-  <li className="w-16 mr-8">
-    <TypeScriptSvg fill="#007acc" />
-  </li>
-
-  <li className="w-16 mr-8">
-    <JavascriptSvg fill="#f7df1e" />
-  </li>
-</ul> */
 }

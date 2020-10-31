@@ -1,10 +1,8 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
-import config from '@/config/website';
+import { SITEMETADATA } from '@/constants/config';
 
 export default class Document extends NextDocument {
   render() {
-    const { siteMetadata } = config;
-
     return (
       <Html lang="en">
         <Head>
@@ -41,9 +39,9 @@ export default class Document extends NextDocument {
           <meta
             key="description"
             name="description"
-            content={siteMetadata.description}
+            content={SITEMETADATA.description}
           />
-          <meta key="title" name="title" content={siteMetadata.title} />
+          <meta key="title" name="title" content={SITEMETADATA.title} />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
