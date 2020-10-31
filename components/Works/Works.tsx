@@ -2,7 +2,7 @@ import { useTheme } from '@/utils/themeContext';
 import Column1 from './Column1/Column1';
 import Column2 from './Column2/Column2';
 
-export default function Hero() {
+export default function Hero(): JSX.Element {
   const { loaded } = useTheme();
 
   return (

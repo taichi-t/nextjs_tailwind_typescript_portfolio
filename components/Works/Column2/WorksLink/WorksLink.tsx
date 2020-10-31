@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
-export default function WorksLink() {
+export default function WorksLink(): JSX.Element {
   const { loaded } = useTheme();
-
   return (
     <Link href="/work/works">
       <div className="group bg-paper custom-border h-full hover:bg-yellow">

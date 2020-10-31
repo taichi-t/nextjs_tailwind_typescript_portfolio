@@ -4,7 +4,7 @@ import { useTheme } from '@/utils/themeContext';
 
 import Tags from '@/components/Tags/Tags';
 
-export default function WorkCard1() {
+export default function WorkCard1(): JSX.Element {
   const { loaded } = useTheme();
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
@@ -12,11 +12,7 @@ export default function WorkCard1() {
     if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
   const handleLoad = () => setIsImgLoaded(true);
-  const tags = ["reactHook",
-    "nextJs",
-    "mongoDB",
-    "nodeJs",
-    "semantic-ui"];
+  const tags = ['reactHook', 'nextJs', 'mongoDB', 'nodeJs', 'semantic-ui'];
   return (
     <Link href="/work/[id]" as={`/work/moving-sale`}>
       <div className="group  bg-paper custom-border flex justify-center items-center hover:bg-opacityBlue">

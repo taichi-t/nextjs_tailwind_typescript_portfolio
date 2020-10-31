@@ -1,6 +1,7 @@
 import { useTheme } from '@/utils/themeContext';
 import Launch from '@/public/images/icons/launch.svg';
 import Aside from '@/components/WorkPagesLayout/Aside/Aside';
+import { Work as WorkType } from '@/types/works';
 
 export default function WorkCard1({
   contentHtml,
@@ -9,7 +10,7 @@ export default function WorkCard1({
   githubLink,
   tags,
   role,
-}) {
+}: Partial<WorkType>) {
   const { loaded } = useTheme();
 
   return (

@@ -2,14 +2,11 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '@/utils/themeContext';
 import Tags from '@/components/Tags/Tags';
-export default function WorkCard2() {
+export default function WorkCard2(): JSX.Element {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   const { loaded } = useTheme();
-  const tags = ["reactHook",
-    "redux",
-    "materialUi",
-    "localStorage"];
+  const tags = ['reactHook', 'redux', 'materialUi', 'localStorage'];
   useEffect(() => {
     if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
@@ -44,7 +41,7 @@ export default function WorkCard2() {
                   !loaded && 'skeleton text-transparent'
                 }`}
               >
-               My Work Space
+                My Work Space
               </span>
             </li>
             <li>

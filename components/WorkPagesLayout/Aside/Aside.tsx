@@ -1,9 +1,9 @@
 import { useTheme } from '@/utils/themeContext';
 import Tags from '@/components/Tags/Tags';
+import { Work as WorkType } from '@/types/works';
 
-export default function Aside({ tags, role }) {
+export default function Aside({ tags, role }: Partial<WorkType>) {
   const { loaded } = useTheme();
-
   return (
     <aside className="flex justify-center items-center mobile:justify-start">
       <div className="inline-block">

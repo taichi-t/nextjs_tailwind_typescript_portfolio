@@ -2,8 +2,13 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 import Tags from '@/components/Tags/Tags';
+import { Work as WorkType } from '@/types/works';
 
-export default function WorksGridLayout({ item }) {
+type Item = {
+  item: WorkType;
+};
+
+export default function WorksGridLayout({ item }: Item) {
   const { thumbnail, id, title, tags } = item;
   const { loaded } = useTheme();
   const [isImgLoaded, setIsImgLoaded] = useState(false);

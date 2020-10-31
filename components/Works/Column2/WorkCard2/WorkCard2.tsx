@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '@/utils/themeContext';
 import Tags from '@/components/Tags/Tags';
 
-export default function WorkCard2() {
+export default function WorkCard2(): JSX.Element {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   const { loaded } = useTheme();

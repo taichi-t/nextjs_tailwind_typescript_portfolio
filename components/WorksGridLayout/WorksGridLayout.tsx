@@ -1,6 +1,7 @@
 import WorksItem from './WorksItem/WorksItem';
+import { AllWorksData } from '@/pages/work/works';
 
-export default function WorksGridLayout({ allWorksData }) {
+export default function WorksGridLayout({ allWorksData }: AllWorksData) {
   const contents = allWorksData.map((item) => (
     <WorksItem item={item} key={item.id} />
   ));

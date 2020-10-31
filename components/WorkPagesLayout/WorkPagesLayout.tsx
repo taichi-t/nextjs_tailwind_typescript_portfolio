@@ -3,6 +3,7 @@ import Description from './Description/Description';
 import Aside from './Aside/Aside';
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
+import { Work as WorkType } from '@/types/works';
 
 export default function WorkPagesLayout({
   contentHtml,
@@ -13,9 +14,8 @@ export default function WorkPagesLayout({
   title,
   webLink,
   githubLink,
-}) {
+}: WorkType): JSX.Element {
   const { loaded } = useTheme();
-
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   useEffect(() => {
