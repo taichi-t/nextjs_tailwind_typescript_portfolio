@@ -1,5 +1,4 @@
 export interface Work {
-  workData: {
     title: string;
     data: string;
     tags: string[];
@@ -26,6 +25,5 @@ export interface Work {
     };
     contentHtml: JSX.Element | string;
   };
-}
 
-export type Works = Work[]
+

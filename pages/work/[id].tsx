@@ -5,7 +5,11 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllWorkIds, getWorkData } from '@/utils/work';
 import { Work as WorkType } from '@/types/works';
 
-export default function Work({ workData }: WorkType): React.ReactElement {
+type WorkData = {
+  workData: WorkType;
+};
+
+export default function Work({ workData }: WorkData): React.ReactElement {
   return (
     <>
       <Head>
