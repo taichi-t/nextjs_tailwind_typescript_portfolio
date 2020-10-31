@@ -1,14 +1,11 @@
-const config = require('@/config/website');
+import { FONT } from '@/constants/config';
 let FontFaceObserver = require('fontfaceobserver');
 
 const useFontFaceObserver = (setLoaded) => {
-  const { font } = config;
-  let fontFamilies = font;
-
   var fontObservers = [];
-  Object.keys(fontFamilies).forEach(function (family) {
+  Object.keys(FONT).forEach(function (family) {
     fontObservers.push(
-      fontFamilies[family].map(function (config) {
+      FONT[family].map(function (config) {
         return new FontFaceObserver(family, config).load();
       })
     );
