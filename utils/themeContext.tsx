@@ -1,20 +1,28 @@
-import { useState, useContext, createContext, useEffect } from 'react';
+import {
+  useState,
+  useContext,
+  createContext,
+  useEffect,
+  ReactNode,
+} from 'react';
 import useFontFaceObserver from '@/hooks/useFontFaceObserver';
 
 interface ContextProps {
-  toggleTheme(): void;
-  theme: string;
-  loaded: boolean;
-  children: JSX.Element
-};
+  toggleTheme?(): void;
+  children: ReactNode;
+  theme?: string;
+  loaded?: boolean;
+}
 
-const initialValue = { theme: 'theme-light', loaded: false };
+const initialValue = { theme: 'theme-dark', loaded: false };
 
 export const ThemeContext = createContext<Partial<ContextProps>>(initialValue);
 
-export default function ThemeProvider({ children }: ContextProps) {
-  const [theme, setTheme] = useState('theme-dark');
-  const [loaded, setLoaded] = useState(false);
+export default function ThemeProvider({
+  children,
+}: ContextProps): React.ReactElement {
+  const [theme, setTheme] = useState(initialValue.theme);
+  const [loaded, setLoaded] = useState(initialValue.loaded);
 
   useEffect(() => {
     useFontFaceObserver(setLoaded);

@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next';
 import { getSortedWorksData } from '@/utils/work';
 import WorksGridLayout from '@/components/WorksGridLayout/WorksGridLayout';
 
-export default function Works({ allWorksData }) {
+export default function Works({ allWorksData }): React.ReactElement {
   return (
     <>
       <Head>

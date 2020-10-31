@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllWorkIds, getWorkData } from '@/utils/work';
 
-export default function Work({ workData }) {
+export default function Work({ workData }): React.ReactElement {
   return (
     <>
       <Head>

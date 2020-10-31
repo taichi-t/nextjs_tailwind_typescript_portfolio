@@ -4,7 +4,7 @@ import Hero from '@/components/Hero/Hero';
 import Introduction from '@/components/Introduction/Introduction';
 import Works from '@/components/Works/Works';
 
-export default function IndexPage(): JSX.Element {
+export default function IndexPage(): React.ReactElement {
   return (
     <>
       <Head>
