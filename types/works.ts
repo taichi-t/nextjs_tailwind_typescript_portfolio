@@ -1,29 +1,28 @@
 export interface Work {
-    title: string;
-    data: string;
-    tags: string[];
-    role: string;
-    webLink: string;
-    githubLink: string;
-    image: {
-      src: string;
-      alt: string;
-    };
-    thumbnail: {
-      src: string;
-      alt: string;
-    };
-    links: {
-      next: {
-        src: string;
-        titl: string;
-      };
-      prev: {
-        src: string;
-        title: string;
-      };
-    };
-    contentHtml: JSX.Element | string;
+  id: string;
+  title: string;
+  date: string;
+  tags: string[];
+  role: string[];
+  webLink: string;
+  githubLink: string;
+  image: {
+    src: string;
+    alt: string;
   };
-
-
+  thumbnail: {
+    src: string;
+    alt: string;
+  };
+  links: {
+    next: {
+      src: string;
+      title: string;
+    };
+    prev: {
+      src: string;
+      title: string;
+    };
+  };
+  contentHtml: string;
+}

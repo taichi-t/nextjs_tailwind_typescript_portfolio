@@ -1,7 +1,7 @@
 import { useTheme } from '@/utils/themeContext';
 
 export default function Hero(): JSX.Element {
-  const { loaded } = useTheme();
+  const { isFontLoaded } = useTheme();
 
   return (
     <div className="flex justify-center items-center mt-20">
@@ -9,7 +9,7 @@ export default function Hero(): JSX.Element {
         <p className={`hero-text uppercase`}>
           <span
             className={`inline-block  ${
-              !loaded && 'skeleton disable-hero-text'
+              !isFontLoaded && 'skeleton disable-hero-text'
             }`}
           >
             welcome
@@ -18,7 +18,7 @@ export default function Hero(): JSX.Element {
         <p className={`hero-text uppercase`}>
           <span
             className={`inline-block  ${
-              !loaded && 'skeleton disable-hero-text'
+              !isFontLoaded && 'skeleton disable-hero-text'
             }`}
           >
             to
@@ -27,7 +27,7 @@ export default function Hero(): JSX.Element {
         <p className={`hero-text uppercase`}>
           <span
             className={`inline-block  ${
-              !loaded && 'skeleton disable-hero-text'
+              !isFontLoaded && 'skeleton disable-hero-text'
             }`}
           >
             my portfolio
@@ -38,7 +38,7 @@ export default function Hero(): JSX.Element {
         >
           <span
             className={`inline-block  ${
-              !loaded && 'skeleton disable-hero-text'
+              !isFontLoaded && 'skeleton disable-hero-text'
             }`}
           >
             Have fun🤟

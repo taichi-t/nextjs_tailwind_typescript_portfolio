@@ -3,7 +3,7 @@ import LinkedInSvg from '@/public/images/icons/linkedin.svg';
 import InstaGramSvg from '@/public/images/icons/instagram.svg';
 import { SNS } from '@/constants/config';
 
-export default function Sns() {
+export default function Sns(): JSX.Element {
   return (
     <ul className="flex flex-wrap">
       <li className="w-5 mr-3">

@@ -1,6 +1,7 @@
 import { useTheme } from '@/utils/themeContext';
 import Launch from '@/public/images/icons/launch.svg';
 import Aside from '@/components/WorkPagesLayout/Aside/Aside';
+import { Work as WorkType } from '@/types/works';
 
 export default function WorkCard1({
   contentHtml,
@@ -9,18 +10,20 @@ export default function WorkCard1({
   githubLink,
   tags,
   role,
-}) {
-  const { loaded } = useTheme();
+}: Partial<WorkType>) {
+  const { isFontLoaded } = useTheme();
 
   return (
     <div>
       <h1 className={`inner-wrap font-bold text-2xl font-display `}>
-        <span className={`inline-block ${!loaded && 'skeleton'}`}>{title}</span>
+        <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
+          {title}
+        </span>
       </h1>
       <div className="mt-5">
         <article
           className={`text-sm leading-relaxed inline-block ${
-            loaded ? 'markdown-style' : 'skeleton'
+            isFontLoaded ? 'markdown-style' : 'skeleton'
           }`}
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
@@ -51,7 +54,9 @@ export default function WorkCard1({
             rel="noopener"
           >
             <span
-              className={`inline-block underline mr-1 ${!loaded && 'skeleton'}`}
+              className={`inline-block underline mr-1 ${
+                !isFontLoaded && 'skeleton'
+              }`}
             >
               VISIT GIT
             </span>

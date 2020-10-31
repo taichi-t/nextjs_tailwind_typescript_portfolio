@@ -5,7 +5,7 @@ import { getSortedWorksData } from '@/utils/work';
 import WorksGridLayout from '@/components/WorksGridLayout/WorksGridLayout';
 import { Work as WorkType } from '@/types/works';
 
-type AllWorksData = {
+export type AllWorksData = {
   allWorksData: WorkType[];
 };
 

@@ -1,14 +1,14 @@
 import { useTheme } from '@/utils/themeContext';
 
 export default function Hero(): JSX.Element {
-  const { loaded } = useTheme();
+  const { isFontLoaded } = useTheme();
 
   return (
     <div className="inner-wrap mt-20">
       <h2 className="title text-primaryText ">
         <span
           className={`font-display font-bold text-3xl inline-block mobile:text-lg ${
-            !loaded && 'skeleton'
+            !isFontLoaded && 'skeleton'
           }`}
         >
           Hi, I'm Taichi 🕺,
@@ -16,7 +16,7 @@ export default function Hero(): JSX.Element {
         <br />
         <span
           className={`text-2xl leading-tight inline-block mobile:text-sm ${
-            !loaded && 'skeleton'
+            !isFontLoaded && 'skeleton'
           }`}
         >
           a junior developer based in Vancouver, Canada, seeking an opportunity

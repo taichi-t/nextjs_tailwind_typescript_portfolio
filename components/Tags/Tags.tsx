@@ -1,4 +1,4 @@
-export default function Tags({ tags }) {
+export default function Tags({ tags }): JSX.Element {
   return tags.map((tag, index) => (
     <li
       className={`bg-inner mb-1 ${

@@ -11,20 +11,16 @@ interface ContextProps {
   toggleTheme?(): void;
   children: ReactNode;
   theme?: string;
-  loaded?: boolean;
+  isFontLoaded?: boolean;
 }
 
-const initialValue = { theme: 'theme-dark', loaded: false };
+const initialValue = { theme: 'theme-dark', isFontLoaded: false };
 
 export const ThemeContext = createContext<Partial<ContextProps>>(initialValue);
 
 export default function ThemeProvider({ children }: ContextProps): JSX.Element {
   const [theme, setTheme] = useState(initialValue.theme);
-  const [loaded, setLoaded] = useState(initialValue.loaded);
-
-  useEffect(() => {
-    useFontFaceObserver(setLoaded);
-  }, []);
+  const { isFontLoaded } = useFontFaceObserver();
 
   function toggleTheme() {
     setTheme(theme === 'theme-light' ? 'theme-dark' : 'theme-light');
@@ -35,7 +31,7 @@ export default function ThemeProvider({ children }: ContextProps): JSX.Element {
       value={{
         theme,
         toggleTheme,
-        loaded,
+        isFontLoaded,
       }}
     >
       {children}
