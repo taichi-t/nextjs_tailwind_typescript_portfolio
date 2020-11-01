@@ -1,10 +1,4 @@
-import {
-  useState,
-  useContext,
-  createContext,
-  useEffect,
-  ReactNode,
-} from 'react';
+import { useState, useContext, createContext, ReactNode } from 'react';
 import useFontFaceObserver from '@/hooks/useFontFaceObserver';
 
 interface ContextProps {
