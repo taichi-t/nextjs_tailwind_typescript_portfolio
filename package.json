@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "fontfaceobserver": "^2.1.0",
@@ -31,6 +32,7 @@
     "babel-jest": "^26.6.1",
     "babel-plugin-inline-react-svg": "^1.1.1",
     "babel-plugin-module-resolver": "^4.0.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.1",
     "next-offline": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
