@@ -5,6 +5,7 @@ tags:
   - typeScript
   - nextJs
   - tailwind
+  - jest
 role:
   - Front-end development
 webLink: 'https://taichi-t.github.io/deploy_redux_hooks_app/'
