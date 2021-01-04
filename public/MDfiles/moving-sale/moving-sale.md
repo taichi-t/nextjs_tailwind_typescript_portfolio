@@ -24,7 +24,7 @@ links:
     src: '/work/Impactraction'
     title: "Company's websites"
   prev:
-    src: '/work/my-work-place'
+    src: '/work/my-work-space'
     title: 'My Work Place'
 ---
 
