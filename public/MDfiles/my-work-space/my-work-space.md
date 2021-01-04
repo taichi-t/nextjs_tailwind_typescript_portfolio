@@ -8,7 +8,7 @@ tags:
   - localStorage
 role:
   - Front-end development
-webLink: 'https://taichi-t.github.io/deploy_redux_hooks_app/'
+webLink: 'https://taichi-t.github.io/redux_hooks_todo_app/'
 githubLink: 'https://github.com/taichi-t/deploy_redux_hooks_app'
 image:
   src: '/MDfiles/my-work-space/my-work-space-devices.png'

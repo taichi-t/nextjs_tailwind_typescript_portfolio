@@ -8,7 +8,7 @@ tags:
   - jest
 role:
   - Front-end development
-webLink: 'https://taichi-t.github.io/deploy_redux_hooks_app/'
+webLink: 'https://taichi-tsujioka.info/'
 githubLink: 'https://github.com/taichi-t/nextjs_tilewind_typescript_boilerplate'
 image:
   src: '/MDfiles/portfolio/portfolio-devices.png'
