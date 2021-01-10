@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '@/utils/themeContext';
+
 import Tags from '@/components/Tags/Tags';
 
-export default function WorkCard1({ data }): JSX.Element {
-  const { id, tags, title, thumbnail } = data;
+export default function WorkCard1(): JSX.Element {
   const { isFontLoaded } = useTheme();
   const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
   const imgRef = useRef(null);
@@ -12,14 +12,15 @@ export default function WorkCard1({ data }): JSX.Element {
     if (imgRef.current.complete) setIsImgisFontLoaded(true);
   }, []);
   const handleLoad = () => setIsImgisFontLoaded(true);
+  const tags = ['reactHook', 'nextJs', 'mongoDB', 'nodeJs', 'semantic-ui'];
   return (
-    <Link href="/work/[id]" as={`/work/${id}`}>
+    <Link href="/work/[id]" as={`/work/moving-sale`}>
       <div className="group  bg-paper custom-border flex justify-center items-center hover:bg-opacityBlue">
         <div className="m-12 grid grid-cols-12 gap-8 tablet:gap-6 tablet:m-10 mobile:gap-2 mobile:m-4">
           <div className="col-span-6 mobile:col-span-12 mobile:mb-3">
             <img
-              src={thumbnail.src}
-              alt={thumbnail.alt}
+              src="/MDfiles/moving-sale/moving-sale-mockup.png"
+              alt="mockup of moving sale"
               className={`shadow ${isImgisFontLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
@@ -39,7 +40,7 @@ export default function WorkCard1({ data }): JSX.Element {
                     !isFontLoaded && 'skeleton text-transparent'
                   }`}
                 >
-                  {title}
+                  E-commerce website
                 </span>
               </li>
               <li>
