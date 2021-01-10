@@ -15,3 +15,9 @@ export const SNS = {
   github: 'https://github.com/taichi-t',
   blog: 'https://www.canajapa.com/',
 };
+
+export const HIGHTLIGHTED_WORKS = [
+  'moving-sale',
+  'impactraction',
+  'weather-react-icons',
+];
