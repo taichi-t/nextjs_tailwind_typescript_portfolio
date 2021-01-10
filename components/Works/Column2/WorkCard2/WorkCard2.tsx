@@ -3,11 +3,18 @@ import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '@/utils/themeContext';
 import Tags from '@/components/Tags/Tags';
 
-export default function WorkCard2({ data }): JSX.Element {
-  const { id, tags, title, thumbnail } = data;
+export default function WorkCard2(): JSX.Element {
   const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
   const imgRef = useRef(null);
   const { isFontLoaded } = useTheme();
+
+  const tags = [
+    'gatsby',
+    'scss',
+    'react-bootstrap',
+    'netlify-functions',
+    'contentful',
+  ];
   useEffect(() => {
     if (imgRef.current.complete) setIsImgisFontLoaded(true);
   }, []);
@@ -15,15 +22,15 @@ export default function WorkCard2({ data }): JSX.Element {
   const handleLoad = () => setIsImgisFontLoaded(true);
 
   return (
-    <Link href="/work/[id]" as={`/work/${id}`}>
+    <Link href="/work/[id]" as={`/work/Impactraction`}>
       <div className="group bg-paper custom-border hover:bg-opacityBioret h-full">
         <div className="m-8 tablet:m-6 mobile:m-4">
           <div
             className={`w-9/12 tablet:w-full my-0 mx-auto mb-6 mobile:w-full mobile:mb-3`}
           >
             <img
-              src={thumbnail.src}
-              alt={thumbnail.alt}
+              src="/MDfiles/Impactraction/Impactraction-mockup.png"
+              alt="mockup of Impactraction"
               className={`shadow ${isImgisFontLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
@@ -42,7 +49,7 @@ export default function WorkCard2({ data }): JSX.Element {
                   !isFontLoaded && 'skeleton text-transparent'
                 }`}
               >
-                {title}
+                Company's websites
               </span>
             </li>
             <li>
