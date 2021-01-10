@@ -6,25 +6,25 @@ import html from 'remark-html';
 
 type GetAllWorkIds = {
   params: {
-      id: string;
+    id: string;
   };
-}[]
+}[];
 
 type GetSortedWorksData = {
   date: string;
   title: string;
   id: string;
-}[]
+}[];
 
 type GetWorkData = {
-    title: string;
-    id: string;
-    contentHtml: string;
-}
+  title: string;
+  id: string;
+  contentHtml: string;
+};
 
 const workDirectory = path.join(process.cwd(), 'public/MDfiles');
 
-export function getAllWorkIds():GetAllWorkIds{
+export function getAllWorkIds(): GetAllWorkIds {
   const folderNames = fs.readdirSync(workDirectory);
   return folderNames.map((folderName) => {
     return {
@@ -35,14 +35,11 @@ export function getAllWorkIds():GetAllWorkIds{
   });
 }
 
-export function getSortedWorksData():GetSortedWorksData {
+export function getSortedWorksData(): GetSortedWorksData {
   const folderNames = fs.readdirSync(workDirectory);
   const allWorksData = folderNames.map((folderName) => {
     const id = folderName;
-    const fullPath = path.join(
-      workDirectory,
-      `${folderName}/${folderName}.md`
-    );
+    const fullPath = path.join(workDirectory, `${folderName}/${folderName}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
     return {
@@ -60,9 +57,9 @@ export function getSortedWorksData():GetSortedWorksData {
   });
 }
 
-export async function getWorkData(id:string):Promise<GetWorkData>{
+export async function getWorkData(id: string): Promise<GetWorkData> {
   const fullPath = path.join(workDirectory, `${id}/${id}.md`);
-  const fileContents =  fs.readFileSync(fullPath, 'utf8');
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
   const processedContent = await remark()
     .use(html)
@@ -73,4 +70,13 @@ export async function getWorkData(id:string):Promise<GetWorkData>{
     contentHtml,
     ...(matterResult.data as { title: string }),
   };
+}
+
+export async function getSelectedWorkData(fileNames: string[]): Promise<any> {
+  let works = {};
+  await fileNames.forEach(async (fileName, index) => {
+    let data = await getWorkData(fileName);
+    works[`card${index + 1}`] = data;
+  });
+  return works;
 }
