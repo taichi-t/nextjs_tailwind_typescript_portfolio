@@ -47,7 +47,7 @@ export async function getWorkData(id: string) {
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
-  matterResult.data.contentHtml = processedContent.toString();
+  matterResult.data.contentHtml = await processedContent.toString();
   return {
     id,
     ...(matterResult.data as Work),
@@ -58,9 +58,12 @@ export async function getSelectedWorkData(
   fileNames: string[]
 ): Promise<{ [key: string]: IWork }> {
   let works = {};
-  await fileNames.forEach(async (fileName, index) => {
+  let index = 1;
+
+  for (let fileName of fileNames) {
     let data = await getWorkData(fileName);
-    works[`card${index + 1}`] = data;
-  });
+    works[`card${index}`] = data;
+    index++;
+  }
   return works;
 }

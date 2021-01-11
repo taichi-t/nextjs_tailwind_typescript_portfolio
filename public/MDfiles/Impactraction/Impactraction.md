@@ -14,10 +14,10 @@ role:
 webLink: 'https://impactraction-v1.netlify.app/'
 githubLink:
 image:
-  src: '/MDfiles/Impactraction/Impactraction-devices.png'
+  src: '/MDfiles/impactraction/impactraction-devices.png'
   alt: 'impactraction with responsive design'
 thumbnail:
-  src: '/MDfiles/Impactraction/Impactraction-mockup.png'
+  src: '/MDfiles/impactraction/impactraction-mockup.png'
   alt: 'mockup Impactraction'
 links:
   next:
