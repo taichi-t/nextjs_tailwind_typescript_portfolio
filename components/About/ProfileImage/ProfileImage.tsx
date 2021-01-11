@@ -10,7 +10,7 @@ export default function ProfileImage(): JSX.Element {
   return (
     <div className={`p-3 mobile:p-1 `}>
       <img
-        src="/images/me.JPG"
+        src="/images/me.jpg"
         alt="me"
         className={`circle ${isImgisFontLoaded ? 'block' : 'hidden'}`}
         width="100%"
