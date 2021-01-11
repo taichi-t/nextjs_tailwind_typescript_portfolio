@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Hero from '@/components/Hero/Hero';
 import Introduction from '@/components/Introduction/Introduction';
 import Works from '@/components/Works/Works';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import { getSelectedWorkData } from '@/utils/work';
 import { HIGHTLIGHTED_WORKS } from '@/constants/config';
 import { IWork } from '@/types/works';
@@ -27,7 +27,7 @@ export default function IndexPage(props: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const works = await getSelectedWorkData(HIGHTLIGHTED_WORKS);
   return {
     props: { ...works },

@@ -3,8 +3,8 @@ export interface Work {
   date: string;
   tags: string[];
   role: string[];
-  webLink: string;
-  githubLink: string;
+  webLink: string | null;
+  githubLink: string | null;
   image: {
     src: string;
     alt: string;
