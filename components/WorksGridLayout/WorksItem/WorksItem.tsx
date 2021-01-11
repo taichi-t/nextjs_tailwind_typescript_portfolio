@@ -2,13 +2,13 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 import Tags from '@/components/Tags/Tags';
-import { Work as WorkType } from '@/types/works';
+import { IWork } from '@/types/works';
 
-type Item = {
-  item: WorkType;
+type Props = {
+  item: IWork;
 };
 
-export default function WorksGridLayout({ item }: Item) {
+export default function WorksGridLayout({ item }: Props) {
   const { thumbnail, id, title, tags } = item;
   const { isFontLoaded } = useTheme();
   const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);

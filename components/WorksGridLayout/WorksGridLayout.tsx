@@ -1,10 +1,12 @@
 import WorksItem from './WorksItem/WorksItem';
-import { AllWorksData } from '@/pages/work/works';
+import { IWork } from '@/types/works';
 
-export default function WorksGridLayout({ allWorksData }: AllWorksData) {
-  const contents = allWorksData.map((item) => (
-    <WorksItem item={item} key={item.id} />
-  ));
+type Props = {
+  works: IWork[];
+};
+
+export default function WorksGridLayout({ works }: Props) {
+  const contents = works.map((item) => <WorksItem item={item} key={item.id} />);
 
   return <div className="grid grid-cols-12 gap-4 tablet:gap-2">{contents}</div>;
 }

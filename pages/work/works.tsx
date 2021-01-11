@@ -3,30 +3,30 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { getSortedWorksData } from '@/utils/work';
 import WorksGridLayout from '@/components/WorksGridLayout/WorksGridLayout';
-import { Work as WorkType } from '@/types/works';
+import { IWork } from '@/types/works';
 
-export type AllWorksData = {
-  allWorksData: WorkType[];
+type Props = {
+  works: IWork[];
 };
 
-export default function Works({ allWorksData }: AllWorksData): JSX.Element {
+export default function Works({ works }: Props) {
   return (
     <>
       <Head>
         <title>{'works'}</title>
       </Head>
       <main className="mt-3">
-        <WorksGridLayout allWorksData={allWorksData} />
+        <WorksGridLayout works={works} />
       </main>
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allWorksData = getSortedWorksData();
+  const works = getSortedWorksData();
   return {
     props: {
-      allWorksData,
+      works,
     },
   };
 };
