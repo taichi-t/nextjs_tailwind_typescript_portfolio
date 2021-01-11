@@ -21,7 +21,7 @@ thumbnail:
   alt: 'mockup moving-sale'
 links:
   next:
-    src: '/work/Impactraction'
+    src: '/work/impactraction'
     title: "Company's websites"
   prev:
     src: '/work/my-work-space'
