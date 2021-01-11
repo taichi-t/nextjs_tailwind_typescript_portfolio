@@ -7,10 +7,7 @@ export default class Document extends NextDocument {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
+
           <link rel="manifest" href="/manifest.json" />
           <link
             rel="apple-touch-icon"

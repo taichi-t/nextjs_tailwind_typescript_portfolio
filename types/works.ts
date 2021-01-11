@@ -1,5 +1,4 @@
 export interface Work {
-  id: string;
   title: string;
   date: string;
   tags: string[];
@@ -25,4 +24,8 @@ export interface Work {
     };
   };
   contentHtml: string;
+}
+
+export interface IWork extends Work {
+  id: string;
 }

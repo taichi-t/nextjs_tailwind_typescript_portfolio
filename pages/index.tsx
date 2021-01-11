@@ -6,8 +6,13 @@ import Works from '@/components/Works/Works';
 import { GetServerSideProps } from 'next';
 import { getSelectedWorkData } from '@/utils/work';
 import { HIGHTLIGHTED_WORKS } from '@/constants/config';
+import { IWork } from '@/types/works';
 
-export default function IndexPage(works): JSX.Element {
+type Props = {
+  [key: string]: IWork;
+};
+
+export default function IndexPage(props: Props) {
   return (
     <>
       <Head>
@@ -16,7 +21,7 @@ export default function IndexPage(works): JSX.Element {
       <main>
         <Hero />
         <Introduction />
-        <Works works={works} />
+        <Works works={props} />
       </main>
     </>
   );

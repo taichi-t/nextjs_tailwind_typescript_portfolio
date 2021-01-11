@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '@/utils/themeContext';
 import Tags from '@/components/Tags/Tags';
+import { IWork } from '@/types/works';
 
-export default function WorkCard1({ data }): JSX.Element {
+export default function WorkCard1(data: IWork): JSX.Element {
   const { id, tags, title, thumbnail } = data;
   const { isFontLoaded } = useTheme();
   const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);

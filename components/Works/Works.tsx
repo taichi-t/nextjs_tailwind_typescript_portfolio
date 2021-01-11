@@ -1,8 +1,16 @@
+import * as React from 'react';
 import { useTheme } from '@/utils/themeContext';
+import { IWork } from '@/types/works';
 import Column1 from './Column1/Column1';
 import Column2 from './Column2/Column2';
 
-export default function Works({ works }): JSX.Element {
+type Props = {
+  works: {
+    [key: string]: IWork;
+  };
+};
+
+export default function Works({ works }: Props) {
   const { isFontLoaded } = useTheme();
 
   return (

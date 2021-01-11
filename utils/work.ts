@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
-import { Work } from '@/types/works';
+import { IWork, Work } from '@/types/works';
 
 const workDirectory = path.join(process.cwd(), 'public/MDfiles');
 
@@ -56,7 +56,7 @@ export async function getWorkData(id: string) {
 
 export async function getSelectedWorkData(
   fileNames: string[]
-): Promise<{ [key: string]: Work }> {
+): Promise<{ [key: string]: IWork }> {
   let works = {};
   await fileNames.forEach(async (fileName, index) => {
     let data = await getWorkData(fileName);
