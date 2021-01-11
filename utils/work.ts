@@ -3,28 +3,11 @@ import path from 'path';
 import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
-
-type GetAllWorkIds = {
-  params: {
-      id: string;
-  };
-}[]
-
-type GetSortedWorksData = {
-  date: string;
-  title: string;
-  id: string;
-}[]
-
-type GetWorkData = {
-    title: string;
-    id: string;
-    contentHtml: string;
-}
+import { IWork, Work } from '@/types/works';
 
 const workDirectory = path.join(process.cwd(), 'public/MDfiles');
 
-export function getAllWorkIds():GetAllWorkIds{
+export function getAllWorkIds() {
   const folderNames = fs.readdirSync(workDirectory);
   return folderNames.map((folderName) => {
     return {
@@ -35,19 +18,16 @@ export function getAllWorkIds():GetAllWorkIds{
   });
 }
 
-export function getSortedWorksData():GetSortedWorksData {
+export function getSortedWorksData() {
   const folderNames = fs.readdirSync(workDirectory);
   const allWorksData = folderNames.map((folderName) => {
     const id = folderName;
-    const fullPath = path.join(
-      workDirectory,
-      `${folderName}/${folderName}.md`
-    );
+    const fullPath = path.join(workDirectory, `${folderName}/${folderName}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as Work),
     };
   });
 
@@ -60,17 +40,27 @@ export function getSortedWorksData():GetSortedWorksData {
   });
 }
 
-export async function getWorkData(id:string):Promise<GetWorkData>{
+export async function getWorkData(id: string) {
   const fullPath = path.join(workDirectory, `${id}/${id}.md`);
-  const fileContents =  fs.readFileSync(fullPath, 'utf8');
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  matterResult.data.contentHtml = processedContent.toString();
   return {
     id,
-    contentHtml,
-    ...(matterResult.data as { title: string }),
+    ...(matterResult.data as Work),
   };
+}
+
+export async function getSelectedWorkData(
+  fileNames: string[]
+): Promise<{ [key: string]: IWork }> {
+  let works = {};
+  await fileNames.forEach(async (fileName, index) => {
+    let data = await getWorkData(fileName);
+    works[`card${index + 1}`] = data;
+  });
+  return works;
 }

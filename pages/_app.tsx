@@ -4,8 +4,10 @@ import * as gtag from '@/utils/gtag';
 import '@/styles/index.css';
 import ThemeProvider from '@/utils/themeContext';
 import { useTheme } from '@/utils/themeContext';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
-function MyApp({ Component, pageProps }): JSX.Element {
+function MyApp({ Component, pageProps }: AppProps<typeof Layout>) {
   const Layout = Component.Layout ? Component.Layout : React.Fragment;
   const { theme } = useTheme();
   useEffect(() => {
@@ -19,13 +21,18 @@ function MyApp({ Component, pageProps }): JSX.Element {
   }, []);
 
   return (
-    <ThemeProvider>
-      <div className={`${theme}`}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </div>
-    </ThemeProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="viewport-fit=cover" />
+      </Head>
+      <ThemeProvider>
+        <div className={`${theme}`}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </div>
+      </ThemeProvider>
+    </>
   );
 }
 

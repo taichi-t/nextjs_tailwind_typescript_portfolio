@@ -1,8 +1,16 @@
+import * as React from 'react';
 import { useTheme } from '@/utils/themeContext';
+import { IWork } from '@/types/works';
 import Column1 from './Column1/Column1';
 import Column2 from './Column2/Column2';
 
-export default function Hero(): JSX.Element {
+type Props = {
+  works: {
+    [key: string]: IWork;
+  };
+};
+
+export default function Works({ works }: Props) {
   const { isFontLoaded } = useTheme();
 
   return (
@@ -15,10 +23,10 @@ export default function Hero(): JSX.Element {
         </span>
       </h2>
       <div className="col-span-12">
-        <Column1 />
+        <Column1 card1={works['card1']} />
       </div>
       <div className="col-span-12">
-        <Column2 />
+        <Column2 card2={works['card2']} card3={works['card3']} />
       </div>
     </div>
   );

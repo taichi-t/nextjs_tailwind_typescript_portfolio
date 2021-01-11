@@ -3,8 +3,16 @@ import Head from 'next/head';
 import Hero from '@/components/Hero/Hero';
 import Introduction from '@/components/Introduction/Introduction';
 import Works from '@/components/Works/Works';
+import { GetServerSideProps } from 'next';
+import { getSelectedWorkData } from '@/utils/work';
+import { HIGHTLIGHTED_WORKS } from '@/constants/config';
+import { IWork } from '@/types/works';
 
-export default function IndexPage(): JSX.Element {
+type Props = {
+  [key: string]: IWork;
+};
+
+export default function IndexPage(props: Props) {
   return (
     <>
       <Head>
@@ -13,10 +21,17 @@ export default function IndexPage(): JSX.Element {
       <main>
         <Hero />
         <Introduction />
-        <Works />
+        <Works works={props} />
       </main>
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const works = await getSelectedWorkData(HIGHTLIGHTED_WORKS);
+  return {
+    props: { ...works },
+  };
+};
 
 IndexPage.Layout = Layout;
