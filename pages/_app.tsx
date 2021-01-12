@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps<typeof Layout>) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="viewport-fit=cover" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <ThemeProvider>
         <div className={`${theme}`}>
