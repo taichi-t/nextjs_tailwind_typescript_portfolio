@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 export default function Header(): JSX.Element {
   const { isFontLoaded, toggleTheme, theme } = useTheme();
-  const { pathname } = useRouter();
+  const { pathname, locale } = useRouter();
   const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
   const imgRef = useRef(null);
   useEffect(() => {
@@ -69,7 +69,7 @@ export default function Header(): JSX.Element {
           <li>
             <Link href="/work/works">
               <a
-                className={`hover:text-yellow font-bold text-xs  ${
+                className={`hover:text-yellow font-bold text-xs mr-4 mobile:mr-2 ${
                   pathname === '/work/works' && 'text-yellow'
                 }`}
               >
@@ -79,6 +79,37 @@ export default function Header(): JSX.Element {
               </a>
             </Link>
           </li>
+
+          <li>
+            <Link href={pathname} locale="en-US">
+              <a
+                className={`hover:text-yellow font-bold text-xs   ${
+                  locale === 'en-US' && 'text-yellow'
+                }`}
+              >
+                <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
+                  en
+                </span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <span className="mx-1">|</span>
+          </li>
+          <li>
+            <Link href={pathname} locale="ja-JP">
+              <a
+                className={`hover:text-yellow font-bold text-xs  ${
+                  locale === 'ja-JP' && 'text-yellow'
+                }`}
+              >
+                <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
+                  ja
+                </span>
+              </a>
+            </Link>
+          </li>
+
           <li>
             <span className="mx-2">/</span>
           </li>
