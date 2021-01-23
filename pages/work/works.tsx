@@ -22,7 +22,7 @@ export default function Works({ works }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const works = getSortedWorksData();
   return {
     props: {

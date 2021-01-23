@@ -21,3 +21,5 @@ export const HIGHTLIGHTED_WORKS = [
   'impactraction',
   'weather-react-icons',
 ];
+
+export const DEFAULT_LOCALE = 'en-US';

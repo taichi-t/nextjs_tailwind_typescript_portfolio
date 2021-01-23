@@ -20,16 +20,16 @@ export default function Work({ workData }: WorkData): JSX.Element {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllWorkIds();
+export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
+  const paths = getAllWorkIds(locales);
   return {
-    paths,
+    ...paths,
     fallback: false,
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const workData = await getWorkData(params.id as string);
+export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
+  const workData = await getWorkData(params.id as string, locale);
   return {
     props: {
       workData,

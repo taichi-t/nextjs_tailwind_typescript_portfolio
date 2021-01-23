@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 export default function Header(): JSX.Element {
   const { isFontLoaded, toggleTheme, theme } = useTheme();
-  const { pathname, locale } = useRouter();
+  const { pathname, locale, query } = useRouter();
   const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
   const imgRef = useRef(null);
   useEffect(() => {
@@ -81,7 +81,7 @@ export default function Header(): JSX.Element {
           </li>
 
           <li>
-            <Link href={pathname} locale="en-US">
+            <Link href={{ pathname, query }} locale="en-US">
               <a
                 className={`hover:text-yellow font-bold text-xs   ${
                   locale === 'en-US' && 'text-yellow'
@@ -97,7 +97,7 @@ export default function Header(): JSX.Element {
             <span className="mx-1">|</span>
           </li>
           <li>
-            <Link href={pathname} locale="ja-JP">
+            <Link href={{ pathname, query }} locale="ja-JP">
               <a
                 className={`hover:text-yellow font-bold text-xs  ${
                   locale === 'ja-JP' && 'text-yellow'

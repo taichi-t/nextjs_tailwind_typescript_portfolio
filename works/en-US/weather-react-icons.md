@@ -9,10 +9,10 @@ role:
 webLink: 'https://www.npmjs.com/package/weather-react-icons'
 githubLink: 'https://github.com/taichi-t/weather-react-icons#readme'
 image:
-  src: '/MDfiles/weather-react-icons/weather-react-icons-screenshot.png'
+  src: '/images/websites/weather-react-icons/weather-react-icons-screenshot.png'
   alt: 'screenshot for weather-react-icons'
 thumbnail:
-  src: '/MDfiles/weather-react-icons/weather-react-icons-thumbnail.png'
+  src: '/images/websites/weather-react-icons/weather-react-icons-thumbnail.png'
   alt: 'thumbnail for weather-react-icons'
 links:
   next:

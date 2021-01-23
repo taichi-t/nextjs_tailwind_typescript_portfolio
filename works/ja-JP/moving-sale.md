@@ -9,15 +9,15 @@ tags:
   - semantic-ui
 
 role:
-  - Front-end development
-  - Back-end development
+  - フロントエンド開発
+  - バックエンド開発
 webLink: 'https://moving-sale.vercel.app/'
 githubLink: 'https://github.com/taichi-t/next.js_e-commerce'
 image:
-  src: '/MDfiles/moving-sale/moving-sale-devices.png'
+  src: '/images/websites/moving-sale/moving-sale-devices.png'
   alt: 'moving-sale with responsive design'
 thumbnail:
-  src: '/MDfiles/moving-sale/moving-sale-mockup.png'
+  src: '/images/websites/moving-sale/moving-sale-mockup.png'
   alt: 'mockup moving-sale'
 links:
   next:
@@ -30,7 +30,7 @@ links:
 
 ## What is Moving Sale
 
-A platform for selling and buying products user-to-user👀
+ユーザ間で物の取引をするプラットフォームです。👀
 
 ## Technologies
 

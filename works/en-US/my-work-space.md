@@ -11,10 +11,10 @@ role:
 webLink: 'https://taichi-t.github.io/redux_hooks_todo_app/'
 githubLink: 'https://github.com/taichi-t/deploy_redux_hooks_app'
 image:
-  src: '/MDfiles/my-work-space/my-work-space-devices.png'
+  src: '/images/websites/my-work-space/my-work-space-devices.png'
   alt: 'my-work-space with responsive design'
 thumbnail:
-  src: '/MDfiles/my-work-space/my-work-space-mockup.png'
+  src: '/images/websites/my-work-space/my-work-space-mockup.png'
   alt: 'mockup my-work-space'
 links:
   next:
