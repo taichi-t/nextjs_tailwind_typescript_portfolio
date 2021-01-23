@@ -1,8 +1,10 @@
 {
   "en-US": {
-    "greeting": "Hi, I'm Taichi 🕺,"
+    "greeting": "Hi, I'm Taichi 🧑‍💻,",
+    "introduction": "a junior developer based in Vancouver, Canada, seeking an opportunity to work as front-end developer."
   },
   "ja-JP": {
-    "greeting": "こんにちは、たいちと申します。"
+    "greeting": "こんにちは、たいちと申します 🧑‍💻",
+    "introduction": "現在バンクーバーでジュニアデベロッパーとして活動しています。"
   }
 }
