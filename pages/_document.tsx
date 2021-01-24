@@ -4,7 +4,7 @@ import { SITEMETADATA } from '@/constants/config';
 export default class Document extends NextDocument {
   render() {
     return (
-      <Html lang="en">
+      <Html>
         <Head>
           <meta charSet="utf-8" />
 

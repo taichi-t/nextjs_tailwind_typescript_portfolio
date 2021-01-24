@@ -7,16 +7,18 @@ import { GetStaticProps } from 'next';
 import { getSelectedWorkData } from '@/utils/work';
 import { HIGHTLIGHTED_WORKS } from '@/constants/config';
 import { IWork } from '@/types/works';
+import { useIntl } from 'react-intl';
 
 type Props = {
   [key: string]: IWork;
 };
 
 export default function IndexPage(props: Props) {
+  const { formatMessage: f } = useIntl();
   return (
     <>
       <Head>
-        <title>home</title>
+        <title>{f({ id: 'home' })}</title>
       </Head>
       <main>
         <Hero />

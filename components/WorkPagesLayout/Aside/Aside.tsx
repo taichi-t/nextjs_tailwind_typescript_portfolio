@@ -1,15 +1,17 @@
 import { useTheme } from '@/utils/themeContext';
 import Tags from '@/components/Tags/Tags';
 import { Work as WorkType } from '@/types/works';
+import { useIntl } from 'react-intl';
 
 export default function Aside({ tags, role }: Partial<WorkType>) {
   const { isFontLoaded } = useTheme();
+  const { formatMessage: f } = useIntl();
   return (
     <aside className="flex justify-center items-center mobile:justify-start">
       <div className="inline-block">
         <h2 className="text-secondaryText text-xs font-bold">
           <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-            Role
+            {f({ id: 'workpages.aside.role.title' })}
           </span>
         </h2>
         <ul>
@@ -24,7 +26,7 @@ export default function Aside({ tags, role }: Partial<WorkType>) {
         </ul>
         <h2 className="text-secondaryText text-xs font-bold mt-5 mobile:mt-1">
           <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-            Technology
+            {f({ id: 'workpages.aside.technology.title' })}
           </span>
         </h2>
         <ul className="flex flex-wrap">

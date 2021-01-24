@@ -14,7 +14,6 @@ export default function Hero(): JSX.Element {
           }`}
         >
           {f({ id: 'greeting' })}
-          {/* Hi, I'm Taichi 🕺, */}
         </span>
         <br />
         <span
@@ -22,8 +21,6 @@ export default function Hero(): JSX.Element {
             !isFontLoaded && 'skeleton'
           }`}
         >
-          {/* a junior developer based in Vancouver, Canada, seeking an opportunity
-          to work as front-end developer. */}
           {f({ id: 'introduction' })}
         </span>
       </h2>

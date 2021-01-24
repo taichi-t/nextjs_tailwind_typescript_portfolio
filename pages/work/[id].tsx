@@ -4,16 +4,18 @@ import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllWorkIds, getWorkData } from '@/utils/work';
 import { Work as WorkType } from '@/types/works';
+import { useIntl } from 'react-intl';
 
 type WorkData = {
   workData: WorkType;
 };
 
 export default function Work({ workData }: WorkData): JSX.Element {
+  const { formatMessage: f } = useIntl();
   return (
     <>
       <Head>
-        <title>{`works/${workData.title}`}</title>
+        <title>{`${f({ id: 'works' })} / ${workData.title}`}</title>
       </Head>
       <WorkPagesLayout {...workData} />
     </>

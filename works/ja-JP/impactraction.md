@@ -9,8 +9,8 @@ tags:
   - contentful
 
 role:
-  - Front-end development
-  - Tech Lead
+  - フロントエンド開発
+  - テックリード
 webLink: 'https://impactraction-v1.netlify.app/'
 githubLink:
 image:

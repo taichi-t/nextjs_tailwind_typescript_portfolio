@@ -4,16 +4,18 @@ import { GetStaticProps } from 'next';
 import { getSortedWorksData } from '@/utils/work';
 import WorksGridLayout from '@/components/WorksGridLayout/WorksGridLayout';
 import { IWork } from '@/types/works';
+import { useIntl } from 'react-intl';
 
 type Props = {
   works: IWork[];
 };
 
 export default function Works({ works }: Props) {
+  const { formatMessage: f } = useIntl();
   return (
     <>
       <Head>
-        <title>{'works'}</title>
+        <title>{f({ id: 'works' })}</title>
       </Head>
       <main className="mt-3">
         <WorksGridLayout works={works} />

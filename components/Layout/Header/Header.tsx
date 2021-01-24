@@ -2,9 +2,11 @@ import { useState, useRef, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/utils/themeContext';
 import { useRouter } from 'next/router';
+import { useIntl } from 'react-intl';
 
 export default function Header(): JSX.Element {
   const { isFontLoaded, toggleTheme, theme } = useTheme();
+  const { formatMessage: f } = useIntl();
   const { pathname, locale, query } = useRouter();
   const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
   const imgRef = useRef(null);
@@ -47,7 +49,7 @@ export default function Header(): JSX.Element {
                 }`}
               >
                 <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-                  home
+                  {f({ id: 'home' })}
                 </span>
               </a>
             </Link>
@@ -61,7 +63,7 @@ export default function Header(): JSX.Element {
                 }`}
               >
                 <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-                  about
+                  {f({ id: 'about' })}
                 </span>
               </a>
             </Link>
@@ -74,7 +76,7 @@ export default function Header(): JSX.Element {
                 }`}
               >
                 <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-                  works
+                  {f({ id: 'works' })}
                 </span>
               </a>
             </Link>

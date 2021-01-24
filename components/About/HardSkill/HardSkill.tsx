@@ -2,14 +2,17 @@ import { useTheme } from '@/utils/themeContext';
 import ReactSvg from '@/public/images/icons/react.svg';
 import TypeScriptSvg from '@/public/images/icons/typescript.svg';
 import JavascriptSvg from '@/public/images/icons/javascript.svg';
+import { useIntl } from 'react-intl';
+
 export default function HardSkill(): JSX.Element {
   const { isFontLoaded } = useTheme();
+  const { formatMessage: f } = useIntl();
   return (
     <div className="text-primaryText text-sm mt-5 mx-auto grid grid-cols-12 gap-3 mobile:gap-1 mobile:mt-8">
       <div className="col-span-6 mobile:col-span-12">
         <h2 className="text-secondaryText font-bold">
           <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-            Specialists:
+            {f({ id: 'about.hardskill.specialists.title' })}
           </span>
         </h2>
         <ul className="flex ml-2 mobile:pt-3 mobile:ml-0 mobile:justify-between">
@@ -30,13 +33,13 @@ export default function HardSkill(): JSX.Element {
       <div className="col-span-6 mobile:col-span-12 mobile:mt-1">
         <h2 className="text-secondaryText font-bold block mobile:pt-3 ">
           <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-            Other skills:
+            {f({ id: 'about.hardskill.otherskills.title' })}
           </span>
         </h2>
         <dl className="flex flex-col">
           <dt className="font-bold text-secondaryText mobile:mt-1">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-              Langueges
+              {f({ id: 'about.hardskill.langueges.title' })}
             </span>
           </dt>
           <dd>
@@ -46,7 +49,7 @@ export default function HardSkill(): JSX.Element {
           </dd>
           <dt className="font-bold text-secondaryText mobile:mt-1">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-              Frameworks
+              {f({ id: 'about.hardskill.frameworks.title' })}
             </span>
           </dt>
           <dd>
@@ -57,7 +60,7 @@ export default function HardSkill(): JSX.Element {
           </dd>
           <dt className="font-bold text-secondaryText mobile:mt-1">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-              Others
+              {f({ id: 'about.hardskill.others.title' })}
             </span>
           </dt>
           <dd>

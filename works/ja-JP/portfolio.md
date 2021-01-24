@@ -7,7 +7,7 @@ tags:
   - tailwind
   - jest
 role:
-  - Front-end development
+  - フロントエンド開発
 webLink: 'https://taichi-tsujioka.info/'
 githubLink: 'https://github.com/taichi-t/nextjs_tilewind_typescript_boilerplate'
 image:

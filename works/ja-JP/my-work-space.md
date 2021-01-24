@@ -7,7 +7,7 @@ tags:
   - materialUi
   - localStorage
 role:
-  - Front-end development
+  - フロントエンド開発
 webLink: 'https://taichi-t.github.io/redux_hooks_todo_app/'
 githubLink: 'https://github.com/taichi-t/deploy_redux_hooks_app'
 image:

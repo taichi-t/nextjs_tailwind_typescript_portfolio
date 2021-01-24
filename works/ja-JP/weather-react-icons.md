@@ -5,7 +5,7 @@ tags:
   - typeScript
   - jest
 role:
-  - Front-end development
+  - フロントエンド開発
 webLink: 'https://www.npmjs.com/package/weather-react-icons'
 githubLink: 'https://github.com/taichi-t/weather-react-icons#readme'
 image:

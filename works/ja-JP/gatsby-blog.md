@@ -8,7 +8,7 @@ tags:
   - styledComponents
   - contentful
 role:
-  - Front-end development
+  - フロントエンド開発
 webLink: 'https://www.canajapa.com/'
 githubLink: 'https://github.com/taichi-t/gatsby-contentful-blog'
 image:
