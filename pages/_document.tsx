@@ -33,12 +33,6 @@ export default class Document extends NextDocument {
             color="#5bbad5"
           />
           <meta name="msapplication-TileColor" content="#2b5797" />
-          <meta
-            key="description"
-            name="description"
-            content={SITEMETADATA.description}
-          />
-          <meta key="title" name="title" content={SITEMETADATA.title} />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}

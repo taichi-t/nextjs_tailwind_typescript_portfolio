@@ -1,5 +1,7 @@
 {
   "en-US": {
+    "metadata.title": "Taichi's portfolio",
+    "metadata.description": "Hi there! My name is Taichi Tsujioka. I'm a junior developer based in Vancouver, Canada",
     "greeting": "Hi, I'm Taichi 🧑‍💻",
     "introduction": "a junior developer based in Vancouver, Canada, seeking an opportunity to work as front-end developer.",
     "home": "home",
@@ -36,11 +38,13 @@
     "workpages.description.weblink": "VISIT WEBSITE"
   },
   "ja-JP": {
+    "metadata.title": "タイチのポートフォリオ",
+    "metadata.description": "カナダのバンクーバーを拠点とするジュニア開発者です。フロントエンド開発者として働く機会を求めています。",
     "greeting": "こんにちは🧑‍💻",
     "introduction": "カナダのバンクーバーを拠点とするジュニア開発者です。フロントエンド開発者として働く機会を求めています。",
     "home": "ホーム",
     "about": "自己紹介",
-    "works": "作品集",
+    "works": "作品一覧",
     "resume": "レジュメ(英)📄",
     "works.title": "最近の作品",
     "works.viewmore": "もっと見る 👉",

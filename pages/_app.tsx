@@ -27,6 +27,16 @@ function MyApp({ Component, pageProps }: AppProps<typeof Layout>) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          key="description"
+          name="description"
+          content={dictionary[locale]['metadata.title']}
+        />
+        <meta
+          key="title"
+          name="title"
+          content={dictionary[locale]['metadata.description']}
+        />
       </Head>
       <IntlProvider
         locale={locale}
