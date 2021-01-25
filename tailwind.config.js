@@ -26,8 +26,8 @@ module.exports = {
         inner: 'var(--color-inner)',
       },
       fontFamily: {
-        body: ['Montserrat', 'Sans-serif'],
-        display: ['Rubik', 'Sans-serif'],
+        body: ['"Montserrat"', '"Noto Sans JP"', '"Sans-serif"'],
+        display: ['"Rubik"', '"M PLUS Rounded 1c"', '"Sans-serif"'],
       },
       fontWeight: {
         light: 300,

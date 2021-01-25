@@ -3,11 +3,12 @@ import Launch from '@/public/images/icons/launch.svg';
 import Link from 'next/link';
 import Sns from '@/components/Sns/Sns';
 import { useRouter } from 'next/router';
+import { useIntl } from 'react-intl';
 
 export default function Footer(): JSX.Element {
   const { pathname } = useRouter();
   const { isFontLoaded } = useTheme();
-
+  const { formatMessage: f } = useIntl();
   return (
     <footer className="mt-20">
       <div className="inner-wrap">
@@ -19,7 +20,7 @@ export default function Footer(): JSX.Element {
             ${!isFontLoaded && 'skeleton text-transparent'}
           `}
           >
-            Drop me a line 📮
+            {f({ id: 'footer.contact' })}
           </span>
         </h3>
         <a
@@ -47,7 +48,7 @@ export default function Footer(): JSX.Element {
         >
           <Link href="/about">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'} `}>
-              about
+              {f({ id: 'about' })}
             </span>
           </Link>
         </button>
@@ -55,7 +56,7 @@ export default function Footer(): JSX.Element {
         <button className={`font-bold  hover:text-yellow focus:outline-none`}>
           <a href="/pdf/taichi-tsujioka-resume.pdf" target="_blank">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'} `}>
-              resume📄
+              {f({ id: 'resume' })}
             </span>
           </a>
         </button>

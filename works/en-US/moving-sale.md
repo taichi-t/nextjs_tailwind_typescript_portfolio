@@ -14,10 +14,10 @@ role:
 webLink: 'https://moving-sale.vercel.app/'
 githubLink: 'https://github.com/taichi-t/next.js_e-commerce'
 image:
-  src: '/MDfiles/moving-sale/moving-sale-devices.png'
+  src: '/images/websites/moving-sale/moving-sale-devices.png'
   alt: 'moving-sale with responsive design'
 thumbnail:
-  src: '/MDfiles/moving-sale/moving-sale-mockup.png'
+  src: '/images/websites/moving-sale/moving-sale-mockup.png'
   alt: 'mockup moving-sale'
 links:
   next:

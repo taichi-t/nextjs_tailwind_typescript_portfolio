@@ -1,5 +1,7 @@
 import { useTheme } from '@/utils/themeContext';
+import { useIntl } from 'react-intl';
 export default function Aside(): JSX.Element {
+  const { formatMessage: f } = useIntl();
   const { isFontLoaded } = useTheme();
   return (
     <div className="p-3 text-primaryText h-full flex flex-col justify-around">
@@ -7,12 +9,12 @@ export default function Aside(): JSX.Element {
         <li>
           <h2 className="text-secondaryText font-bold list-font">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-              LOCATION
+              {f({ id: 'about.aside.location.title' })}
             </span>
           </h2>
           <p className="item-font">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-              Vancouver, Canada
+              {f({ id: 'about.aside.location' })}
             </span>
           </p>
         </li>
@@ -21,12 +23,12 @@ export default function Aside(): JSX.Element {
         <li>
           <h2 className="text-secondaryText font-bold list-font">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-              HOMETOWN
+              {f({ id: 'about.aside.hometown.title' })}
             </span>
           </h2>
           <p className="item-font">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-              Japan
+              {f({ id: 'about.aside.hometown' })}
             </span>
           </p>
         </li>
@@ -35,12 +37,12 @@ export default function Aside(): JSX.Element {
         <li>
           <h2 className="text-secondaryText font-bold list-font">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-              WORK
+              {f({ id: 'about.aside.work.title' })}
             </span>
           </h2>
           <p className="item-font">
             <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-              Frontend Developer
+              {f({ id: 'about.aside.work' })}
             </span>
           </p>
         </li>

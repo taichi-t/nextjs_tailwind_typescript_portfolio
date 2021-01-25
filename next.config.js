@@ -2,7 +2,7 @@ const withOffline = require('next-offline');
 
 const nextConfig = {
   target: 'serverless',
-  transformManifest: (manifest) => ['/'].concat(manifest), 
+  transformManifest: (manifest) => ['/'].concat(manifest),
   generateInDevMode: false,
   workboxOpts: {
     swDest: 'static/service-worker.js',
@@ -24,6 +24,10 @@ const nextConfig = {
       },
     ],
     maximumFileSizeToCacheInBytes: 20 * 1024 * 1024,
+  },
+  i18n: {
+    locales: ['en-US', 'ja-JP'],
+    defaultLocale: 'en-US',
   },
 };
 

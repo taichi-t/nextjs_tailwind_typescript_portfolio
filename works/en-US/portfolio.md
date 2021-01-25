@@ -11,10 +11,10 @@ role:
 webLink: 'https://taichi-tsujioka.info/'
 githubLink: 'https://github.com/taichi-t/nextjs_tilewind_typescript_boilerplate'
 image:
-  src: '/MDfiles/portfolio/portfolio-devices.png'
+  src: '/images/websites/portfolio/portfolio-devices.png'
   alt: 'portfolio with responsive design'
 thumbnail:
-  src: '/MDfiles/portfolio/portfolio-mockup.png'
+  src: '/images/websites/portfolio/portfolio-mockup.png'
   alt: 'mockup my-work-space'
 links:
   next:

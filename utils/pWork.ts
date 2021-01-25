@@ -1,3 +1,5 @@
+//test
+
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -32,11 +34,7 @@ export function getAllWorkIds(locales: string[]) {
 }
 
 export function getSortedWorksData() {
-  const folderNames = fs
-    .readdirSync(`${workDirectory}/${DEFAULT_LOCALE}`)
-    .map((fileName) => {
-      return path.basename(fileName, '.md');
-    });
+  const folderNames = fs.readdirSync(`${workDirectory}/${DEFAULT_LOCALE}`);
   const allWorksData = folderNames.map((folderName) => {
     const id = folderName;
     const fullPath = path.join(
@@ -75,13 +73,14 @@ export async function getWorkData(id: string, locale: string) {
 }
 
 export async function getSelectedWorkData(
-  fileNames: string[]
+  fileNames: string[],
+  locale: string
 ): Promise<{ [key: string]: IWork }> {
   let works = {};
   let index = 1;
 
   for (let fileName of fileNames) {
-    let data = await getWorkData(fileName, DEFAULT_LOCALE);
+    let data = await getWorkData(fileName, locale);
     works[`card${index}`] = data;
     index++;
   }

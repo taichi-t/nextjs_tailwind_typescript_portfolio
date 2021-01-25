@@ -1,7 +1,9 @@
 import { useTheme } from '@/utils/themeContext';
+import { useIntl } from 'react-intl';
 
 export default function Hero(): JSX.Element {
   const { isFontLoaded } = useTheme();
+  const { formatMessage: f } = useIntl();
 
   return (
     <div className="inner-wrap mt-20">
@@ -11,7 +13,7 @@ export default function Hero(): JSX.Element {
             !isFontLoaded && 'skeleton'
           }`}
         >
-          Hi, I'm Taichi 🕺,
+          {f({ id: 'greeting' })}
         </span>
         <br />
         <span
@@ -19,8 +21,7 @@ export default function Hero(): JSX.Element {
             !isFontLoaded && 'skeleton'
           }`}
         >
-          a junior developer based in Vancouver, Canada, seeking an opportunity
-          to work as front-end developer.
+          {f({ id: 'introduction' })}
         </span>
       </h2>
     </div>
