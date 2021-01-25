@@ -19,7 +19,7 @@ export default function Header(): JSX.Element {
   return (
     <header className="items-center py-4 text-primaryText mobile:flex-wrap mobile:py-2">
       <div className="flex justify-between items-center">
-        <div className={`mobile:w-10 w-12`}>
+        <div className={`mobile:w-10 w-12 cursor-pointer`}>
           <Link href="/">
             <img
               src="/images/logo.png"
