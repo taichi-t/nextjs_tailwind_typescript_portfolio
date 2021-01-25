@@ -22,7 +22,7 @@ export default function WorksGridLayout({ item }: Props) {
 
   return (
     <Link href="/work/[id]" as={`/work/${id}`}>
-      <div className="col-span-4 text-primaryText bg-paper p-3 border border-divider tablet:p-2 mobile:col-span-12 ">
+      <div className="col-span-4 text-primaryText bg-paper p-3 border border-divider tablet:p-2 mobile:col-span-12 cursor-pointer">
         <div className="border border-divider">
           <img
             src={thumbnail.src}

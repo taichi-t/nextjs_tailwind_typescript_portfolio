@@ -17,7 +17,7 @@ export default function WorkCard2(data: IWork): JSX.Element {
 
   return (
     <Link href="/work/[id]" as={`/work/${id}`}>
-      <div className="group bg-paper custom-border hover:bg-opacityBioret h-full">
+      <div className="group bg-paper custom-border hover:bg-opacityBioret h-full cursor-pointer">
         <div className="m-8 tablet:m-6 mobile:m-4">
           <div
             className={`w-9/12 tablet:w-full my-0 mx-auto mb-6 mobile:w-full mobile:mb-3`}

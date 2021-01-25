@@ -15,7 +15,7 @@ export default function WorkCard1(data: IWork): JSX.Element {
   const handleLoad = () => setIsImgisFontLoaded(true);
   return (
     <Link href="/work/[id]" as={`/work/${id}`}>
-      <div className="group  bg-paper custom-border flex justify-center items-center hover:bg-opacityBlue">
+      <div className="group bg-paper custom-border flex justify-center items-center hover:bg-opacityBlue cursor-pointer">
         <div className="m-12 grid grid-cols-12 gap-8 tablet:gap-6 tablet:m-10 mobile:gap-2 mobile:m-4">
           <div className="col-span-6 mobile:col-span-12 mobile:mb-3">
             <img

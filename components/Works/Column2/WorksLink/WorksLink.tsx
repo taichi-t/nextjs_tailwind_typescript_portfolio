@@ -6,7 +6,7 @@ export default function WorksLink(): JSX.Element {
   const { formatMessage: f } = useIntl();
   return (
     <Link href="/work/works">
-      <div className="group bg-paper custom-border h-full hover:bg-yellow">
+      <div className="group bg-paper custom-border h-full hover:bg-yellow cursor-pointer">
         <div className="m-3 ">
           <div className="text-lg font-bold text-indigo-400">
             <span
