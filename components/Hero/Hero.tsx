@@ -26,7 +26,7 @@ export default function Hero(): JSX.Element {
         </p>
         <p className={`hero-text uppercase`}>
           <span
-            className={`inline-block  ${
+            className={`inline-block break-normal ${
               !isFontLoaded && 'skeleton disable-hero-text'
             }`}
           >
