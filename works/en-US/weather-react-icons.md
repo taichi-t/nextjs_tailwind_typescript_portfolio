@@ -4,6 +4,7 @@ date: '2021-01-03'
 tags:
   - typeScript
   - jest
+  - reactHook
 role:
   - Front-end development
 webLink: 'https://www.npmjs.com/package/weather-react-icons'

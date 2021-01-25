@@ -1,6 +1,6 @@
 .hero-text-container {
   position: relative;
-  font-family: theme('fontFamily.display');
+  font-family: 'Rubik', sans-serif;
   font-weight: bold;
   color: theme('colors.primaryText');
   font-size: theme('fontSize.4xl');

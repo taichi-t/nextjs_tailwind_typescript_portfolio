@@ -24,9 +24,9 @@ export default function Hero(): JSX.Element {
             to
           </span>
         </p>
-        <p className={`hero-text uppercase`}>
+        <p className={`hero-text uppercase whitespace-no-wrap`}>
           <span
-            className={`inline-block break-normal ${
+            className={`inline-block ${
               !isFontLoaded && 'skeleton disable-hero-text'
             }`}
           >
@@ -34,7 +34,7 @@ export default function Hero(): JSX.Element {
           </span>
         </p>
         <p
-          className={`text-sm text-right -mt-2 text-secondaryText mobile:text-xs -mr-1 `}
+          className={`text-sm text-right -mt-2 text-secondaryText mobile:text-xs -mr-1 whitespace-no-wrap`}
         >
           <span
             className={`inline-block  ${

@@ -3,6 +3,7 @@
   overflow: hidden;
   @apply bg-skeleton;
   color: transparent;
+  z-index: 99;
 }
 
 @keyframes skeletonAnimation {
