@@ -17,29 +17,73 @@ export default function Header(): JSX.Element {
   const handleLoad = () => setIsImgisFontLoaded(true);
 
   return (
-    <header>
-      <nav className="flex justify-between items-center py-4 text-primaryText mobile:flex-wrap mobile:py-2 ">
-        <ul>
-          <li className={`mobile:grow-1 mobile:w-12 w-16`}>
-            <Link href="/">
-              <div>
-                <img
-                  src="/images/logo.png"
-                  alt="me"
-                  className={`${isImgisFontLoaded ? 'block' : 'hidden'}`}
-                  width="100%"
-                  height="100%"
-                  ref={imgRef}
-                  onLoad={handleLoad}
-                />
-                <div
-                  className={`${isImgisFontLoaded ? 'hidden' : 'block '}`}
-                  style={{ paddingTop: '100%', height: 'auto' }}
-                />
-              </div>
+    <header className="items-center py-4 text-primaryText mobile:flex-wrap mobile:py-2">
+      <div className="flex justify-between items-center">
+        <div className={`mobile:w-10 w-12`}>
+          <Link href="/">
+            <img
+              src="/images/logo.png"
+              alt="me"
+              className={`${isImgisFontLoaded ? 'block' : 'hidden'}`}
+              width="100%"
+              height="100%"
+              ref={imgRef}
+              onLoad={handleLoad}
+            />
+          </Link>
+          <div
+            className={`${isImgisFontLoaded ? 'hidden' : 'block '}`}
+            style={{ paddingTop: '100%', height: 'auto' }}
+          />
+        </div>
+        <ul className="flex">
+          <li>
+            <Link href={{ pathname, query }} locale="en-US">
+              <a
+                className={`hover:text-yellow font-bold text-xs   ${
+                  locale === 'en-US' && 'text-yellow'
+                }`}
+              >
+                <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
+                  EN
+                </span>
+              </a>
             </Link>
           </li>
+          <li>
+            <span className="mx-1">|</span>
+          </li>
+          <li>
+            <Link href={{ pathname, query }} locale="ja-JP">
+              <a
+                className={`hover:text-yellow font-bold text-xs  ${
+                  locale === 'ja-JP' && 'text-yellow'
+                }`}
+              >
+                <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
+                  JA
+                </span>
+              </a>
+            </Link>
+          </li>
+
+          <li>
+            <span className="mx-2">/</span>
+          </li>
+          <li>
+            <button onClick={toggleTheme} className="focus:outline-none">
+              <span
+                className={`font-bold text-lg inline-block ${
+                  !isFontLoaded && 'skeleton'
+                }`}
+              >
+                {theme === 'theme-dark' ? '🌞' : '🌚'}
+              </span>
+            </button>
+          </li>
         </ul>
+      </div>
+      <nav>
         <ul className="inline-flex w-full justify-end">
           <li>
             <Link href="/">
@@ -71,7 +115,7 @@ export default function Header(): JSX.Element {
           <li>
             <Link href="/work/works">
               <a
-                className={`hover:text-yellow font-bold text-xs mr-4 mobile:mr-2 ${
+                className={`hover:text-yellow font-bold text-xs ${
                   pathname === '/work/works' && 'text-yellow'
                 }`}
               >
@@ -80,51 +124,6 @@ export default function Header(): JSX.Element {
                 </span>
               </a>
             </Link>
-          </li>
-
-          <li>
-            <Link href={{ pathname, query }} locale="en-US">
-              <a
-                className={`hover:text-yellow font-bold text-xs   ${
-                  locale === 'en-US' && 'text-yellow'
-                }`}
-              >
-                <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-                  en
-                </span>
-              </a>
-            </Link>
-          </li>
-          <li>
-            <span className="mx-1">|</span>
-          </li>
-          <li>
-            <Link href={{ pathname, query }} locale="ja-JP">
-              <a
-                className={`hover:text-yellow font-bold text-xs  ${
-                  locale === 'ja-JP' && 'text-yellow'
-                }`}
-              >
-                <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-                  ja
-                </span>
-              </a>
-            </Link>
-          </li>
-
-          <li>
-            <span className="mx-2">/</span>
-          </li>
-          <li>
-            <button onClick={toggleTheme} className="focus:outline-none">
-              <span
-                className={`font-bold text-lg inline-block ${
-                  !isFontLoaded && 'skeleton'
-                }`}
-              >
-                {theme === 'theme-dark' ? '🌞' : '🌚'}
-              </span>
-            </button>
           </li>
         </ul>
       </nav>
