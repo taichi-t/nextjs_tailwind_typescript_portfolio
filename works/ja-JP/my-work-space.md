@@ -12,10 +12,10 @@ webLink: 'https://taichi-t.github.io/redux_hooks_todo_app/'
 githubLink: 'https://github.com/taichi-t/deploy_redux_hooks_app'
 image:
   src: '/images/websites/my-work-space/my-work-space-devices.png'
-  alt: 'my-work-space with responsive design'
+  alt: 'my-work-spaceのレスポンシブ画像'
 thumbnail:
   src: '/images/websites/my-work-space/my-work-space-mockup.png'
-  alt: 'mockup my-work-space'
+  alt: 'my-work-spaceのモックアップ画像'
 links:
   next:
     src: '/work/gatsby-blog'
@@ -25,8 +25,12 @@ links:
     title: 'Portfolio'
 ---
 
-## What is My Work Space
+## My Work Space とは？
 
-My Work Space is **an advanced Todo List**. You can add your tasks and organize them by weeks, or projects etc. In this project, I focus on UI, for instance you can toggle dark mode or light mode, choose a color theme.
+多機能 Todo リストです。タスクを曜日ごとやプロジェクトごとにフォルダにまとめる事ができます 🔥
 
-It's no need sign-up, your todo is saved automatically. Let's get started My Work Space 🔥
+## 特徴
+
+技術スタックは React.js、Redux、material-UI です。データの永続化には LocalStrage を使用しています。
+ユーザーは好みに応じて**テーマカラー**や**ライトモード**、**ダークモード**が選ぶ事ができます。
+サインインが必要ないので、すぐ始める事ができます。DEMO サイトは下記リンクからどうぞ ⬇️

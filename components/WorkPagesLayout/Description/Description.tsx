@@ -40,7 +40,7 @@ export default function WorkCard1({
             rel="noopener"
           >
             <span className={`inline-block underline mr-1`}>
-              {f({ id: 'workpages.description.gitlink' })}
+              {f({ id: 'workpages.description.weblink' })}
             </span>
             <span>
               <Launch className="inline-block fill-current" width="1rem" />
@@ -61,7 +61,7 @@ export default function WorkCard1({
                 !isFontLoaded && 'skeleton'
               }`}
             >
-              {f({ id: 'workpages.description.weblink' })}
+              {f({ id: 'workpages.description.gitlink' })}
             </span>
             <span>
               <Launch className="inline-block fill-current" width="1rem" />

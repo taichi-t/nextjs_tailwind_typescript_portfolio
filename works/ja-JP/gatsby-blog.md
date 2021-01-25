@@ -13,10 +13,10 @@ webLink: 'https://www.canajapa.com/'
 githubLink: 'https://github.com/taichi-t/gatsby-contentful-blog'
 image:
   src: '/images/websites/gatsby-blog/gatsby-blog-devices.png'
-  alt: 'gatsby-blog with responsive design'
+  alt: 'gatsby-blogのレスポンシブ画像'
 thumbnail:
   src: '/images/websites/gatsby-blog/gatsby-blog-mockup.png'
-  alt: 'mockup gatsby-blog'
+  alt: 'gatsby-blogのモックアップ画像'
 links:
   next:
     src: '/work/my-work-space'
@@ -26,11 +26,11 @@ links:
     title: 'Portfolio'
 ---
 
-## What is Gatsby Blog
+## Gatsby Blog とは？
 
-A personal blog for people in japan who want to live or get IT job in Vancouver, Canada.🔥
+技術＋バンクーバーでの生活を綴った個人ブログです 🔥
 
-## Technologies
+## 特徴
 
-Implemented Headless Content Management System (Headless CMS), so enable users to update and post with graphical user interface easily.
-The blog sites is built with Gatsby.js, which Server-Side Rendering (SSR), therefore that allows users to deliver responsive sites that work a lot faster than standard request-response model.
+CMS には Contentful を使用していますので記事の編集、写真の追加が容易にできます。
+静的サイト生成に Gatsby.js を使用しており、サーバーサイドでコンテンツが生成される為、画面にレンダリングされるまでの時間が早くなっています。

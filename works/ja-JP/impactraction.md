@@ -12,13 +12,13 @@ role:
   - フロントエンド開発
   - テックリード
 webLink: 'https://impactraction-v1.netlify.app/'
-githubLink:
+githubLink: ''
 image:
   src: '/images/websites/impactraction/impactraction-devices.png'
-  alt: 'impactraction with responsive design'
+  alt: 'impactractionのレスポンシブ画像'
 thumbnail:
   src: '/images/websites/impactraction/impactraction-mockup.png'
-  alt: 'mockup Impactraction'
+  alt: 'Impactractionのモックアップ画像'
 links:
   next:
     src: '/work/my-work-space'
@@ -28,10 +28,18 @@ links:
     title: 'Portfolio'
 ---
 
-## What I did as team
+## Company's websites とは？
 
-developed front-end architecture, boiler-plate, reviewed member's code as a tech lead 👀
+Canada にある教育系スタートアップのカンパニーページです。
+クライアントとのヒアリングからデプロイまで担当しました。
 
-## Technologies
+## 特徴
 
-The client needed the website to be editable and display faster, also enable visitors for the websites to subscribe to newsletters, so that we introduced Server-Side Rendering **(SSR)**, a Headless Contents Management System **(Contentful)** and Customer Relationship Management system **(Agile CMS)**.
+クライアントの要望が、
+
+- 表示が高速
+- 記事の編集が出来る
+- ニュースレター購読
+  <p></p>
+  であったので、静的サイト生成に Gatsby.js、CMS に Contentful、顧客管理システムに AgileCMS を導入しました。<br/>
+  クライアントからは高い評価を得ることができました。

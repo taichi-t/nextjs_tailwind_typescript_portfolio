@@ -15,10 +15,10 @@ webLink: 'https://moving-sale.vercel.app/'
 githubLink: 'https://github.com/taichi-t/next.js_e-commerce'
 image:
   src: '/images/websites/moving-sale/moving-sale-devices.png'
-  alt: 'moving-sale with responsive design'
+  alt: 'moving-saleのレスポンシブ画像'
 thumbnail:
   src: '/images/websites/moving-sale/moving-sale-mockup.png'
-  alt: 'mockup moving-sale'
+  alt: 'moving-saleのモックアップ画像'
 links:
   next:
     src: '/work/impactraction'
@@ -28,10 +28,11 @@ links:
     title: 'My Work Place'
 ---
 
-## What is Moving Sale
+## Moving Sale とは？
 
-ユーザ間で物の取引をするプラットフォームです。👀
+ユーザ間で物の取引をするプラットフォームです 👀
 
-## Technologies
+## 特徴
 
-It is build up with React(Next.js), MongoDB and Node.js. In this project, I focused on responsiveness. For instance, SWR(stale-while-revalidate) allows client-side to cache data, so no need to fetch to a server when users visit once more, it means reducing wasteful data fetching. Furthermore, it used SSR (Server Side Rendering), so a server-side pre-renders web-page, it enables client-side displaying faster than no SSR.
+React(Next.js)、MongoDB、Node.js を使用したフルスタックアプリケーションです。
+このプロジェクトでは、レンダリングの高速化に力を入れました。例えば SWR（stale-while-revalidate）を導入し何度も訪れる可能性のあるページのデータをキャッシュする事ができました。さらに Next.js の SSR（Server Side Rendering）機能を使用する事で、コンテンツがサーバー側で生成される為、表示が高速になっています。
