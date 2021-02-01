@@ -45,7 +45,7 @@ export default function Header(): JSX.Element {
                 }`}
               >
                 <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-                  EN
+                  English
                 </span>
               </a>
             </Link>
@@ -61,7 +61,7 @@ export default function Header(): JSX.Element {
                 }`}
               >
                 <span className={`inline-block ${!isFontLoaded && 'skeleton'}`}>
-                  JA
+                  日本語
                 </span>
               </a>
             </Link>
