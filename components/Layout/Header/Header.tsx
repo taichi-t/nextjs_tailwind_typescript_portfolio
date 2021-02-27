@@ -8,13 +8,13 @@ export default function Header(): JSX.Element {
   const { isFontLoaded, toggleTheme, theme } = useTheme();
   const { formatMessage: f } = useIntl();
   const { pathname, locale, query } = useRouter();
-  const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
+  const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   useEffect(() => {
-    if (imgRef.current.complete) setIsImgisFontLoaded(true);
+    if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
 
-  const handleLoad = () => setIsImgisFontLoaded(true);
+  const handleLoad = () => setIsImgLoaded(true);
 
   return (
     <header className="items-center py-4 text-primaryText mobile:flex-wrap mobile:py-2">
@@ -24,7 +24,7 @@ export default function Header(): JSX.Element {
             <img
               src="/images/logo.png"
               alt="me"
-              className={`${isImgisFontLoaded ? 'block' : 'hidden'}`}
+              className={`${isImgLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
               ref={imgRef}
@@ -32,7 +32,7 @@ export default function Header(): JSX.Element {
             />
           </Link>
           <div
-            className={`${isImgisFontLoaded ? 'hidden' : 'block '}`}
+            className={`${isImgLoaded ? 'hidden' : 'block '}`}
             style={{ paddingTop: '100%', height: 'auto' }}
           />
         </div>

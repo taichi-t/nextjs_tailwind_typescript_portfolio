@@ -11,14 +11,14 @@ type Props = {
 export default function WorksGridLayout({ item }: Props) {
   const { thumbnail, id, title, tags } = item;
   const { isFontLoaded } = useTheme();
-  const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
+  const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
 
   useEffect(() => {
-    if (imgRef.current.complete) setIsImgisFontLoaded(true);
+    if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
 
-  const handleLoad = () => setIsImgisFontLoaded(true);
+  const handleLoad = () => setIsImgLoaded(true);
 
   return (
     <Link href="/work/[id]" as={`/work/${id}`}>
@@ -29,11 +29,11 @@ export default function WorksGridLayout({ item }: Props) {
             alt={thumbnail.alt}
             onLoad={handleLoad}
             ref={imgRef}
-            className={`${isImgisFontLoaded ? 'block' : 'hidden'}`}
+            className={`${isImgLoaded ? 'block' : 'hidden'}`}
           />
         </div>
         <div
-          className={`${isImgisFontLoaded ? 'hidden' : 'skeleton'}`}
+          className={`${isImgLoaded ? 'hidden' : 'skeleton'}`}
           style={{ paddingTop: '67%', height: 'auto' }}
         />
         <h2 className="font-bold font-display mt-3">

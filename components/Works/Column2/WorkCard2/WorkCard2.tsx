@@ -6,14 +6,14 @@ import { IWork } from '@/types/works';
 
 export default function WorkCard2(data: IWork): JSX.Element {
   const { id, tags, title, thumbnail } = data;
-  const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
+  const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   const { isFontLoaded } = useTheme();
   useEffect(() => {
-    if (imgRef.current.complete) setIsImgisFontLoaded(true);
+    if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
 
-  const handleLoad = () => setIsImgisFontLoaded(true);
+  const handleLoad = () => setIsImgLoaded(true);
 
   return (
     <Link href="/work/[id]" as={`/work/${id}`}>
@@ -25,14 +25,14 @@ export default function WorkCard2(data: IWork): JSX.Element {
             <img
               src={thumbnail.src}
               alt={thumbnail.alt}
-              className={`shadow ${isImgisFontLoaded ? 'block' : 'hidden'}`}
+              className={`shadow ${isImgLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
               ref={imgRef}
               onLoad={handleLoad}
             />
             <div
-              className={`${isImgisFontLoaded ? 'hidden' : 'skeleton'}`}
+              className={`${isImgLoaded ? 'hidden' : 'skeleton'}`}
               style={{ paddingTop: '67%' }}
             />
           </div>

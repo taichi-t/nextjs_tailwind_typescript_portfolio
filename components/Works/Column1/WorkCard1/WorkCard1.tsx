@@ -7,12 +7,12 @@ import { IWork } from '@/types/works';
 export default function WorkCard1(data: IWork): JSX.Element {
   const { id, tags, title, thumbnail } = data;
   const { isFontLoaded } = useTheme();
-  const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
+  const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   useEffect(() => {
-    if (imgRef.current.complete) setIsImgisFontLoaded(true);
+    if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
-  const handleLoad = () => setIsImgisFontLoaded(true);
+  const handleLoad = () => setIsImgLoaded(true);
   return (
     <Link href="/work/[id]" as={`/work/${id}`}>
       <div className="group bg-paper custom-border flex justify-center items-center hover:bg-opacityBlue cursor-pointer">
@@ -21,14 +21,14 @@ export default function WorkCard1(data: IWork): JSX.Element {
             <img
               src={thumbnail.src}
               alt={thumbnail.alt}
-              className={`shadow ${isImgisFontLoaded ? 'block' : 'hidden'}`}
+              className={`shadow ${isImgLoaded ? 'block' : 'hidden'}`}
               width="100%"
               height="100%"
               ref={imgRef}
               onLoad={handleLoad}
             />
             <div
-              className={`${isImgisFontLoaded ? 'hidden' : 'skeleton'}`}
+              className={`${isImgLoaded ? 'hidden' : 'skeleton'}`}
               style={{ paddingTop: '55%' }}
             ></div>
           </div>

@@ -16,14 +16,14 @@ export default function WorkPagesLayout({
   githubLink,
 }: WorkType): JSX.Element {
   const { isFontLoaded } = useTheme();
-  const [isImgisFontLoaded, setIsImgisFontLoaded] = useState(false);
+  const [isImgLoaded, setIsImgLoaded] = useState(false);
   const imgRef = useRef(null);
   useEffect(() => {
-    if (imgRef.current.complete) setIsImgisFontLoaded(true);
+    if (imgRef.current.complete) setIsImgLoaded(true);
   }, []);
 
   const handleLoad = () => {
-    setIsImgisFontLoaded(true);
+    setIsImgLoaded(true);
   };
   return (
     <main className="mt-3">
@@ -50,10 +50,10 @@ export default function WorkPagesLayout({
           width="100%"
           height="100%"
           onLoad={handleLoad}
-          className={`${isImgisFontLoaded ? 'block' : 'hidden'}`}
+          className={`${isImgLoaded ? 'block' : 'hidden'}`}
         />
         <div
-          className={`skeleton ${isImgisFontLoaded ? 'hidden' : 'block'}`}
+          className={`skeleton ${isImgLoaded ? 'hidden' : 'block'}`}
           style={{ paddingTop: '58%' }}
         ></div>
       </div>
