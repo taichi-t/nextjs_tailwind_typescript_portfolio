@@ -10,7 +10,6 @@ My portfolio website made of Next.js(React).
 - Next.js(React)
 - TypeScript
 - TailwindCSS
-- Jest
 
 ### Test tool
 - Jest
