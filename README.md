@@ -21,8 +21,8 @@ My portfolio website made of Next.js(React).
 ## Features
 - i18n
 - Dark Mode
-- Reduced critical rendering paths by SSG
-- Installed PWA to avoid loading a bundle file every reloads
+- Reduce critical rendering paths by SSG
+- Installe PWA to avoid loading a bundle file every reloads
 
 ## Link
 - https://taichi-tsujioka.info/
