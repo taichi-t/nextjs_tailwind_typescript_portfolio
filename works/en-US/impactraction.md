@@ -1,6 +1,6 @@
 ---
-title: "Company's websites"
-date: '2020-07-28'
+title: "Impactraction"
+date: "2020-07-28"
 tags:
   - gatsby
   - scss
@@ -11,27 +11,37 @@ tags:
 role:
   - Front-end development
   - Tech Lead
-webLink: 'https://impactraction-v1.netlify.app/'
+webLink: "https://impactraction-v1.netlify.app/"
 githubLink:
 image:
-  src: '/images/websites/impactraction/impactraction-devices.png'
-  alt: 'impactraction with responsive design'
+  src: "/images/websites/impactraction/impactraction-devices.png"
+  alt: "impactraction with responsive design"
 thumbnail:
-  src: '/images/websites/impactraction/impactraction-mockup.png'
-  alt: 'mockup Impactraction'
+  src: "/images/websites/impactraction/impactraction-mockup.png"
+  alt: "mockup Impactraction"
 links:
   next:
-    src: '/work/my-work-space'
-    title: 'My Work Space'
+    src: "/work/my-work-space"
+    title: "My Work Space"
   prev:
-    src: '/work/portfolio'
-    title: 'Portfolio'
+    src: "/work/portfolio"
+    title: "Portfolio"
 ---
+
+## What is Impactraction
+
+Impactraction company homepage. This is a team project at Cornerstone Community College with real client.
 
 ## What I did as team
 
-developed front-end architecture, boiler-plate, reviewed member's code as a tech lead 👀
+Developed a front-end architecture, a boilerplate, and reviewed member's code as a tech lead 👀
+
+## Features
+
+- Subscrive to newsletter
+- Edit/add articles in CMS
+- Manage customer's info using AgileCMS
 
 ## Technologies
 
-The client needed the website to be editable and display faster, also enable visitors for the websites to subscribe to newsletters, so that we introduced Server-Side Rendering **(SSR)**, a Headless Contents Management System **(Contentful)** and Customer Relationship Management system **(Agile CMS)**.
+- Implemented on Gatsby with SSG, which reduces critical rendering path in end-users’ side

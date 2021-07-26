@@ -1,7 +1,8 @@
 .markdown-style h2 {
-  font-size: theme('fontSize.lg');
-  font-weight: theme('fontWeight.bold');
-  color: theme('colors.secondaryText');
+  margin: 1rem 0 0.5rem 0;
+  font-size: theme("fontSize.lg");
+  font-weight: theme("fontWeight.bold");
+  color: theme("colors.secondaryText");
 }
 .markdown-style p {
   margin-bottom: 1rem;
@@ -9,4 +10,9 @@
 
 .markdown-style li {
   list-style: inside;
+}
+
+.markdown-style a {
+  color: var(--color-blue);
+  text-decoration: underline;
 }
